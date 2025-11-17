@@ -3,135 +3,205 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cornelius Aurelius – The Omniscientrix | Polymath Inventor, Artist, Author</title>
 
-<!-- SEO -->
-<meta name="description" content="Cornelius Aurelius – The Omniscientrix. Polymath, Inventor, Artist, Author, Athlete. Explore the Omniscientrix ecosystem: inventions, books, AI art, fitness, psychology, universe theory, and the 1000× Value Return System." />
-<meta name="keywords" content="Cornelius Aurelius, The Omniscientrix, polymath, inventor, artist, author, fitness, equilibrium, philosophy, genius, ethical innovator, universal formula, 1000x value return" />
-<meta name="author" content="Cornelius Aurelius" />
+<title>Cornelius Aurelius – The Omniscientrix | Polymath Inventor</title>
+
+<!-- SEO SUPERCHARGE -->
+<meta name="description" content="Cornelius Aurelius – The Omniscientrix. Polymath, Inventor, Artist, Author, Athlete, Universe Theorist. Explore the Omniscientrix domains: AI, Art, Inventions, Psychology, Fitness, Philosophy, and the 1000× Value Return System.">
+<meta name="keywords" content="Cornelius Aurelius, Omniscientrix, polymath, inventor, genius, philosopher, ethical innovator, universal formula, AI art, author, athlete, neon blue brand, equilibrium">
+<meta name="author" content="Cornelius Aurelius">
+
+<!-- Social / OpenGraph -->
+<meta property="og:title" content="Cornelius Aurelius – The Omniscientrix">
+<meta property="og:description" content="A polymathic world-builder creating equilibrium across Energy, Information, and Awareness.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cornelius-aurelius.github.io/">
+<meta property="og:image" content="YOUR_LOGO_HERE.png">
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #000000;
-        color: #d0eaff;
-        overflow-x: hidden;
-    }
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: #d7f7ff;
+    overflow-x: hidden;
+}
 
-    /* Neon glow */
-    .glow {
-        text-shadow: 0 0 10px #00c8ff, 0 0 20px #00e1ff;
-    }
+/* PARTICLE BACKGROUND */
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
 
-    header {
-        text-align: center;
-        padding: 80px 20px 60px;
-    }
+/* HEADER */
+header {
+    text-align: center;
+    padding: 120px 20px 60px;
+    position: relative;
+    z-index: 2;
+}
 
-    h1 {
-        font-size: 3.8rem;
-        font-weight: 700;
-        color: #00c8ff;
-    }
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #00d9ff;
+    text-shadow: 0 0 15px #00d9ff, 0 0 35px #00d9ff;
+    animation: pulse 4s infinite ease-in-out;
+}
 
-    h2 {
-        color: #00aaff;
-        margin-bottom: 5px;
-    }
+@keyframes pulse {
+    0% { text-shadow: 0 0 15px #00d9ff; }
+    50% { text-shadow: 0 0 40px #00faff; }
+    100% { text-shadow: 0 0 15px #00d9ff; }
+}
 
-    .subtitle {
-        font-size: 1.3rem;
-        color: #9adfff;
-        margin-top: -10px;
-    }
+.subtitle {
+    font-size: 1.3rem;
+    color: #9beaff;
+}
 
-    /* Section blocks */
-    .section-title {
-        font-size: 2rem;
-        margin-top: 60px;
-        margin-bottom: 20px;
-        text-align: center;
-        color: #00c8ff;
-    }
+/* SIGIL */
+.sigil-container {
+    margin: 30px auto;
+    width: 180px;
+    height: 180px;
+    animation: rotate 14s linear infinite;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 20px;
-        padding: 20px 40px;
-    }
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-    .card {
-        background: #05141b;
-        border: 1px solid #003344;
-        border-radius: 12px;
-        padding: 20px;
-        transition: 0.25s ease;
-        text-align: center;
-    }
+.sigil {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 15px #00e5ff);
+}
 
-    .card:hover {
-        background: #031f28;
-        transform: translateY(-6px);
-        box-shadow: 0 0 20px #00c8ff55;
-    }
+/* SECTION TITLE */
+.section-title {
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2.6rem;
+    color: #00d9ff;
+    text-shadow: 0 0 12px #00d9ff;
+}
 
-    .card a {
-        color: #7cdfff;
-        font-size: 1.2rem;
-        text-decoration: none;
-        font-weight: 600;
-    }
+/* GRID CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+}
 
-    .desc {
-        font-size: 0.9rem;
-        margin-top: 8px;
-        color: #a8e7ff;
-    }
+.card {
+    background: rgba(0, 25, 35, 0.75);
+    border: 1px solid #004055;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    color: #bff7ff;
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+    transform-style: preserve-3d;
+}
 
-    footer {
-        margin-top: 60px;
-        padding: 30px;
-        text-align: center;
-        font-size: 0.9rem;
-        color: #7cdfff;
-    }
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px #00eaffaa;
+    border-color: #00eaff;
+}
 
-    footer a {
-        color: #00e1ff;
-        text-decoration: none;
-    }
+.card a {
+    text-decoration: none;
+    color: #7ee6ff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 
-    hr {
-        border: 0;
-        border-top: 1px solid #003344;
-        margin: 40px auto;
-        width: 80%;
-    }
+.desc {
+    font-size: 0.95rem;
+    color: #a7eaff;
+    margin-top: 8px;
+}
+
+/* OMNISCIENTRIX FORMULA PANEL */
+.formula-panel {
+    margin: 60px auto;
+    padding: 30px 20px;
+    width: 85%;
+    max-width: 900px;
+    background: rgba(0, 40, 60, 0.4);
+    border: 1px solid #007c99;
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px #00eaff55;
+    text-align: center;
+}
+
+.formula-panel h3 {
+    color: #00d9ff;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.formula {
+    font-size: 1.25rem;
+    color: #b6f6ff;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #78eaff;
+    position: relative;
+    z-index: 2;
+}
+
+footer a {
+    color: #00dfff;
+    text-decoration: none;
+}
 </style>
 </head>
-
 <body>
 
+<!-- PARTICLES BACKGROUND -->
+<canvas id="particles"></canvas>
+
 <header>
-    <h1 class="glow">CORNELIUS AURELIUS</h1>
-    <h2 class="glow">THE OMNISCIENTRIX</h2>
+    <div class="sigil-container">
+        <!-- Replace with your SVG later -->
+        <img src="YOUR_LOGO_HERE.png" class="sigil">
+    </div>
+
+    <h1>CORNELIUS AURELIUS</h1>
+    <p class="subtitle">THE OMNISCIENTRIX</p>
     <p class="subtitle">Polymath • Inventor • Artist • Author • Athlete • Ethical Innovator</p>
 </header>
 
-<!-- Polymath Domains -->
 <h2 class="section-title">THE OMNISCIENTRIX DOMAINS</h2>
 <div class="grid">
 
     <div class="card">
         <a href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/" target="_blank">Fitness Equilibrium</a>
-        <p class="desc">Mind–body optimisation • Athlete–Inventor performance system</p>
+        <p class="desc">Mind–body optimisation • Athlete–Inventor performance</p>
     </div>
 
     <div class="card">
         <a href="https://cornelius-aurelius.github.io/Attractive-Narcissist/" target="_blank">Attractive Narcissist</a>
-        <p class="desc">Magnetic psychology • Archetypes • Behavioural transformation</p>
+        <p class="desc">Psychology • Archetypes • Behavioural transformation</p>
     </div>
 
     <div class="card">
@@ -141,54 +211,92 @@
 
     <div class="card">
         <a href="https://cornelius-aurelius.github.io/AI-ART/" target="_blank">AI Art & Symbolic Design</a>
-        <p class="desc">Mythological visuals • Equilibrium symbolism • Omniscient aesthetics</p>
+        <p class="desc">Mythic visuals • Equilibrium symbolism</p>
     </div>
 
     <div class="card">
         <a href="https://cornelius-aurelius.github.io/SPENCER-AURELIUS/" target="_blank">Spencer Aurelius</a>
-        <p class="desc">Character universe • Myth-building • Narrative world</p>
+        <p class="desc">Character universe • Narrative mythos</p>
     </div>
 
     <div class="card">
         <a href="https://cornelius-aurelius.github.io/WALK-WRAP/" target="_blank">WALK WRAP</a>
-        <p class="desc">Walking optimisation • Movement equilibrium system</p>
+        <p class="desc">Movement optimisation • Walking equilibrium</p>
     </div>
 
     <div class="card">
         <a href="https://cornelius-aurelius.github.io/PROOF-IS-KING/" target="_blank">Proof Is King</a>
-        <p class="desc">Experiments • Logic • Demonstrations • Applied truth</p>
+        <p class="desc">Experiments • Logic • Applied truth</p>
     </div>
 
     <div class="card">
-        <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22AURELIUS%2C%20CORNELIUS%22" target="_blank">Academic / Zenodo Archive</a>
-        <p class="desc">Published formulas • Universe theory • Scientific releases</p>
+        <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22AURELIUS%2C%20CORNELIUS%22" target="_blank">Academic Archive</a>
+        <p class="desc">Formulas • Universe theory • Scientific releases</p>
     </div>
 
     <div class="card">
         <a href="https://www.amazon.co.uk/stores/author/B0FC2XKLX3" target="_blank">Amazon Author Page</a>
-        <p class="desc">Official author storefront • All books by Cornelius Aurelius</p>
+        <p class="desc">Official authored works</p>
     </div>
 
 </div>
 
-<hr>
+<div class="formula-panel">
+    <h3>The Omniscientriox Formula</h3>
+    <p class="formula">
+        (Polymath Skills × Inventive Output × Ethical Return) ÷ Ego = Infinite Collective ROI
+    </p>
+</div>
 
-<!-- Identity + Mission -->
-<h2 class="section-title">THE OMNISCIENTRIX FORMULA</h2>
-<p style="text-align:center; max-width:900px; margin: 0 auto; color:#a8e7ff; font-size:1.1rem;">
-(Polymath Skills × Inventive Output × Ethical Return) ÷ Ego = Infinite Collective ROI  
-<br><br>
-Cornelius Aurelius operates through Equilibrium: the balance of Energy, Information, and Awareness.  
-Every creation aims to return <span class="glow">1000× value</span> back to the observer, the supporter, and their chosen cause.
-</p>
-
-<hr>
-
-<!-- Footer -->
 <footer>
-    <p>© 2025 Cornelius Aurelius — The Omniscientrix</p>
-    <p><a href="https://zenodo.org/records/17362534" target="_blank">Peace License</a></p>
+    © 2025 Cornelius Aurelius — The Omniscientriox<br>
+    <a href="https://zenodo.org/records/17362534" target="_blank">Peace License</a>
 </footer>
+
+<script>
+// BASIC PARTICLE EFFECT
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+let particles = [];
+for (let i = 0; i < 90; i++) {
+    particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        speedX: (Math.random() - 0.5) * 0.4,
+        speedY: (Math.random() - 0.5) * 0.4,
+        size: Math.random() * 2 + 1
+    });
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#00eaff55";
+
+    particles.forEach(p => {
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
 
 </body>
 </html>
