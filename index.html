@@ -22,7 +22,7 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
             background: linear-gradient(180deg, #000 0%, #001428 100%);
         }
 
@@ -39,54 +39,58 @@
 
         .grid {
             display: grid;
-            gap: 20px;
+            gap: 25px;
             padding: 40px 20px;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         }
 
-        .card {
+        /* CARD STYLE */
+        .media-card {
             background-color: #001a33;
             border: 1px solid #003d66;
-            padding: 25px;
             border-radius: 12px;
             text-align: center;
-            transition: all 0.2s ease;
-            box-shadow: 0 0 10px #003d66;
+            padding-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+            box-shadow: 0 0 12px #003d66;
         }
 
-        .card:hover {
+        .media-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 0 20px #00aaff;
+            box-shadow: 0 0 25px #00aaff;
             border-color: #00aaff;
         }
 
-        .card a {
-            text-decoration: none;
-            color: #00c3ff;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-shadow: 0 0 10px #0099ff;
-        }
-
-        /* VIDEO CARD */
-        .video-card {
-            background-color: #001a33;
-            border: 1px solid #003d66;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 0 15px #003d66;
-        }
-
-        .video-card video {
+        .media-card video,
+        .media-card img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 12px;
+        }
+
+        .media-button {
+            margin-top: 12px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #003d66;
+            color: #00c3ff;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 10px #0099ff;
+            transition: 0.2s ease;
+        }
+
+        .media-button:hover {
+            background: #00aaff;
+            color: #000;
+            box-shadow: 0 0 16px #00cfff;
         }
 
         footer {
-            margin-top: 50px;
-            padding: 25px;
+            margin-top: 40px;
+            padding: 20px;
             text-align: center;
             background-color: #000814;
             color: #66bfff;
@@ -95,7 +99,6 @@
 
         footer a {
             color: #00aaff;
-            text-decoration: none;
         }
     </style>
 </head>
@@ -109,44 +112,85 @@
 
 <section class="grid">
 
-    <!-- Fitness VIDEO Card -->
-    <div class="video-card">
-        <a href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">
-            <video autoplay muted loop playsinline>
-                <source src="cornelius and spencer vid.mp4" type="video/mp4">
-            </video>
-        </a>
+    <!-- FITNESS - VIDEO -->
+    <div class="media-card">
+        <video autoplay muted loop playsinline>
+            <source src="cornelius and spencer vid.mp4" type="video/mp4">
+        </video>
+        <a class="media-button" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">Fitness Equilibrium</a>
     </div>
 
-    <!-- Normal Cards -->
-    <div class="card"><a href="https://cornelius-aurelius.github.io/AI-ART/">AI.Art Gallery</a></div>
+    <!-- AI ART - THUMBNAIL -->
+    <div class="media-card">
+        <img src="ai.art.png" alt="AI Art Thumbnail">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/AI-ART/">AI.Art Gallery</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/Omniscientrix-Laws/">Omniscientrix Laws (vΩ)</a></div>
+    <!-- LAWS - NO IMAGE YET -->
+    <div class="media-card">
+        <img src="https://via.placeholder.com/800x450/001a33/00c3ff?text=Omniscientrix+Laws" alt="Laws">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/Omniscientrix-Laws/">Omniscientrix Laws (vΩ)</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">Book → GPT Business</a></div>
+    <!-- BOOKS TO GPT -->
+    <div class="media-card">
+        <img src="my books.png" alt="Books Thumbnail">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">Book → GPT Business</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/BOOKS--/">Books Library</a></div>
+    <!-- BOOKS -->
+    <div class="media-card">
+        <img src="my books.png" alt="Books Thumbnail">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/BOOKS--/">Books Library</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI Book Chats</a></div>
+    <!-- BOOK GPT -->
+    <div class="media-card">
+        <img src="my books.png" alt="AI Books">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI Book Chats</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/omniscientrix-map/">Universe Map</a></div>
+    <!-- UNIVERSE MAP -->
+    <div class="media-card">
+        <img src="universe.png" alt="Universe Map Thumbnail">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/omniscientrix-map/">Universe Map</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">Zenodo Research Hub</a></div>
+    <!-- ZENODO -->
+    <div class="media-card">
+        <img src="universe.png" alt="Zenodo">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">Zenodo Research Hub</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">Inventions</a></div>
+    <!-- INVENTIONS -->
+    <div class="media-card">
+        <img src="https://via.placeholder.com/800x450/001a33/00c3ff?text=Inventions" alt="Inventions">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">Inventions</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">Websites Hub</a></div>
+    <!-- NEXUS HUB -->
+    <div class="media-card">
+        <img src="https://via.placeholder.com/800x450/001a33/00c3ff?text=Websites+Hub" alt="Web Hub">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">Websites Hub</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/KRONATRIX/">KRONATRIX – Marketing Agency</a></div>
+    <!-- KRONATRIX -->
+    <div class="media-card">
+        <img src="https://via.placeholder.com/800x450/001a33/00c3ff?text=KRONATRIX+Agency" alt="Kronatrix">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/KRONATRIX/">KRONATRIX Agency</a>
+    </div>
 
-    <div class="card"><a href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">Omniscientrix Arcade</a></div>
+    <!-- GAMES -->
+    <div class="media-card">
+        <img src="https://via.placeholder.com/800x450/001a33/00c3ff?text=Omniscientrix+Arcade" alt="Games">
+        <a class="media-button" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">Omniscientrix Arcade</a>
+    </div>
 
 </section>
 
 <footer>
     © 2025 <strong>Cornelius Aurelius</strong> — The Omniscientrix  
-    <br><br>
-    <a href="https://zenodo.org/records/17362534" target="_blank">Peace License</a>  
+    • <a href="https://zenodo.org/records/17362534">Peace License</a>  
     • <a href="mailto:138licensing@gmail.com">138licensing@gmail.com</a>
 </footer>
 
