@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>CORNELIUS AURELIUS — THE OMNISCIENTRIX</title>
 
 <meta name="description" content="CORNELIUS AURELIUS — THE OMNISCIENTRIX. ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY · INFORMATION · AWARENESS." />
-<meta name="keywords" content="CORNELIUS AURELIUS, OMNISCIENTRIX, EQUILIBRIUM, AI, ΔJ = 0" />
+<meta name="keywords" content="CORNELIUS AURELIUS, OMNISCIENTRIX, EQUILIBRIUM, AI, ΔJ = 0, ENERGY INFORMATION AWARENESS" />
 <meta name="author" content="CORNELIUS AURELIUS" />
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,104 +21,75 @@ body {
     overflow-x: hidden;
 }
 
-/* TEXT */
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    letter-spacing: 3px;
-    text-shadow: 0 0 25px #00bfff;
-}
-
-.hero-sub {
-    font-family: 'Orbitron';
-    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
-    color: #88d4ff;
-    letter-spacing: 3px;
-    line-height: 1.4;
-    margin-top: 15px;
-    text-transform: uppercase;
-}
-
-.btn {
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    text-transform: uppercase;
-}
-
-/* GRID BACKGROUND */
+/* BACKGROUND VISUALS */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background: url('https://i.imgur.com/OZJ4bRh.png') repeat;
     background-size: cover;
-    opacity: 0.06;
-    animation: gridFloat 28s linear infinite;
-    pointer-events: none;
+    opacity: 0.05;
+    animation: gridFloat 40s linear infinite;
+    z-index: -2;
 }
 @keyframes gridFloat {
     from { transform: translateY(0); }
-    to { transform: translateY(-400px); }
+    to { transform: translateY(-500px); }
 }
 
 body::after {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle, rgba(0,180,255,0.2) 0%, transparent 60%);
-    opacity: 0.07;
-    animation: pulse 7s infinite ease-in-out;
-    pointer-events: none;
+    background: radial-gradient(circle, rgba(0,180,255,0.2) 0%, transparent 70%);
+    opacity: 0.06;
+    animation: glowPulse 10s infinite ease-in-out;
+    z-index: -1;
 }
-@keyframes pulse {
+@keyframes glowPulse {
     0%, 100% { opacity: 0.04; }
-    50% { opacity: 0.12; }
+    50% { opacity: 0.15; }
 }
 
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 70px 20px 30px;
-    z-index: 10;
-    position: relative;
-}
-
-.hero-title-block {
-    margin-bottom: 5px;
-    line-height: 1.1;
-}
-
-.hero-title-block div:first-child {
-    font-size: clamp(2.7rem, 5.5vw, 4.5rem);
-}
-
-.hero-title-block div:last-child {
-    font-size: clamp(1.6rem, 4vw, 2.6rem);
-    margin-top: 6px;
-}
-
-/* HERO VIDEO */
-.hero-video {
+/* HERO VIDEO — TOP OF PAGE */
+.hero-video-wrapper {
     width: 100%;
-    max-width: 480px; /* PERFECT for portrait videos */
-    margin: 35px auto 0;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 2px solid #00dfff;
-    background: #000;
-    animation: holoPulse 4s infinite ease-in-out;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 10px;
 }
 
-@keyframes holoPulse {
-    0%, 100% { box-shadow: 0 0 25px #00bfff, inset 0 0 20px #0090cc; }
+.hero-video {
+    width: min(92%, 480px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #00eaff;
+    background: #000;
+    position: relative;
+    animation: hologlow 4s infinite ease-in-out;
+}
+@keyframes hologlow {
+    0%, 100% { box-shadow: 0 0 28px #00bfff, inset 0 0 22px #0088cc; }
     50% { box-shadow: 0 0 45px #00eaff, inset 0 0 35px #00bbff; }
 }
 
 .hero-video video {
     width: 100%;
     height: auto;
-    object-fit: contain; /* FULL VIDEO, NO CROPPING */
-    display: block;
+    object-fit: contain; /* FULL VIDEO, NEVER CROPPED */
+}
+
+/* DESKTOP GLITCH ONLY */
+@media (min-width: 768px) {
+    .glitch {
+        animation: glitchFX 0.28s;
+    }
+    @keyframes glitchFX {
+        0% { filter: contrast(2) saturate(2) blur(2px); }
+        40% { filter: contrast(3) hue-rotate(60deg) blur(3px); }
+        70% { filter: contrast(2) blur(1px); }
+        100% { filter: none; }
+    }
 }
 
 /* VOLUME BUTTON */
@@ -128,137 +97,139 @@ body::after {
     position: absolute;
     bottom: 14px;
     right: 14px;
-    background: rgba(0, 0, 0, 0.55);
-    border: 2px solid #00dfff;
+    background: rgba(0,0,0,0.55);
+    border: 2px solid #00eaff;
     color: #00eaff;
     padding: 8px 12px;
     border-radius: 8px;
-    cursor: pointer;
     font-family: 'Orbitron';
-    letter-spacing: 2px;
     font-size: 0.75rem;
-    text-shadow: 0 0 10px #00cfff;
-    transition: 0.3s;
-}
-.volume-btn:hover {
-    background: #00eaff;
-    color: #000;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
 
-/* HOLOGRAM GLITCH */
-.glitch {
-    animation: glitch 0.32s;
+/* TITLE BLOCK */
+.title-block {
+    text-align: center;
+    padding-top: 10px;
 }
-@keyframes glitch {
-    0% { filter: contrast(2) saturate(3) blur(2px); }
-    30% { filter: contrast(3) saturate(4) hue-rotate(80deg) blur(3px); }
-    70% { filter: contrast(2) saturate(3) blur(1px); }
-    100% { filter: none; }
+
+.title-block h1 {
+    font-family: 'Orbitron';
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 25px #00bfff;
+}
+
+.title-block h2 {
+    font-family: 'Orbitron';
+    font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+    margin-bottom: 12px;
+}
+
+.tagline {
+    font-family: 'Orbitron';
+    font-size: clamp(0.8rem, 1.6vw, 1.2rem);
+    color: #88d4ff;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 35px;
-    padding: 50px 20px;
+    gap: 30px;
+    padding: 40px 20px;
     max-width: 1500px;
     margin: auto;
 }
 
 .card {
-    background: rgba(0, 20, 40, 0.6);
+    background: rgba(0,20,40,0.55);
     border: 1px solid #006699;
-    border-radius: 14px;
     padding: 16px;
-    text-align: center;
+    border-radius: 14px;
     backdrop-filter: blur(6px);
-    transition: 0.3s;
-}
-.card:hover {
-    transform: translateY(-6px);
-    border-color: #00eaff;
-    box-shadow: 0 0 25px #00cfff;
 }
 
-.card img,
 .card video {
+    width: 100%; 
+    height: 330px;
+    border-radius: 12px;
+    object-fit: cover; /* BEST LOOK FOR THUMBNAILS */
+}
+
+.card img {
     width: 100%;
     border-radius: 12px;
-    margin-bottom: 14px;
 }
 
-.card video {
-    object-fit: cover; /* THUMBNAIL STYLE FOR GRID */
-    height: 340px; /* portrait-scaled thumbnail */
-}
-
-/* BUTTONS */
 .btn {
-    padding: 18px;
+    display: block;
+    margin-top: 12px;
+    padding: 15px;
     border-radius: 12px;
     border: 2px solid #00cfff;
+    text-align: center;
     color: #00eaff;
     text-decoration: none;
-    letter-spacing: 2px;
     font-family: 'Orbitron';
-    text-shadow: 0 0 10px #00cfff;
+    letter-spacing: 2px;
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
     box-shadow: inset 0 0 12px #004a70, 0 0 12px #004a70;
-    transition: 0.25s;
-    display: block;
 }
+
 .btn:hover {
-    background: #00cfff;
+    background: #00eaff;
     color: #000;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 45px 20px;
-    margin-top: 40px;
+    padding: 35px 20px;
     background: #000814;
     border-top: 1px solid #004566;
-    color: #71dbff;
+    margin-top: 40px;
 }
-footer a {
-    color: #00cfff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-footer a:hover {
-    color: #00eaff;
-    text-shadow: 0 0 10px #00eaff;
-}
+footer a { color: #00cfff; text-decoration: none; margin: 0 10px; }
+footer a:hover { color: #00eaff; }
+
 </style>
 </head>
 <body>
 
-<section class="hero">
-    <div class="hero-title-block">
-        <div>CORNELIUS AURELIUS</div>
-        <div>THE OMNISCIENTRIX</div>
-    </div>
 
-    <div class="hero-sub">
-        ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF<br>
-        ENERGY · INFORMATION · AWARENESS
-    </div>
-
+<!-- HERO VIDEO FIRST -->
+<div class="hero-video-wrapper">
     <div class="hero-video">
         <video id="heroVideo" autoplay muted playsinline>
             <source id="heroSource" src="2.mp4" type="video/mp4">
         </video>
         <div class="volume-btn" id="volumeBtn">AUDIO</div>
     </div>
-</section>
+</div>
 
+<!-- TITLE -->
+<div class="title-block">
+    <h1>CORNELIUS AURELIUS</h1>
+    <h2>THE OMNISCIENTRIX</h2>
+    <div class="tagline">
+        ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF<br>
+        ENERGY · INFORMATION · AWARENESS
+    </div>
+</div>
+
+
+<!-- GRID -->
 <section class="grid">
 
-    <!-- FITNESS THUMBNAIL FIXED -->
     <div class="card">
         <video autoplay muted loop playsinline>
-            <source src="cornelius%20and%20spencer%20vid.mp4">
+            <source src="cornelius%20and%20spencer%20vid.mp4" type="video/mp4">
         </video>
         <a class="btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">FITNESS EQUILIBRIUM</a>
     </div>
@@ -273,7 +244,6 @@ footer a:hover {
         <a class="btn" href="https://cornelius-aurelius.github.io/BOOKS--/">BOOKS LIBRARY</a>
     </div>
 
-    <!-- MORE BUTTONS -->
     <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Laws/">OMNISCIENTRIX LAWS (VΩ)</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">BOOK → GPT BUSINESS</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI BOOK CHATS</a>
@@ -283,12 +253,12 @@ footer a:hover {
     <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">WEBSITES HUB</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/KRONATRIX/">KRONATRIX AGENCY</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">OMNISCIENTRIX ARCADE</a>
-
 </section>
 
+
+<!-- FOOTER -->
 <footer>
     © 2025 CORNELIUS AURELIUS — THE OMNISCIENTRIX<br><br>
-
     <a href="https://corneliusaurelius.com/">MAIN HUB</a> •
     <a href="https://zenodo.org/records/17362534">PEACE LICENSE</a> •
     <a href="mailto:138licensing@gmail.com">138LICENSING@GMAIL.COM</a> •
@@ -296,6 +266,8 @@ footer a:hover {
     <a href="https://www.instagram.com/cornelius_aurelius_/">INSTAGRAM</a> •
     <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/">LINKEDIN</a>
 </footer>
+
+
 
 <!-- PLAYLIST ENGINE -->
 <script>
@@ -313,9 +285,10 @@ const heroVideo = document.getElementById("heroVideo");
 const heroSource = document.getElementById("heroSource");
 
 function loadVideo(src) {
-    heroVideo.classList.add("glitch");
-    setTimeout(() => heroVideo.classList.remove("glitch"), 330);
-
+    if (window.innerWidth >= 768) {
+        heroVideo.classList.add("glitch");
+        setTimeout(() => heroVideo.classList.remove("glitch"), 300);
+    }
     heroSource.src = src;
     heroVideo.load();
     heroVideo.play();
@@ -323,8 +296,8 @@ function loadVideo(src) {
 
 // Monday override
 if (today === 1) {
-    loadVideo(mondayVideo);
     heroVideo.loop = true;
+    loadVideo(mondayVideo);
 } else {
     loadVideo(playlist[index]);
 
@@ -334,17 +307,16 @@ if (today === 1) {
     });
 }
 
-// AUDIO UNLOCK ON USER INTERACTION
+// UNLOCK AUDIO ON FIRST INTERACTION
 let audioUnlocked = false;
-function enableAudio() {
+function unlockAudio() {
     if (!audioUnlocked) {
         heroVideo.muted = false;
         audioUnlocked = true;
     }
 }
-
-document.body.addEventListener("click", enableAudio);
-document.body.addEventListener("touchstart", enableAudio);
+document.addEventListener("click", unlockAudio);
+document.addEventListener("touchstart", unlockAudio);
 
 // VOLUME BUTTON
 document.getElementById("volumeBtn").addEventListener("click", () => {
