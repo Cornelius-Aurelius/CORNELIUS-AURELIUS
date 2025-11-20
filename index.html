@@ -6,11 +6,12 @@
 
 <title>CORNELIUS AURELIUS — THE OMNISCIENTRIX</title>
 
-<meta name="description" content="CORNELIUS AURELIUS — THE OMNISCIENTRIX. ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY • INFORMATION • AWARENESS." />
+<meta name="description" content="CORNELIUS AURELIUS — THE OMNISCIENTRIX. ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY · INFORMATION · AWARENESS." />
 <meta name="keywords" content="CORNELIUS AURELIUS, OMNISCIENTRIX, EQUILIBRIUM, AI, ΔJ = 0" />
 <meta name="author" content="CORNELIUS AURELIUS" />
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,12 +23,30 @@ body {
     overflow-x: hidden;
 }
 
-/* RESPONSIVE TEXT */
-h1 { font-size: clamp(2.2rem, 5vw, 4.2rem); }
-.hero-sub { font-size: clamp(1rem, 2.2vw, 1.4rem); }
-.btn { font-size: clamp(0.9rem, 1.5vw, 1.15rem); }
+/* TEXT */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 3px;
+    text-shadow: 0 0 25px #00bfff;
+}
 
-/* BACKGROUND GRID */
+.hero-sub {
+    font-family: 'Orbitron';
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+    color: #88d4ff;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.btn {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    text-transform: uppercase;
+}
+
+/* GRID BACKGROUND */
 body::before {
     content: "";
     position: fixed;
@@ -43,102 +62,97 @@ body::before {
     to { transform: translateY(-400px); }
 }
 
-/* PARTICLE FIELD */
 body::after {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle, rgba(0,180,255,0.25) 0%, transparent 65%);
-    opacity: 0.05;
+    background: radial-gradient(circle, rgba(0,180,255,0.2) 0%, transparent 60%);
+    opacity: 0.07;
     animation: pulse 7s infinite ease-in-out;
     pointer-events: none;
 }
 @keyframes pulse {
     0%, 100% { opacity: 0.04; }
-    50% { opacity: 0.11; }
+    50% { opacity: 0.12; }
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
     text-align: center;
-    padding: 70px 20px 20px;
-    position: relative;
+    padding: 70px 20px 30px;
     z-index: 10;
+    position: relative;
 }
 
-.hero-title {
-    font-family: 'Orbitron', sans-serif;
-    color: #00eaff;
-    text-shadow: 0 0 35px #00bfff;
-    letter-spacing: 4px;
-    font-weight: 700;
+.hero-title-block {
+    margin-bottom: 5px;
+    line-height: 1.1;
 }
 
-.hero-sub {
-    font-family: 'Orbitron';
-    color: #a9e8ff;
-    letter-spacing: 3px;
-    margin-top: 10px;
+.hero-title-block div:first-child {
+    font-size: clamp(2.7rem, 5.5vw, 4.5rem);
+}
+
+.hero-title-block div:last-child {
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    margin-top: 6px;
 }
 
 /* HERO VIDEO */
 .hero-video {
-    width: 92%;
-    max-width: 900px;
-    margin: 30px auto 0;
-    border-radius: 20px;
-    border: 2px solid #00dfff;
+    width: 100%;
+    max-width: 480px; /* PERFECT for portrait videos */
+    margin: 35px auto 0;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 0 40px #00cfff, inset 0 0 30px #0099cc;
+    border: 2px solid #00dfff;
+    background: #000;
     animation: holoPulse 4s infinite ease-in-out;
     position: relative;
-    aspect-ratio: 16/9;
-    max-height: clamp(300px, 55vh, 600px);
 }
 
 @keyframes holoPulse {
-    0%, 100% { box-shadow: 0 0 30px #00bfff, inset 0 0 22px #0088cc; }
-    50% { box-shadow: 0 0 50px #00eaff, inset 0 0 36px #00bbff; }
+    0%, 100% { box-shadow: 0 0 25px #00bfff, inset 0 0 20px #0090cc; }
+    50% { box-shadow: 0 0 45px #00eaff, inset 0 0 35px #00bbff; }
 }
 
 .hero-video video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain; /* FULL VIDEO, NO CROPPING */
+    display: block;
 }
 
 /* VOLUME BUTTON */
 .volume-btn {
     position: absolute;
-    bottom: 18px;
-    right: 18px;
+    bottom: 14px;
+    right: 14px;
     background: rgba(0, 0, 0, 0.55);
     border: 2px solid #00dfff;
     color: #00eaff;
-    padding: 10px 14px;
+    padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
     font-family: 'Orbitron';
     letter-spacing: 2px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-shadow: 0 0 10px #00cfff;
     transition: 0.3s;
 }
-
 .volume-btn:hover {
     background: #00eaff;
     color: #000;
 }
 
-/* HOLOGRAM GLITCH TRANSITION */
+/* HOLOGRAM GLITCH */
 .glitch {
-    animation: glitch 0.35s;
+    animation: glitch 0.32s;
 }
-
 @keyframes glitch {
-    0% { filter: contrast(2) saturate(3) hue-rotate(40deg) blur(2px); }
-    30% { filter: contrast(3) saturate(4) hue-rotate(90deg) blur(3px); }
-    70% { filter: contrast(2) saturate(3) hue-rotate(0deg) blur(1px); }
+    0% { filter: contrast(2) saturate(3) blur(2px); }
+    30% { filter: contrast(3) saturate(4) hue-rotate(80deg) blur(3px); }
+    70% { filter: contrast(2) saturate(3) blur(1px); }
     100% { filter: none; }
 }
 
@@ -150,33 +164,36 @@ body::after {
     padding: 50px 20px;
     max-width: 1500px;
     margin: auto;
-    position: relative;
 }
 
 .card {
-    background: rgba(0,20,40,0.6);
+    background: rgba(0, 20, 40, 0.6);
     border: 1px solid #006699;
     border-radius: 14px;
     padding: 16px;
     text-align: center;
-    transition: 0.3s;
     backdrop-filter: blur(6px);
-    box-shadow: 0 0 18px #003f5a;
+    transition: 0.3s;
 }
-
 .card:hover {
     transform: translateY(-6px);
     border-color: #00eaff;
-    box-shadow: 0 0 30px #00cfff;
+    box-shadow: 0 0 25px #00cfff;
 }
 
-.card img, .card video {
+.card img,
+.card video {
     width: 100%;
     border-radius: 12px;
     margin-bottom: 14px;
-    height: auto;
 }
 
+.card video {
+    object-fit: cover; /* THUMBNAIL STYLE FOR GRID */
+    height: 340px; /* portrait-scaled thumbnail */
+}
+
+/* BUTTONS */
 .btn {
     padding: 18px;
     border-radius: 12px;
@@ -190,7 +207,6 @@ body::after {
     transition: 0.25s;
     display: block;
 }
-
 .btn:hover {
     background: #00cfff;
     color: #000;
@@ -200,17 +216,15 @@ body::after {
 footer {
     text-align: center;
     padding: 45px 20px;
+    margin-top: 40px;
     background: #000814;
     border-top: 1px solid #004566;
     color: #71dbff;
-    margin-top: 40px;
 }
-
 footer a {
     color: #00cfff;
     margin: 0 10px;
     text-decoration: none;
-    transition: 0.3s;
 }
 footer a:hover {
     color: #00eaff;
@@ -221,8 +235,15 @@ footer a:hover {
 <body>
 
 <section class="hero">
-    <h1 class="hero-title">CORNELIUS AURELIUS — THE OMNISCIENTRIX</h1>
-    <div class="hero-sub">ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY · INFORMATION · AWARENESS</div>
+    <div class="hero-title-block">
+        <div>CORNELIUS AURELIUS</div>
+        <div>THE OMNISCIENTRIX</div>
+    </div>
+
+    <div class="hero-sub">
+        ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF<br>
+        ENERGY · INFORMATION · AWARENESS
+    </div>
 
     <div class="hero-video">
         <video id="heroVideo" autoplay muted playsinline>
@@ -234,10 +255,10 @@ footer a:hover {
 
 <section class="grid">
 
-    <!-- FITNESS: PERMANENT THUMBNAIL -->
+    <!-- FITNESS THUMBNAIL FIXED -->
     <div class="card">
         <video autoplay muted loop playsinline>
-            <source src="cornelius%20and%20spencer%20vid.mp4" type="video/mp4">
+            <source src="cornelius%20and%20spencer%20vid.mp4">
         </video>
         <a class="btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">FITNESS EQUILIBRIUM</a>
     </div>
@@ -252,6 +273,7 @@ footer a:hover {
         <a class="btn" href="https://cornelius-aurelius.github.io/BOOKS--/">BOOKS LIBRARY</a>
     </div>
 
+    <!-- MORE BUTTONS -->
     <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Laws/">OMNISCIENTRIX LAWS (VΩ)</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">BOOK → GPT BUSINESS</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI BOOK CHATS</a>
@@ -292,7 +314,7 @@ const heroSource = document.getElementById("heroSource");
 
 function loadVideo(src) {
     heroVideo.classList.add("glitch");
-    setTimeout(() => heroVideo.classList.remove("glitch"), 400);
+    setTimeout(() => heroVideo.classList.remove("glitch"), 330);
 
     heroSource.src = src;
     heroVideo.load();
@@ -313,19 +335,18 @@ if (today === 1) {
 }
 
 // AUDIO UNLOCK ON USER INTERACTION
-let audioEnabled = false;
-
+let audioUnlocked = false;
 function enableAudio() {
-    if (!audioEnabled) {
+    if (!audioUnlocked) {
         heroVideo.muted = false;
-        audioEnabled = true;
+        audioUnlocked = true;
     }
 }
 
 document.body.addEventListener("click", enableAudio);
 document.body.addEventListener("touchstart", enableAudio);
 
-// Volume button
+// VOLUME BUTTON
 document.getElementById("volumeBtn").addEventListener("click", () => {
     heroVideo.muted = !heroVideo.muted;
 });
