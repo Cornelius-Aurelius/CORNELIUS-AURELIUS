@@ -1,199 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Cornelius Aurelius – The Omniscientrix | Official Hub</title>
+    <title>CORNELIUS AURELIUS — THE OMNISCIENTRIX</title>
 
     <!-- SEO -->
-    <meta name="description" content="Official Hub of Cornelius Aurelius – Polymath inventor, world-builder, creator of Equilibrium, and architect of Omniscientrix laws, AI tools, universe research and more." />
-    <meta name="keywords" content="Cornelius Aurelius, Omniscientrix, vΩ, Equilibrium, Books, GPT, AI Art, Universe, Kronatrix, Polymath" />
-    <meta name="author" content="Cornelius Aurelius" />
+    <meta name="description" content="CORNELIUS AURELIUS — THE OMNISCIENTRIX. ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY • INFORMATION • AWARENESS. OFFICIAL HUB OF THE POLYMATH, INVENTOR, WORLD-BUILDER." />
+    <meta name="keywords" content="CORNELIUS AURELIUS, OMNISCIENTRIX, EQUILIBRIUM, AI, UNIVERSE, ENERGY INFORMATION AWARENESS, ΔJ = 0" />
+    <meta name="author" content="CORNELIUS AURELIUS" />
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Base Theme */
-        body {
+        /* RESET + BASICS */
+        html, body {
             margin: 0;
-            background-color: #000;
-            font-family: 'Inter', Arial, sans-serif;
-            color: #dff6ff;
+            padding: 0;
+            background: #000;
+            color: #dff9ff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
 
-        /* Header */
-        header {
+        /* GLOBAL NEON GLOW */
+        .neon {
+            text-shadow: 0 0 18px #00cfff, 0 0 32px #00aaff;
+        }
+
+        /* ANIMATED GRID BACKGROUND */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: url('https://i.imgur.com/OZJ4bRh.png');
+            background-size: cover;
+            opacity: 0.08;
+            pointer-events: none;
+            animation: gridFloat 20s linear infinite;
+        }
+        @keyframes gridFloat {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-300px); }
+        }
+
+        /* FLOATING PARTICLES */
+        body::after {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            background: radial-gradient(circle, rgba(0,200,255,0.25) 0%, transparent 60%);
+            mix-blend-mode: screen;
+            opacity: 0.05;
+            animation: pulse 6s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.04; }
+            50% { opacity: 0.09; }
+        }
+
+        /* HERO SECTION */
+        .hero {
             text-align: center;
-            padding: 60px 20px;
-            background: radial-gradient(circle at center, #001428, #000000 70%);
+            padding: 90px 20px 60px;
+            position: relative;
+            z-index: 3;
         }
 
-        h1 {
-            font-size: 3rem;
-            color: #00cfff;
-            text-shadow: 0 0 25px #00aaff;
-            margin-bottom: 10px;
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            color: #00eaff;
+            letter-spacing: 3px;
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: #88d4ff;
-            margin-top: 6px;
+        .hero-sub {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.15rem;
+            margin-top: 12px;
+            color: #a9e8ff;
+            letter-spacing: 2px;
         }
 
-        /* Grid Layout */
+        /* HOLOGRAM VIDEO FRAME */
+        .hero-video {
+            width: 92%;
+            max-width: 900px;
+            margin: 45px auto 10px;
+            border-radius: 18px;
+            border: 2px solid #00cfff;
+            overflow: hidden;
+            box-shadow: 0 0 38px #00bfff, inset 0 0 25px #0088cc;
+            animation: holoPulse 4s infinite ease-in-out;
+        }
+        @keyframes holoPulse {
+            0%, 100% { box-shadow: 0 0 28px #00bfff, inset 0 0 22px #0088cc; }
+            50% { box-shadow: 0 0 42px #00eaff, inset 0 0 32px #00bbff; }
+        }
+
+        .hero-video video {
+            width: 100%;
+            display: block;
+        }
+
+        /* GRID LAYOUT */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 35px;
+            gap: 32px;
             padding: 40px 20px;
             max-width: 1500px;
             margin: auto;
+            position: relative;
+            z-index: 2;
         }
 
-        /* Card Styling */
+        /* GRID CARD */
         .card {
-            background-color: #001325;
-            border: 1px solid #003d66;
-            border-radius: 15px;
-            padding: 15px;
+            background: rgba(0, 20, 40, 0.55);
+            border: 1px solid #005f9a;
+            border-radius: 14px;
             text-align: center;
+            padding: 16px;
+            backdrop-filter: blur(6px);
             transition: 0.25s ease;
-            box-shadow: 0 0 15px #002a45;
+            box-shadow: 0 0 16px #00324f;
         }
 
         .card:hover {
             transform: translateY(-6px);
-            border-color: #00d0ff;
-            box-shadow: 0 0 25px #00cfff;
+            border-color: #00e4ff;
+            box-shadow: 0 0 28px #00cfff;
         }
 
-        .card img, .card video {
+        .card img,
+        .card video {
             width: 100%;
             border-radius: 12px;
             margin-bottom: 14px;
         }
 
-        /* Neon Buttons */
-        .themed-button {
+        /* BUTTON */
+        .btn {
             display: block;
             padding: 18px;
             border-radius: 12px;
             border: 2px solid #00cfff;
-            color: #00d9ff;
+            font-size: 1rem;
+            letter-spacing: 1px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            background: rgba(0, 30, 60, 0.35);
-            text-shadow: 0 0 10px #00b7ff;
-            transition: 0.25s ease;
-            box-shadow: inset 0 0 14px #003d66, 0 0 14px #003d66;
+            color: #00eaff;
+            font-family: 'Orbitron';
+            text-shadow: 0 0 10px #00cfff;
+            box-shadow: inset 0 0 12px #004a70, 0 0 12px #004a70;
+            transition: 0.25s;
         }
-
-        .themed-button:hover {
+        .btn:hover {
             background: #00cfff;
             color: #000;
             text-shadow: none;
-            box-shadow: 0 0 22px #00e5ff;
+            box-shadow: 0 0 22px #00eaff;
         }
 
-        /* Footer */
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 35px 20px;
-            margin-top: 50px;
-            color: #66cfff;
-            background-color: #000814;
-            border-top: 1px solid #003d66;
+            padding: 38px 20px;
+            margin-top: 40px;
+            background: #000814;
+            border-top: 1px solid #004566;
+            color: #71dbff;
+            position: relative;
+            z-index: 3;
         }
 
         footer a {
-            color: #00aaff;
+            color: #00cfff;
             text-decoration: none;
+            margin: 0 8px;
             transition: 0.25s;
         }
-
         footer a:hover {
-            color: #00e0ff;
-            text-shadow: 0 0 8px #00dfff;
+            color: #00eaff;
+            text-shadow: 0 0 10px #00eaff;
         }
-
-        /* Social links block */
-        .social-links {
-            margin-top: 18px;
-            font-size: 0.95rem;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-        }
-
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Cornelius Aurelius – The Omniscientrix</h1>
-    <div class="subtitle">Polymath • Inventor • Architect of Equilibrium • World-Builder</div>
-</header>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1 class="hero-title neon">CORNELIUS AURELIUS — THE OMNISCIENTRIX</h1>
+        <div class="hero-sub neon">ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY • INFORMATION • AWARENESS</div>
 
-<section class="grid">
+        <!-- HOLOGRAM HERO VIDEO -->
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="cornelius-and-spencer.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
 
-    <!-- FITNESS -->
-    <div class="card">
-        <video autoplay muted loop playsinline>
-            <source src="cornelius and spencer vid.mp4" type="video/mp4">
-        </video>
-        <a class="themed-button" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">Fitness Equilibrium</a>
-    </div>
+    <!-- GRID SECTION -->
+    <section class="grid">
 
-    <!-- AI ART -->
-    <div class="card">
-        <img src="ai.art.png" alt="AI Art">
-        <a class="themed-button" href="https://cornelius-aurelius.github.io/AI-ART/">AI.Art Gallery</a>
-    </div>
+        <div class="card">
+            <video autoplay muted loop playsinline>
+                <source src="cornelius-and-spencer.mp4" type="video/mp4">
+            </video>
+            <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-FITNESS-EQUILIBRIUM/">FITNESS EQUILIBRIUM</a>
+        </div>
 
-    <!-- BOOKS -->
-    <div class="card">
-        <img src="my books.png" alt="Books">
-        <a class="themed-button" href="https://cornelius-aurelius.github.io/BOOKS--/">Books Library</a>
-    </div>
+        <div class="card">
+            <img src="ai.art.png">
+            <a class="btn" href="https://cornelius-aurelius.github.io/AI-ART/">AI.ART GALLERY</a>
+        </div>
 
-    <!-- Button-only sections -->
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/Omniscientrix-Laws/">Omniscientrix Laws (vΩ)</a>
+        <div class="card">
+            <img src="my books.png">
+            <a class="btn" href="https://cornelius-aurelius.github.io/BOOKS--/">BOOKS LIBRARY</a>
+        </div>
 
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">Book → GPT Business</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Laws/">OMNISCIENTRIX LAWS (VΩ)</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">BOOK → GPT BUSINESS</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI BOOK CHATS</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-map/">UNIVERSE MAP</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">ZENODO RESEARCH HUB</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">INVENTIONS</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">WEBSITES HUB</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/KRONATRIX/">KRONATRIX AGENCY</a>
+        <a class="btn" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-ARCADE-/">OMNISCIENTRIX ARCADE</a>
 
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI Book Chats</a>
+    </section>
 
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/omniscientrix-map/">Universe Map</a>
+    <!-- FOOTER -->
+    <footer>
+        © 2025 CORNELIUS AURELIUS — THE OMNISCIENTRIX<br><br>
 
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">Zenodo Research Hub</a>
-
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">Inventions</a>
-
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">Websites Hub</a>
-
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/KRONATRIX/">KRONATRIX Agency</a>
-
-    <a class="themed-button" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">Omniscientrix Arcade</a>
-
-</section>
-
-<footer>
-    © 2025 <strong>Cornelius Aurelius — The Omniscientrix</strong><br>
-
-    <!-- REQUIRED GLOBAL LINKS -->
-    <a href="https://corneliusaurelius.com/" target="_blank">Main Hub</a> •
-    <a href="https://zenodo.org/records/17362534" target="_blank">Peace License</a> •
-    <a href="mailto:138licensing@gmail.com">138licensing@gmail.com</a>
-
-    <div class="social-links">
-        <a href="https://medium.com/@138licensing" target="_blank">Medium</a> |
-        <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank">Instagram</a> |
-        <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/" target="_blank">LinkedIn</a>
-    </div>
-</footer>
+        <a href="https://corneliusaurelius.com/" target="_blank">MAIN HUB</a> •
+        <a href="https://zenodo.org/records/17362534" target="_blank">PEACE LICENSE</a> •
+        <a href="mailto:138licensing@gmail.com">138LICENSING@GMAIL.COM</a> •
+        <a href="https://medium.com/@138licensing" target="_blank">MEDIUM</a> •
+        <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank">INSTAGRAM</a> •
+        <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/" target="_blank">LINKEDIN</a>
+    </footer>
 
 </body>
 </html>
