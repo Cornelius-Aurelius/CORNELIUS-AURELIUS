@@ -11,7 +11,7 @@
     <meta name="keywords" content="CORNELIUS AURELIUS, OMNISCIENTRIX, EQUILIBRIUM, AI, ΔJ = 0, ENERGY INFORMATION AWARENESS" />
     <meta name="author" content="CORNELIUS AURELIUS" />
 
-    <!-- GOOGLE FONTS -->
+    <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -29,19 +29,21 @@
         .hero-sub { font-size: clamp(1rem, 2.2vw, 1.4rem); }
         .btn { font-size: clamp(0.9rem, 1.5vw, 1.15rem); }
 
-        /* BACKGROUND GRID */
+        /* BACKGROUND GRID ANIMATION */
         body::before {
             content: "";
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            inset: 0;
             background: url('https://i.imgur.com/OZJ4bRh.png') repeat;
             background-size: cover;
             opacity: 0.06;
             animation: gridFloat 28s linear infinite;
             pointer-events: none;
         }
-        @keyframes gridFloat { from { transform: translateY(0); } to { transform: translateY(-400px); } }
+        @keyframes gridFloat {
+            from { transform: translateY(0); }
+            to { transform: translateY(-400px); }
+        }
 
         /* PARTICLE GLOW */
         body::after {
@@ -81,7 +83,7 @@
             margin-top: 14px;
         }
 
-        /* HOLOGRAM VIDEO */
+        /* HERO VIDEO HOLOGRAM */
         .hero-video {
             width: 92%;
             max-width: 920px;
@@ -91,12 +93,41 @@
             overflow: hidden;
             box-shadow: 0 0 40px #00cfff, inset 0 0 30px #0099cc;
             animation: holoPulse 4s infinite ease-in-out;
+            position: relative;
         }
         @keyframes holoPulse {
             0%, 100% { box-shadow: 0 0 30px #00bfff, inset 0 0 22px #0088cc; }
             50% { box-shadow: 0 0 50px #00eaff, inset 0 0 36px #00bbff; }
         }
-        .hero-video video { width: 100%; height: auto; display: block; }
+
+        .hero-video video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* VOLUME BUTTON */
+        .volume-btn {
+            position: absolute;
+            bottom: 18px;
+            right: 18px;
+            background: rgba(0, 0, 0, 0.55);
+            border: 2px solid #00dfff;
+            color: #00eaff;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Orbitron';
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            text-shadow: 0 0 10px #00cfff;
+            transition: 0.3s;
+        }
+        .volume-btn:hover {
+            background: #00eaff;
+            color: #000;
+            text-shadow: none;
+        }
 
         /* GRID */
         .grid {
@@ -132,6 +163,7 @@
             height: auto;
             border-radius: 12px;
             margin-bottom: 14px;
+            display: block;
         }
 
         /* BUTTON */
@@ -152,7 +184,6 @@
             background: #00cfff;
             color: #000;
             box-shadow: 0 0 25px #00eaff;
-            text-shadow: none;
         }
 
         /* FOOTER */
@@ -170,7 +201,7 @@
             color: #00cfff;
             margin: 0 10px;
             text-decoration: none;
-            transition: 0.25s;
+            transition: 0.3s;
         }
         footer a:hover {
             color: #00eaff;
@@ -187,19 +218,22 @@
         <div class="hero-sub">ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY • INFORMATION • AWARENESS</div>
 
         <div class="hero-video">
-            <video autoplay muted loop playsinline>
-                <source src="cornelius%20and%20spencer%20vid.mp4" type="video/mp4">
+            <video id="heroVideo" autoplay muted playsinline>
+                <source id="heroSource" src="cornelius%20and%20spencer%20vid.mp4" type="video/mp4">
             </video>
+
+            <!-- Volume Button (HERO ONLY) -->
+            <div class="volume-btn" id="volumeBtn">AUDIO</div>
         </div>
     </section>
 
     <!-- GRID -->
     <section class="grid">
 
-        <!-- FITNESS -->
+        <!-- FITNESS — ALWAYS FIXED VIDEO -->
         <div class="card">
             <video autoplay muted loop playsinline>
-                <source src="cornelius%20and%20spencer%20vid.mp4">
+                <source src="cornelius%20and%20spencer%20vid.mp4" type="video/mp4">
             </video>
             <a class="btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">FITNESS EQUILIBRIUM</a>
         </div>
@@ -241,7 +275,7 @@
         <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/">LINKEDIN</a>
     </footer>
 
-    <!-- RANDOM VIDEO ENGINE -->
+    <!-- RANDOM VIDEO + MONDAY LOGIC + VOLUME LOGIC -->
     <script>
         const randomVideos = [
             "2.mp4","3.mp4","4.mp4","5.mp4","6.mp4",
@@ -250,22 +284,24 @@
         ];
 
         const mondayVideo = "MONDAY.mp4";
-
         const today = new Date().getDay();
-        let selectedVideo = (today === 1) ? mondayVideo :
-            randomVideos[Math.floor(Math.random() * randomVideos.length)];
 
-        const heroSource = document.querySelector(".hero-video source");
-        const heroVideo = document.querySelector(".hero-video video");
+        const selectedVideo = (today === 1)
+            ? mondayVideo
+            : randomVideos[Math.floor(Math.random() * randomVideos.length)];
+
+        const heroVideo = document.getElementById("heroVideo");
+        const heroSource = document.getElementById("heroSource");
+
         heroSource.src = selectedVideo;
         heroVideo.load();
 
-        const gridSource = document.querySelector(".card video source");
-        const gridVideo = document.querySelector(".card video");
-        if (gridSource && gridVideo) {
-            gridSource.src = selectedVideo;
-            gridVideo.load();
-        }
+        /* VOLUME BUTTON ONLY FOR HERO */
+        const volumeBtn = document.getElementById("volumeBtn");
+        volumeBtn.addEventListener("click", () => {
+            heroVideo.muted = !heroVideo.muted;
+            volumeBtn.textContent = heroVideo.muted ? "AUDIO" : "MUTE";
+        });
     </script>
 
 </body>
