@@ -17,17 +17,17 @@ body {
     overflow-x: hidden;
 }
 
-/* PAGE WRAPPER */
+/* PAGE CONTAINER */
 .page {
     max-width: 1200px;
     margin: auto;
-    padding: 20px 15px;
+    padding: 20px 15px 40px;
 }
 
 /* TITLE */
 .title-block {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .title-block h1 {
@@ -46,39 +46,45 @@ body {
     font-family: 'Orbitron';
     font-size: clamp(0.85rem, 1.5vw, 1.2rem);
     color: #9cdcff;
-    margin-bottom: 25px;
 }
 
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
+    gap: 32px;
+    margin-top: 30px;
 }
 
-/* CARDS */
+/* CONTENT CARD */
 .card {
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
+/* SUBTLE NEON GLOW AROUND CONTENT */
 .card img,
 .card video {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: 12px;
+
+    /* Subtle neon blue outer glow */
+    box-shadow:
+        0 0 18px rgba(0, 200, 255, 0.35),
+        0 0 8px rgba(0, 150, 255, 0.25);
 }
 
-/* FITNESS EQUILIBRIUM VIDEO — FIXED ASPECT */
+/* FITNESS VIDEO SPECIAL RULE */
 .fitness-video {
     aspect-ratio: 4 / 5 !important;
     object-fit: cover !important;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn {
-    margin-top: 12px;
     padding: 14px;
     border-radius: 8px;
     border: 2px solid #00bfe6;
@@ -94,6 +100,25 @@ body {
     background: #00dfff;
     color: #000;
 }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px 10px;
+    font-size: 0.9rem;
+    color: #72c9ff;
+    border-top: 1px solid #033a55;
+}
+
+footer a {
+    color: #72c9ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #a8e8ff;
+}
 </style>
 </head>
 
@@ -104,7 +129,10 @@ body {
 <div class="title-block">
     <h1>CORNELIUS AURELIUS</h1>
     <h2>THE OMNISCIENTRIX</h2>
-    <div class="tagline">ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF<br>ENERGY · INFORMATION · AWARENESS</div>
+    <div class="tagline">
+        ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF<br>
+        ENERGY · INFORMATION · AWARENESS
+    </div>
 </div>
 
 <!-- GRID -->
@@ -142,9 +170,9 @@ body {
         <a class="btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">BOOK → GPT BUSINESS</a>
     </div>
 
-    <!-- AI BOOK CHATS -->
+    <!-- AI BOOK CHATS (UPDATED IMAGE) -->
     <div class="card">
-        <img src="Books to AI - BOOK CHATS.png">
+        <img src="Books to AI · BOOK CHATS (1).png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI BOOK CHATS</a>
     </div>
 
@@ -154,7 +182,7 @@ body {
         <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-map/">UNIVERSE MAP</a>
     </div>
 
-    <!-- ZENODO -->
+    <!-- ZENODO RESEARCH -->
     <div class="card">
         <img src="ZENODO RESEARCH HUB.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">ZENODO RESEARCH HUB</a>
@@ -166,9 +194,9 @@ body {
         <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">INVENTIONS</a>
     </div>
 
-    <!-- WEBSITES HUB -->
+    <!-- WEBSITES HUB (UPDATED IMAGE) -->
     <div class="card">
-        <img src="WEBSITES HUB.png">
+        <img src="WEBSITES HUB (1).png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">WEBSITES HUB</a>
     </div>
 
@@ -186,7 +214,16 @@ body {
 
 </section>
 
+<!-- FOOTER -->
+<footer>
+    <a href="https://corneliusaurelius.com/">MAIN SITE</a> •
+    <a href="https://www.instagram.com/cornelius_aurelius_/">INSTAGRAM</a> •
+    <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/">LINKEDIN</a> •
+    <a href="https://medium.com/@138licensing">MEDIUM</a> •
+    <a href="https://zenodo.org/records/17362534">ZENODO</a> •
+    <a href="mailto:138licensing@gmail.com">EMAIL</a>
+</footer>
+
 </div>
 </body>
 </html>
-
