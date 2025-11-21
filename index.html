@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CORNELIUS AURELIUS — THE OMNISCIENTRIX</title>
 
+<!-- SEO -->
 <meta name="description" content="CORNELIUS AURELIUS — THE OMNISCIENTRIX. ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY · INFORMATION · AWARENESS." />
 <meta name="keywords" content="CORNELIUS AURELIUS, OMNISCIENTRIX, EQUILIBRIUM, AI, ΔJ = 0, ENERGY INFORMATION AWARENESS" />
 <meta name="author" content="CORNELIUS AURELIUS" />
 
+<!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+/* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -19,9 +22,10 @@ body {
     color: #dff9ff;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* BACKGROUND VISUALS */
+/* BACKGROUND */
 body::before {
     content: "";
     position: fixed;
@@ -29,67 +33,61 @@ body::before {
     background: url('https://i.imgur.com/OZJ4bRh.png') repeat;
     background-size: cover;
     opacity: 0.05;
-    animation: gridFloat 40s linear infinite;
+    animation: gridFloat 45s linear infinite;
     z-index: -2;
 }
+
 @keyframes gridFloat {
     from { transform: translateY(0); }
-    to { transform: translateY(-500px); }
+    to { transform: translateY(-600px); }
 }
 
+/* RADIAL GLOW */
 body::after {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle, rgba(0,180,255,0.2) 0%, transparent 70%);
-    opacity: 0.06;
-    animation: glowPulse 10s infinite ease-in-out;
+    background: radial-gradient(circle, rgba(0,180,255,0.18) 0%, transparent 70%);
+    opacity: 0.07;
+    animation: glowPulse 12s infinite ease-in-out;
     z-index: -1;
 }
+
 @keyframes glowPulse {
-    0%, 100% { opacity: 0.04; }
-    50% { opacity: 0.15; }
+    0%,100% { opacity: 0.06; }
+    50% { opacity: 0.16; }
 }
 
-/* HERO VIDEO — TOP OF PAGE */
+/* HERO WRAPPER */
 .hero-video-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px 0 10px;
+    padding: 20px 0 0;
 }
 
+/* HERO VIDEO CARD */
 .hero-video {
-    width: min(92%, 480px);
-    border-radius: 20px;
+    width: min(95%, 520px);
+    border-radius: 22px;
     overflow: hidden;
     border: 2px solid #00eaff;
     background: #000;
     position: relative;
     animation: hologlow 4s infinite ease-in-out;
 }
+
 @keyframes hologlow {
-    0%, 100% { box-shadow: 0 0 28px #00bfff, inset 0 0 22px #0088cc; }
-    50% { box-shadow: 0 0 45px #00eaff, inset 0 0 35px #00bbff; }
+    0%,100% { box-shadow: 0 0 28px #00bfff, inset 0 0 22px #0088cc; }
+    50% { box-shadow: 0 0 46px #00eaff, inset 0 0 36px #00bbff; }
 }
 
 .hero-video video {
     width: 100%;
     height: auto;
-    object-fit: contain; /* FULL VIDEO, NEVER CROPPED */
-}
-
-/* DESKTOP GLITCH ONLY */
-@media (min-width: 768px) {
-    .glitch {
-        animation: glitchFX 0.28s;
-    }
-    @keyframes glitchFX {
-        0% { filter: contrast(2) saturate(2) blur(2px); }
-        40% { filter: contrast(3) hue-rotate(60deg) blur(3px); }
-        70% { filter: contrast(2) blur(1px); }
-        100% { filter: none; }
-    }
+    object-fit: contain; /* PERFECT FIT — NEVER CROPPED */
+    display: block;
+    background-color: #000;
 }
 
 /* VOLUME BUTTON */
@@ -97,26 +95,27 @@ body::after {
     position: absolute;
     bottom: 14px;
     right: 14px;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.6);
     border: 2px solid #00eaff;
     color: #00eaff;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: 'Orbitron';
     font-size: 0.75rem;
     letter-spacing: 2px;
     cursor: pointer;
+    user-select: none;
 }
 
 /* TITLE BLOCK */
 .title-block {
     text-align: center;
-    padding-top: 10px;
+    padding: 20px 10px 5px;
 }
 
 .title-block h1 {
     font-family: 'Orbitron';
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2.7rem, 6vw, 4.5rem);
     letter-spacing: 3px;
     margin-bottom: 8px;
     text-shadow: 0 0 25px #00bfff;
@@ -124,52 +123,54 @@ body::after {
 
 .title-block h2 {
     font-family: 'Orbitron';
-    font-size: clamp(1.4rem, 3.5vw, 2.4rem);
-    margin-bottom: 12px;
+    font-size: clamp(1.5rem, 3.6vw, 2.5rem);
+    margin-bottom: 10px;
 }
 
 .tagline {
     font-family: 'Orbitron';
-    font-size: clamp(0.8rem, 1.6vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.8vw, 1.3rem);
     color: #88d4ff;
     letter-spacing: 2px;
-    margin-bottom: 20px;
-    line-height: 1.4;
+    margin-bottom: 25px;
+    line-height: 1.45;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 40px 20px;
-    max-width: 1500px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px;
+    padding: 40px 20px 50px;
+    max-width: 1550px;
     margin: auto;
 }
 
 .card {
     background: rgba(0,20,40,0.55);
     border: 1px solid #006699;
-    padding: 16px;
-    border-radius: 14px;
+    padding: 18px;
+    border-radius: 16px;
     backdrop-filter: blur(6px);
 }
 
 .card video {
     width: 100%; 
-    height: 330px;
-    border-radius: 12px;
-    object-fit: cover; /* BEST LOOK FOR THUMBNAILS */
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
 }
 
 .card img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 14px;
 }
 
+/* BUTTON */
 .btn {
     display: block;
-    margin-top: 12px;
+    margin-top: 15px;
     padding: 15px;
     border-radius: 12px;
     border: 2px solid #00cfff;
@@ -178,7 +179,7 @@ body::after {
     text-decoration: none;
     font-family: 'Orbitron';
     letter-spacing: 2px;
-    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.4vw, 1.15rem);
     box-shadow: inset 0 0 12px #004a70, 0 0 12px #004a70;
 }
 
@@ -190,20 +191,27 @@ body::after {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 35px 20px;
+    padding: 40px 20px;
     background: #000814;
     border-top: 1px solid #004566;
     margin-top: 40px;
+    font-size: 0.9rem;
 }
-footer a { color: #00cfff; text-decoration: none; margin: 0 10px; }
-footer a:hover { color: #00eaff; }
 
+footer a {
+    color: #00cfff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    color: #00eaff;
+}
 </style>
 </head>
 <body>
 
-
-<!-- HERO VIDEO FIRST -->
+<!-- HERO -->
 <div class="hero-video-wrapper">
     <div class="hero-video">
         <video id="heroVideo" autoplay muted playsinline>
@@ -223,13 +231,12 @@ footer a:hover { color: #00eaff; }
     </div>
 </div>
 
-
 <!-- GRID -->
 <section class="grid">
 
     <div class="card">
         <video autoplay muted loop playsinline>
-            <source src="cornelius%20and%20spencer%20vid.mp4" type="video/mp4">
+            <source src="cornelius and spencer vid.mp4" type="video/mp4">
         </video>
         <a class="btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">FITNESS EQUILIBRIUM</a>
     </div>
@@ -240,7 +247,7 @@ footer a:hover { color: #00eaff; }
     </div>
 
     <div class="card">
-        <img src="my%20books.png">
+        <img src="my books.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/BOOKS--/">BOOKS LIBRARY</a>
     </div>
 
@@ -253,8 +260,8 @@ footer a:hover { color: #00eaff; }
     <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">WEBSITES HUB</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/KRONATRIX/">KRONATRIX AGENCY</a>
     <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">OMNISCIENTRIX ARCADE</a>
-</section>
 
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -267,10 +274,8 @@ footer a:hover { color: #00eaff; }
     <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/">LINKEDIN</a>
 </footer>
 
-
-
-<!-- PLAYLIST ENGINE -->
 <script>
+/* PLAYLIST ENGINE */
 const playlist = [
     "2.mp4","3.mp4","4.mp4","5.mp4","6.mp4",
     "7.mp4","8.mp4","9.mp4","10.mp4",
@@ -285,13 +290,9 @@ const heroVideo = document.getElementById("heroVideo");
 const heroSource = document.getElementById("heroSource");
 
 function loadVideo(src) {
-    if (window.innerWidth >= 768) {
-        heroVideo.classList.add("glitch");
-        setTimeout(() => heroVideo.classList.remove("glitch"), 300);
-    }
     heroSource.src = src;
     heroVideo.load();
-    heroVideo.play();
+    heroVideo.play().catch(()=>{});
 }
 
 // Monday override
@@ -300,14 +301,13 @@ if (today === 1) {
     loadVideo(mondayVideo);
 } else {
     loadVideo(playlist[index]);
-
     heroVideo.addEventListener("ended", () => {
         index = (index + 1) % playlist.length;
         loadVideo(playlist[index]);
     });
 }
 
-// UNLOCK AUDIO ON FIRST INTERACTION
+// AUDIO UNLOCK
 let audioUnlocked = false;
 function unlockAudio() {
     if (!audioUnlocked) {
@@ -318,7 +318,6 @@ function unlockAudio() {
 document.addEventListener("click", unlockAudio);
 document.addEventListener("touchstart", unlockAudio);
 
-// VOLUME BUTTON
 document.getElementById("volumeBtn").addEventListener("click", () => {
     heroVideo.muted = !heroVideo.muted;
 });
