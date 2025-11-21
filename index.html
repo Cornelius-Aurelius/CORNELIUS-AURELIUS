@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CORNELIUS AURELIUS — THE OMNISCIENTRIX</title>
 
-<meta name="description" content="CORNELIUS AURELIUS — THE OMNISCIENTRIX. ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF ENERGY · INFORMATION · AWARENESS." />
-<meta name="keywords" content="CORNELIUS AURELIUS, OMNISCIENTRIX, EQUILIBRIUM, AI, ΔJ = 0, ENERGY INFORMATION AWARENESS" />
-<meta name="author" content="CORNELIUS AURELIUS" />
-
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -21,357 +17,176 @@ body {
     overflow-x: hidden;
 }
 
-/* BACKGROUND */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url('https://i.imgur.com/OZJ4bRh.png') repeat;
-    background-size: cover;
-    opacity: 0.05;
-    animation: gridFloat 45s linear infinite;
-    z-index: -2;
-}
-@keyframes gridFloat {
-    from { transform: translateY(0); }
-    to { transform: translateY(-600px); }
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(circle, rgba(0,180,255,0.18) 0%, transparent 70%);
-    opacity: 0.07;
-    animation: glowPulse 12s infinite ease-in-out;
-    z-index: -1;
-}
-@keyframes glowPulse {
-    0%,100% { opacity: 0.06; }
-    50% { opacity: 0.16; }
-}
-
-/* REEL FRAME (HERO + FITNESS) */
-.reel-frame {
-    width: min(95vw, 420px);
-    aspect-ratio: 9 / 16;
-    background: #000;
-    border-radius: 28px;
-    overflow: hidden;
-    border: 3px solid #00eaff;
-    box-shadow:
-        0 0 45px #00eaff,
-        inset 0 0 32px #0099cc;
-    animation: reelGlow 4s infinite ease-in-out;
-}
-@keyframes reelGlow {
-    0%,100% { box-shadow: 0 0 35px #00bfff, inset 0 0 18px #006699; }
-    50% { box-shadow: 0 0 55px #00eaff, inset 0 0 33px #00bbff; }
-}
-
-.reel-frame video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: #000;
-}
-
-/* POST FRAME (images) */
-.post-frame {
-    width: min(90vw, 350px);
-    aspect-ratio: 4 / 5;
-    border-radius: 28px;
-    overflow: hidden;
-    border: 3px solid #00eaff;
-    box-shadow:
-        0 0 45px #00eaff,
-        inset 0 0 32px #0099cc;
-    animation: reelGlow 4s infinite ease-in-out;
-}
-.post-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* HERO WRAPPER */
-.hero-video-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0 10px;
-}
-
-.volume-btn {
-    position: absolute;
-    bottom: 14px;
-    right: 14px;
-    background: rgba(0,0,0,0.7);
-    border: 2px solid #00eaff;
-    color: #00eaff;
-    padding: 8px 12px;
-    border-radius: 10px;
-    font-family: 'Orbitron';
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    cursor: pointer;
+/* PAGE WRAPPER */
+.page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 15px;
 }
 
 /* TITLE */
 .title-block {
     text-align: center;
-    padding: 15px 10px 5px;
+    margin-bottom: 20px;
 }
 
 .title-block h1 {
     font-family: 'Orbitron';
-    font-size: clamp(2.7rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
     margin-bottom: 8px;
-    text-shadow: 0 0 25px #00bfff;
 }
 
 .title-block h2 {
     font-family: 'Orbitron';
-    font-size: clamp(1.5rem, 3.6vw, 2.5rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    margin-bottom: 6px;
 }
 
 .tagline {
     font-family: 'Orbitron';
-    font-size: clamp(0.9rem, 1.8vw, 1.3rem);
-    color: #88d4ff;
-    letter-spacing: 2px;
+    font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+    color: #9cdcff;
     margin-bottom: 25px;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 40px;
-    padding: 40px 20px 50px;
-    max-width: 1500px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
 }
 
+/* CARDS */
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-/* BUTTON */
-.btn {
-    margin-top: 15px;
-    padding: 15px;
+.card img,
+.card video {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
     border-radius: 12px;
-    border: 2px solid #00cfff;
+}
+
+/* FITNESS EQUILIBRIUM VIDEO — FIXED ASPECT */
+.fitness-video {
+    aspect-ratio: 4 / 5 !important;
+    object-fit: cover !important;
+}
+
+/* BUTTONS */
+.btn {
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 8px;
+    border: 2px solid #00bfe6;
     text-align: center;
-    color: #00eaff;
+    color: #00dfff;
     text-decoration: none;
     font-family: 'Orbitron';
-    letter-spacing: 2px;
-    font-size: clamp(0.9rem, 1.4vw, 1.15rem);
-    box-shadow: inset 0 0 12px #004a70, 0 0 12px #004a70;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    letter-spacing: 1px;
 }
+
 .btn:hover {
-    background: #00eaff;
+    background: #00dfff;
     color: #000;
 }
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background: #000814;
-    border-top: 1px solid #004566;
-    margin-top: 40px;
-}
-footer a {
-    color: #00cfff;
-    margin: 0 8px;
-    text-decoration: none;
-}
-footer a:hover { color: #00eaff; }
 </style>
 </head>
-<body>
 
-<!-- HERO VIDEO -->
-<div class="hero-video-wrapper">
-    <div class="hero-video-container" style="position:relative;">
-        <div class="reel-frame">
-            <video id="heroVideo" autoplay muted playsinline>
-                <source id="heroSource" src="2.mp4" type="video/mp4">
-            </video>
-            <div class="volume-btn" id="volumeBtn">AUDIO</div>
-        </div>
-    </div>
-</div>
+<body>
+<div class="page">
 
 <!-- TITLE -->
 <div class="title-block">
     <h1>CORNELIUS AURELIUS</h1>
     <h2>THE OMNISCIENTRIX</h2>
-    <div class="tagline">
-        ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF<br>
-        ENERGY · INFORMATION · AWARENESS
-    </div>
+    <div class="tagline">ΔJ = 0 — ABSOLUTE EQUILIBRIUM OF<br>ENERGY · INFORMATION · AWARENESS</div>
 </div>
 
 <!-- GRID -->
 <section class="grid">
 
-    <!-- FITNESS EQUILIBRIUM (REEL) -->
+    <!-- FITNESS EQUILIBRIUM -->
     <div class="card">
-        <div class="reel-frame">
-            <video autoplay muted loop playsinline>
-                <source src="cornelius and spencer vid.mp4" type="video/mp4">
-            </video>
-        </div>
+        <video class="fitness-video" autoplay muted loop playsinline>
+            <source src="cornelius and spencer vid.mp4" type="video/mp4">
+        </video>
         <a class="btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">FITNESS EQUILIBRIUM</a>
     </div>
 
     <!-- AI ART -->
     <div class="card">
-        <div class="post-frame">
-            <img src="AI ART.png">
-        </div>
+        <img src="AI ART.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/AI-ART/">AI.ART GALLERY</a>
     </div>
 
     <!-- BOOKS LIBRARY -->
     <div class="card">
-        <div class="post-frame">
-            <img src="BOOKS LIBRARY.png">
-        </div>
+        <img src="BOOKS LIBRARY.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/BOOKS--/">BOOKS LIBRARY</a>
     </div>
 
     <!-- OMNISCIENTRIX LAWS -->
     <div class="card">
-        <div class="post-frame">
-            <img src="Omniscientrix-Laws.png">
-        </div>
+        <img src="Omniscientrix-Laws.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Laws/">OMNISCIENTRIX LAWS (VΩ)</a>
     </div>
 
     <!-- BOOK TO GPT -->
     <div class="card">
-        <div class="post-frame">
-            <img src="BOOK TO GPT.png">
-        </div>
+        <img src="BOOK TO GPT.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">BOOK → GPT BUSINESS</a>
     </div>
 
     <!-- AI BOOK CHATS -->
     <div class="card">
-        <div class="post-frame">
-            <img src="Books to AI - BOOK CHATS.png">
-        </div>
+        <img src="Books to AI - BOOK CHATS.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI BOOK CHATS</a>
     </div>
 
     <!-- UNIVERSE MAP -->
     <div class="card">
-        <div class="post-frame">
-            <img src="UNIVERSE MAP.png">
-        </div>
+        <img src="UNIVERSE MAP.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-map/">UNIVERSE MAP</a>
     </div>
 
-    <!-- ZENODO RESEARCH -->
+    <!-- ZENODO -->
     <div class="card">
-        <div class="post-frame">
-            <img src="ZENODO RESEARCH HUB.png">
-        </div>
+        <img src="ZENODO RESEARCH HUB.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">ZENODO RESEARCH HUB</a>
     </div>
 
     <!-- INVENTIONS -->
     <div class="card">
-        <div class="post-frame">
-            <img src="INVENTIONS.png">
-        </div>
+        <img src="INVENTIONS.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">INVENTIONS</a>
     </div>
 
     <!-- WEBSITES HUB -->
     <div class="card">
-        <div class="post-frame">
-            <img src="WEBSITES HUB.png">
-        </div>
+        <img src="WEBSITES HUB.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">WEBSITES HUB</a>
     </div>
 
     <!-- KRONATRIX -->
     <div class="card">
-        <div class="post-frame">
-            <img src="KRONATRIX.png">
-        </div>
+        <img src="KRONATRIX.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/KRONATRIX/">KRONATRIX AGENCY</a>
     </div>
 
     <!-- ARCADE -->
     <div class="card">
-        <div class="post-frame">
-            <img src="OMNISCIENTRIX ARCADE.png">
-        </div>
+        <img src="OMNISCIENTRIX ARCADE.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">OMNISCIENTRIX ARCADE</a>
     </div>
 
 </section>
 
-<!-- FOOTER -->
-<footer>
-    © 2025 CORNELIUS AURELIUS — THE OMNISCIENTRIX<br><br>
-    <a href="https://corneliusaurelius.com/">MAIN HUB</a> •
-    <a href="https://zenodo.org/records/17362534">PEACE LICENSE</a> •
-    <a href="mailto:138licensing@gmail.com">138LICENSING@GMAIL.COM</a> •
-    <a href="https://medium.com/@138licensing">MEDIUM</a> •
-    <a href="https://www.instagram.com/cornelius_aurelius_/">INSTAGRAM</a> •
-    <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/">LINKEDIN</a>
-</footer>
-
-<!-- PLAYLIST ENGINE -->
-<script>
-const playlist = [
-    "2.mp4","3.mp4","4.mp4","5.mp4","6.mp4",
-    "7.mp4","8.mp4","9.mp4","10.mp4",
-    "11.mp4","12.mp4","13.mp4"
-];
-
-let index = 0;
-const heroVideo = document.getElementById("heroVideo");
-const heroSource = document.getElementById("heroSource");
-
-function loadVideo(src) {
-    heroSource.src = src;
-    heroVideo.load();
-    heroVideo.play().catch(()=>{});
-}
-
-loadVideo(playlist[index]);
-
-heroVideo.addEventListener("ended", () => {
-    index = (index + 1) % playlist.length;
-    loadVideo(playlist[index]);
-});
-
-let audioUnlocked = false;
-function unlockAudio() {
-    if (!audioUnlocked) {
-        heroVideo.muted = false;
-        audioUnlocked = true;
-    }
-}
-document.addEventListener("click", unlockAudio);
-document.addEventListener("touchstart", unlockAudio);
-
-document.getElementById("volumeBtn").addEventListener("click", () => {
-    heroVideo.muted = !heroVideo.muted;
-});
-</script>
-
+</div>
 </body>
 </html>
+
