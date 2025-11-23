@@ -48,6 +48,12 @@ body {
     color: #9cdcff;
 }
 
+.cert-small {
+    font-size: 0.75rem;
+    opacity: 0.65;
+    letter-spacing: 1px;
+}
+
 /* GRID */
 .grid {
     display: grid;
@@ -63,7 +69,7 @@ body {
     gap: 12px;
 }
 
-/* SUBTLE NEON GLOW AROUND CONTENT */
+/* SUBTLE NEON GLOW */
 .card img,
 .card video {
     width: 100%;
@@ -71,13 +77,12 @@ body {
     object-fit: cover;
     border-radius: 12px;
 
-    /* Subtle neon blue outer glow */
     box-shadow:
         0 0 18px rgba(0, 200, 255, 0.35),
         0 0 8px rgba(0, 150, 255, 0.25);
 }
 
-/* FITNESS VIDEO SPECIAL RULE */
+/* FITNESS VIDEO */
 .fitness-video {
     aspect-ratio: 4 / 5 !important;
     object-fit: cover !important;
@@ -101,6 +106,64 @@ body {
     color: #000;
 }
 
+/* CERTIFICATION BUTTON */
+.cert-button-wrapper {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.cert-btn {
+    padding: 12px 24px;
+    border: 2px solid #00dfff;
+    background: transparent;
+    color: #00dfff;
+    font-family: 'Orbitron';
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cert-btn:hover {
+    background: #00dfff;
+    color: #000;
+}
+
+/* MODAL */
+.cert-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 999999;
+}
+
+.cert-content {
+    max-width: 750px;
+    background: #00141f;
+    padding: 25px;
+    border-radius: 12px;
+    overflow-y: auto;
+    max-height: 90vh;
+    box-shadow: 0 0 24px #00d5ff80;
+}
+
+.cert-content h2 {
+    font-family: 'Orbitron';
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cert-content img {
+    width: 100%;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 0 14px rgba(0, 200, 255, 0.4);
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -119,6 +182,24 @@ footer a {
 footer a:hover {
     color: #a8e8ff;
 }
+
+/* CERTIFICATION BAR */
+.cert-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 40px;
+    padding: 10px 0;
+    opacity: 0.7;
+}
+
+.cert-bar img {
+    height: 38px;
+    width: auto;
+    border-radius: 6px;
+    filter: drop-shadow(0 0 6px rgba(0, 200, 255, 0.4));
+}
 </style>
 </head>
 
@@ -130,16 +211,16 @@ footer a:hover {
     <h1>CORNELIUS AURELIUS</h1>
     <h2>THE OMNISCIENTRIX</h2>
     <div class="tagline">
-        δJ ≈ 0
-        <br>
-        ENERGY · INFORMATION · AWARENESS
+        δJ ≈ 0 <br>
+        ENERGY · INFORMATION · AWARENESS <br><br>
+        <span class="cert-small">Google & HubSpot Certified</span>
     </div>
 </div>
 
 <!-- GRID -->
 <section class="grid">
 
-    <!-- FITNESS EQUILIBRIUM -->
+    <!-- FITNESS -->
     <div class="card">
         <video class="fitness-video" autoplay muted loop playsinline>
             <source src="cornelius and spencer vid.mp4" type="video/mp4">
@@ -159,7 +240,7 @@ footer a:hover {
         <a class="btn" href="https://cornelius-aurelius.github.io/BOOKS--/">BOOKS LIBRARY</a>
     </div>
 
-    <!-- OMNISCIENTRIX LAWS -->
+    <!-- LAWS -->
     <div class="card">
         <img src="Omniscientrix-Laws.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/">OMNISCIENTRIX LAWS (VΩ)</a>
@@ -171,7 +252,7 @@ footer a:hover {
         <a class="btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">BOOK → GPT BUSINESS</a>
     </div>
 
-    <!-- AI BOOK CHATS (UPDATED IMAGE) -->
+    <!-- AI BOOK CHATS -->
     <div class="card">
         <img src="Books to AI · BOOK CHATS (1).png">
         <a class="btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">AI BOOK CHATS</a>
@@ -183,7 +264,7 @@ footer a:hover {
         <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-map/">UNIVERSE MAP</a>
     </div>
 
-    <!-- ZENODO RESEARCH -->
+    <!-- ZENODO -->
     <div class="card">
         <img src="ZENODO RESEARCH HUB.png">
         <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">ZENODO RESEARCH HUB</a>
@@ -195,12 +276,11 @@ footer a:hover {
         <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">INVENTIONS</a>
     </div>
 
-    <!-- WEBSITES HUB (UPDATED IMAGE) -->
+    <!-- WEBSITES HUB -->
     <div class="card">
-    <img src="WEBSITES  HUB (1).png">
-    <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">WEBSITES HUB</a>
-</div>
-
+        <img src="WEBSITES  HUB (1).png">
+        <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">WEBSITES HUB</a>
+    </div>
 
     <!-- KRONATRIX -->
     <div class="card">
@@ -216,6 +296,37 @@ footer a:hover {
 
 </section>
 
+<!-- VIEW CERTIFICATIONS BUTTON -->
+<div class="cert-button-wrapper">
+    <button class="cert-btn" onclick="openCerts()">VIEW CERTIFICATIONS</button>
+</div>
+
+<!-- MODAL -->
+<div id="cert-modal" class="cert-modal" onclick="closeCerts()">
+    <div class="cert-content" onclick="event.stopPropagation()">
+        <h2>Certifications</h2>
+
+        <img src="1.png">
+        <img src="2.png">
+        <img src="3.png">
+        <img src="4.png">
+        <img src="5.png">
+        <img src="6.png">
+        <img src="7.png">
+        <img src="8.png">
+        <img src="9.png">
+
+    </div>
+</div>
+
+<!-- CERTIFICATION BAR -->
+<div class="cert-bar">
+    <img src="1.png">
+    <img src="2.png">
+    <img src="3.png">
+    <img src="4.png">
+</div>
+
 <!-- FOOTER -->
 <footer>
     <a href="https://corneliusaurelius.com/">MAIN SITE</a> •
@@ -227,5 +338,15 @@ footer a:hover {
 </footer>
 
 </div>
+
+<script>
+function openCerts() {
+    document.getElementById("cert-modal").style.display = "flex";
+}
+function closeCerts() {
+    document.getElementById("cert-modal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
