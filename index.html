@@ -157,7 +157,8 @@ body {
     margin-bottom: 20px;
 }
 
-.cert-content img {
+.cert-content img,
+.cert-content video {
     width: 100%;
     margin-bottom: 22px;
     border-radius: 12px;
@@ -304,8 +305,10 @@ footer a:hover {
 <!-- MODAL -->
 <div id="cert-modal" class="cert-modal" onclick="closeCerts()">
     <div class="cert-content" onclick="event.stopPropagation()">
+
         <h2>Certifications</h2>
 
+        <!-- CERTIFICATE IMAGES -->
         <img src="1.png">
         <img src="2.png">
         <img src="3.png">
@@ -315,6 +318,14 @@ footer a:hover {
         <img src="7.png">
         <img src="8.png">
         <img src="9.png">
+
+        <!-- CERTIFICATE VIDEOS -->
+        <video controls src="10.mp4"></video>
+        <video controls src="11.mp4"></video>
+        <video controls src="12.mp4"></video>
+        <video controls src="13.mp4"></video>
+        <video controls src="14.mp4"></video>
+        <video controls src="15.mp4"></video>
 
     </div>
 </div>
