@@ -99,6 +99,7 @@ body {
     font-family: 'Orbitron';
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -229,6 +230,14 @@ footer a:hover {
         <a class="btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">FITNESS EQUILIBRIUM</a>
     </div>
 
+    <!-- FEATURED CERTIFICATE VIDEO -->
+    <div class="card">
+        <video class="fitness-video" autoplay muted loop playsinline>
+            <source src="Untitled%20design%20(2).mp4" type="video/mp4">
+        </video>
+        <a class="btn" onclick="openCerts()">CERTIFICATE / INSIGHTS</a>
+    </div>
+
     <!-- AI ART -->
     <div class="card">
         <img src="AI ART.png">
@@ -297,12 +306,12 @@ footer a:hover {
 
 </section>
 
-<!-- VIEW CERTIFICATIONS BUTTON -->
+<!-- MODAL BUTTON -->
 <div class="cert-button-wrapper">
-    <button class="cert-btn" onclick="openCerts()">VIEW CERTIFICATIONS</button>
+    <button class="cert-btn" onclick="openCerts()">CERTIFICATE / INSIGHTS</button>
 </div>
 
-<!-- MODAL -->
+<!-- CERTIFICATE MODAL -->
 <div id="cert-modal" class="cert-modal" onclick="closeCerts()">
     <div class="cert-content" onclick="event.stopPropagation()">
 
