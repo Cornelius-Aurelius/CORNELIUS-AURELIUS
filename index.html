@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -100,7 +100,7 @@
     }
 
     .brand span {
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.85rem;
       font-weight: 700;
       letter-spacing: 0.14em;
@@ -152,10 +152,10 @@
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 380px;
-      gap: 34px;
+      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.62fr);
+      gap: clamp(26px, 4vw, 46px);
       align-items: center;
-      padding: clamp(28px, 5vw, 58px);
+      padding: clamp(28px, 4.4vw, 52px);
     }
 
     .pill {
@@ -169,7 +169,7 @@
       border-radius: 999px;
       background: rgba(0, 217, 255, 0.055);
       color: #69ecff;
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.78rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -184,28 +184,28 @@
     }
 
     h1 {
-      font-family: Orbitron, sans-serif;
-      font-size: clamp(2.65rem, 7.3vw, 5.15rem);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.45rem, 5.5vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
       text-transform: uppercase;
       text-shadow: 0 0 28px rgba(0, 217, 255, 0.18);
-      max-width: 780px;
+      max-width: 610px;
     }
 
     .subtitle {
       margin-top: 16px;
       color: #3eeeff;
-      font-family: Orbitron, sans-serif;
-      font-size: clamp(1.05rem, 2.3vw, 1.55rem);
-      letter-spacing: 0.20em;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1rem, 1.7vw, 1.34rem);
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     .formula {
       margin-top: 18px;
       color: #d9fbff;
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(1.15rem, 3vw, 1.75rem);
       letter-spacing: 0.15em;
     }
@@ -235,7 +235,7 @@
       border-radius: 14px;
       text-decoration: none;
       text-align: center;
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 900;
       letter-spacing: 0.07em;
       text-transform: uppercase;
@@ -270,6 +270,8 @@
     }
 
     .signal-box {
+      width: 100%;
+      max-width: 100%;
       border: 1px solid rgba(0, 217, 255, 0.22);
       border-radius: 24px;
       background: rgba(0, 0, 0, 0.50);
@@ -278,10 +280,10 @@
     }
 
     .signal-box h2 {
-      font-family: Orbitron, sans-serif;
-      font-size: clamp(1.05rem, 2vw, 1.45rem);
-      line-height: 1.35;
-      letter-spacing: 0.10em;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1rem, 1.45vw, 1.26rem);
+      line-height: 1.42;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -308,7 +310,7 @@
       border-radius: 10px;
       background: rgba(0, 217, 255, 0.09);
       color: #4cecff;
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.75rem;
       font-weight: 900;
     }
@@ -386,7 +388,7 @@
     }
 
     .section-head h2 {
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(1.45rem, 3vw, 2.2rem);
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -466,7 +468,7 @@
     }
 
     .card h3 {
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       color: #effcff;
       font-size: 1rem;
       line-height: 1.35;
@@ -594,7 +596,7 @@
 
     .cert-content h2 {
       padding-right: 54px;
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(1.4rem, 3vw, 2rem);
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -642,7 +644,7 @@
     }
 
     footer h2 {
-      font-family: Orbitron, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 1rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -701,7 +703,7 @@
 
     .toast.show { transform: translate(-50%, 0); opacity: 1; }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1120px) {
       .hero-inner { grid-template-columns: 1fr; }
       .signal-box { max-width: 660px; }
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -711,13 +713,14 @@
 
     @media (max-width: 720px) {
       .page { padding-inline: 14px; }
+      .brand span { font-size: 0.78rem; letter-spacing: 0.09em; }
       .topbar-inner { flex-direction: column; align-items: stretch; min-height: auto; }
       .brand { justify-content: center; }
       .nav { display: grid; grid-template-columns: repeat(2, 1fr); }
       .nav a, .nav button { width: 100%; font-size: 0.82rem; }
       .hero { margin-top: 16px; border-radius: 24px; }
       .hero-inner { padding: 24px 18px; gap: 22px; }
-      h1 { font-size: clamp(2.35rem, 13vw, 4rem); }
+      h1 { font-size: clamp(2.35rem, 12vw, 3.8rem); max-width: 100%; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
       .tools { grid-template-columns: 1fr; }
       .tool-buttons { justify-content: stretch; display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -755,7 +758,7 @@
             <h1 id="hero-title">Cornelius<br>Aurelius</h1>
             <div class="subtitle">The Omniscientrix</div>
             <div class="formula">δJ ≈ 0</div>
-            <p class="hero-copy"><strong>Energy · Information · Awareness</strong> — a black-and-neon project universe built around minimising wasted energy, turning ideas into tools, and making hidden signals easier to see.</p>
+            <p class="hero-copy"><strong>Energy · Information · Awareness</strong> — a project universe built around minimising wasted energy, turning ideas into tools, and making hidden signals easier to see.</p>
             <div class="hero-actions">
               <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebook Library</a>
               <a class="ghost" href="#projects">Explore Projects</a>
@@ -789,7 +792,7 @@
       <section id="projects" aria-labelledby="projects-title">
         <div class="section-head">
           <h2 id="projects-title">Project Library</h2>
-          <p>Every card opens part of the Cornelius Aurelius universe. Clean black layout, subtle neon blue highlights, and no overlapping sections.</p>
+          <p>Every card opens part of the Cornelius Aurelius universe. Search, explore, read, use, share and move between projects without friction.</p>
         </div>
 
         <div class="grid" id="project-grid">
