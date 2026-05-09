@@ -3,173 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#02060a" />
-  <meta name="description" content="Cornelius Aurelius — The Omniscientrix. Explore free ebooks, AI projects, marketing GPTs, football tools, inventions, research hubs, creative systems, books, fitness, art, and the wider Cornelius Aurelius project universe." />
-  <meta name="keywords" content="Cornelius Aurelius, The Omniscientrix, Omniscientrix, free ebooks, AI projects, KRONATRIX, colour blindness in football, Cornelius Aurelius ebooks, AI art, inventions, research hub" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Cornelius Aurelius — The Omniscientrix. Explore free ebooks, AI tools, research, football projects, art, inventions, books, marketing GPTs and digital experiments." />
+  <meta name="keywords" content="Cornelius Aurelius, Omniscientrix, free ebooks, Cornelius Aurelius ebooks, KRONATRIX, colour blindness in football, AI tools, inventions, AI art, research hub" />
   <meta name="author" content="Cornelius Aurelius" />
 
   <meta property="og:title" content="Cornelius Aurelius — The Omniscientrix" />
-  <meta property="og:description" content="Energy. Information. Awareness. Explore the Cornelius Aurelius project universe: ebooks, AI tools, football projects, research, inventions, art, books, and more." />
+  <meta property="og:description" content="Energy · Information · Awareness. Explore the Cornelius Aurelius project universe." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://cornelius-aurelius.github.io/" />
   <meta property="og:image" content="ChatGPT Image May 9, 2026, 05_40_53 PM.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cornelius Aurelius — The Omniscientrix" />
-  <meta name="twitter:description" content="Explore the Cornelius Aurelius universe: free ebooks, AI tools, football projects, research hubs, inventions, art, books, and more." />
-  <meta name="twitter:image" content="ChatGPT Image May 9, 2026, 05_40_53 PM.png" />
 
   <title>Cornelius Aurelius — The Omniscientrix</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #02060a;
-      --bg-2: #030c14;
-      --panel: rgba(4, 19, 31, 0.74);
-      --panel-2: rgba(2, 31, 48, 0.78);
-      --line: rgba(68, 220, 255, 0.24);
-      --line-strong: rgba(0, 223, 255, 0.72);
-      --text: #e8fbff;
-      --muted: #9bc9dc;
-      --muted-2: #72aabe;
-      --neon: #00dfff;
-      --neon-2: #55f1ff;
-      --blue: #047bff;
-      --shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
-      --glow: 0 0 18px rgba(0, 223, 255, 0.38), 0 0 42px rgba(4, 123, 255, 0.18);
-      --radius: 24px;
-      --radius-sm: 16px;
-      --max: 1240px;
+      --black: #000000;
+      --black-2: #03070b;
+      --panel: #050b10;
+      --panel-2: #07111a;
+      --text: #ecfbff;
+      --soft: #a9c9d4;
+      --muted: #7896a2;
+      --blue: #00d9ff;
+      --blue-2: #008cff;
+      --line: rgba(0, 217, 255, 0.18);
+      --line-strong: rgba(0, 217, 255, 0.55);
+      --glow: 0 0 22px rgba(0, 217, 255, 0.16);
+      --radius: 22px;
+      --max: 1160px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: #000; }
 
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at 12% 0%, rgba(0, 223, 255, 0.16), transparent 30%),
-        radial-gradient(circle at 88% 8%, rgba(4, 123, 255, 0.22), transparent 34%),
-        radial-gradient(circle at 50% 105%, rgba(0, 223, 255, 0.12), transparent 30%),
-        linear-gradient(180deg, #000 0%, var(--bg) 45%, #000 100%);
+        radial-gradient(circle at 50% -15%, rgba(0, 217, 255, 0.16), transparent 32%),
+        radial-gradient(circle at 85% 18%, rgba(0, 140, 255, 0.08), transparent 30%),
+        linear-gradient(180deg, #000 0%, #020509 48%, #000 100%);
       color: var(--text);
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow-x: hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-      background-size: 46px 46px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 72%);
-      z-index: -1;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    img,
-    video {
-      display: block;
-      max-width: 100%;
-    }
-
-    button,
-    input {
-      font: inherit;
-    }
+    a { color: inherit; }
+    img, video { display: block; max-width: 100%; }
+    button, input { font: inherit; }
 
     .page {
       width: min(100%, var(--max));
       margin: 0 auto;
-      padding: 18px clamp(14px, 3vw, 28px) 40px;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: 12px;
-      top: -120px;
-      z-index: 1000000;
-      padding: 12px 16px;
-      border-radius: 999px;
-      background: var(--neon);
-      color: #001017;
-      font-weight: 800;
-      transition: top 0.2s ease;
-    }
-
-    .skip-link:focus {
-      top: 12px;
+      padding: 0 18px 42px;
     }
 
     .topbar {
       position: sticky;
       top: 0;
       z-index: 50;
-      margin: 0 calc(clamp(14px, 3vw, 28px) * -1) 22px;
-      padding: 12px clamp(14px, 3vw, 28px);
-      background: rgba(0, 5, 9, 0.74);
-      border-bottom: 1px solid rgba(0, 223, 255, 0.16);
+      background: rgba(0, 0, 0, 0.92);
+      border-bottom: 1px solid var(--line);
       backdrop-filter: blur(16px);
     }
 
     .topbar-inner {
       width: min(100%, var(--max));
       margin: 0 auto;
+      min-height: 72px;
+      padding: 12px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
+      gap: 18px;
     }
 
-    .brand-mini {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      min-width: 0;
+      gap: 12px;
       text-decoration: none;
+      min-width: 0;
     }
 
-    .brand-orb {
-      width: 34px;
-      height: 34px;
+    .orb {
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      border: 1px solid rgba(0, 223, 255, 0.72);
-      background:
-        radial-gradient(circle at 35% 25%, #effcff 0 7%, transparent 8%),
-        radial-gradient(circle at 50% 50%, rgba(0,223,255,.9), rgba(4,123,255,.28) 42%, rgba(0,0,0,.2) 68%);
-      box-shadow: var(--glow);
+      border: 1px solid rgba(0, 217, 255, 0.9);
+      background: radial-gradient(circle at 35% 25%, #fff 0 5%, #00d9ff 7%, #002a38 44%, #000 72%);
+      box-shadow: 0 0 18px rgba(0, 217, 255, 0.45);
       flex: 0 0 auto;
     }
 
-    .brand-mini span {
+    .brand span {
       font-family: Orbitron, sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      color: #dffaff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    .nav-actions {
+    .nav {
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -177,284 +117,212 @@
       flex-wrap: wrap;
     }
 
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .nav a, .nav button {
       min-height: 40px;
-      padding: 10px 14px;
-      border: 1px solid rgba(0, 223, 255, 0.28);
+      padding: 9px 14px;
+      border: 1px solid rgba(0, 217, 255, 0.28);
       border-radius: 999px;
-      color: var(--muted);
+      background: rgba(0, 217, 255, 0.035);
+      color: #bfeefa;
       text-decoration: none;
-      font-size: 0.86rem;
       font-weight: 800;
-      letter-spacing: 0.03em;
-      background: rgba(0, 16, 25, 0.58);
-      transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: 0.2s ease;
     }
 
-    .nav-link:hover,
-    .nav-link:focus-visible {
-      transform: translateY(-1px);
-      border-color: var(--line-strong);
-      color: #001017;
-      background: var(--neon);
+    .nav a:hover, .nav button:hover,
+    .nav a:focus-visible, .nav button:focus-visible {
+      background: var(--blue);
+      color: #001016;
+      border-color: var(--blue);
       outline: none;
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(0, 223, 255, 0.24);
-      border-radius: calc(var(--radius) + 10px);
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
       background:
-        linear-gradient(135deg, rgba(0, 223, 255, 0.10), transparent 36%),
-        radial-gradient(circle at 72% 18%, rgba(0, 223, 255, 0.20), transparent 26%),
-        linear-gradient(180deg, rgba(3, 20, 32, 0.82), rgba(0, 6, 10, 0.82));
-      box-shadow: var(--shadow), inset 0 0 0 1px rgba(255,255,255,0.04);
-      padding: clamp(28px, 6vw, 70px) clamp(18px, 5vw, 56px);
-      isolation: isolate;
+        linear-gradient(135deg, rgba(0, 217, 255, 0.08), transparent 34%),
+        linear-gradient(180deg, rgba(7, 17, 26, 0.92), rgba(0, 0, 0, 0.94));
+      box-shadow: var(--glow), 0 24px 70px rgba(0, 0, 0, 0.55);
+      overflow: hidden;
     }
 
-    .hero::before {
-      content: "OMNISCIENTRIX";
-      position: absolute;
-      right: -2vw;
-      bottom: -0.19em;
-      z-index: -1;
-      font-family: Orbitron, sans-serif;
-      font-size: clamp(3rem, 12vw, 9.5rem);
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(0, 223, 255, 0.11);
-      opacity: 0.88;
-      white-space: nowrap;
-    }
-
-    .hero-grid {
+    .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
-      gap: clamp(24px, 5vw, 54px);
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 34px;
       align-items: center;
+      padding: clamp(28px, 5vw, 58px);
     }
 
-    .eyebrow {
+    .pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      width: fit-content;
       margin-bottom: 18px;
-      padding: 8px 12px;
-      border: 1px solid rgba(0, 223, 255, 0.28);
+      padding: 8px 13px;
+      border: 1px solid rgba(0, 217, 255, 0.28);
       border-radius: 999px;
-      color: var(--neon-2);
-      background: rgba(0, 223, 255, 0.07);
+      background: rgba(0, 217, 255, 0.055);
+      color: #69ecff;
       font-family: Orbitron, sans-serif;
       font-size: 0.78rem;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
-    .pulse {
-      width: 8px;
-      height: 8px;
+    .dot {
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
-      background: var(--neon);
-      box-shadow: 0 0 0 0 rgba(0, 223, 255, 0.7);
-      animation: pulse 1.8s infinite;
-    }
-
-    @keyframes pulse {
-      70% { box-shadow: 0 0 0 10px rgba(0, 223, 255, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 223, 255, 0); }
+      background: var(--blue);
+      box-shadow: 0 0 13px rgba(0, 217, 255, 0.8);
     }
 
     h1 {
       font-family: Orbitron, sans-serif;
-      font-size: clamp(2.45rem, 8vw, 5.8rem);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
+      font-size: clamp(2.65rem, 7.3vw, 5.15rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
       text-transform: uppercase;
-      text-shadow: 0 0 26px rgba(0, 223, 255, 0.20);
+      text-shadow: 0 0 28px rgba(0, 217, 255, 0.18);
+      max-width: 780px;
     }
 
-    .hero-title-line {
-      display: block;
-    }
-
-    .hero-subtitle {
-      margin-top: 14px;
-      color: var(--neon-2);
+    .subtitle {
+      margin-top: 16px;
+      color: #3eeeff;
       font-family: Orbitron, sans-serif;
-      font-size: clamp(1rem, 2.2vw, 1.45rem);
-      letter-spacing: 0.18em;
+      font-size: clamp(1.05rem, 2.3vw, 1.55rem);
+      letter-spacing: 0.20em;
       text-transform: uppercase;
     }
 
     .formula {
       margin-top: 18px;
-      color: #c9f7ff;
+      color: #d9fbff;
       font-family: Orbitron, sans-serif;
-      font-size: clamp(1.25rem, 3vw, 2rem);
-      letter-spacing: 0.12em;
+      font-size: clamp(1.15rem, 3vw, 1.75rem);
+      letter-spacing: 0.15em;
     }
 
     .hero-copy {
-      max-width: 760px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: clamp(1rem, 1.55vw, 1.16rem);
-      line-height: 1.75;
+      max-width: 720px;
+      margin-top: 22px;
+      color: var(--soft);
+      font-size: clamp(1.02rem, 1.7vw, 1.18rem);
+      line-height: 1.72;
     }
 
-    .hero-copy strong {
-      color: #effcff;
-    }
+    .hero-copy strong { color: #f4fdff; }
 
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 26px;
     }
 
-    .btn,
-    .ghost-btn,
-    .icon-btn,
-    .cert-btn {
-      appearance: none;
-      border: 0;
-      cursor: pointer;
+    .btn, .ghost, .card-btn, .modal-btn, .search-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 14px;
       text-decoration: none;
-      user-select: none;
+      text-align: center;
+      font-family: Orbitron, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 13px 17px;
-      border: 1px solid rgba(0, 223, 255, 0.86);
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(0, 223, 255, 0.98), rgba(4, 123, 255, 0.88));
-      color: #001017;
-      font-family: Orbitron, sans-serif;
-      font-size: 0.9rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-align: center;
-      text-transform: uppercase;
-      box-shadow: 0 14px 34px rgba(0, 223, 255, 0.18);
-      transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+      padding: 12px 18px;
+      border: 1px solid var(--blue);
+      background: linear-gradient(135deg, var(--blue), var(--blue-2));
+      color: #001016;
+      box-shadow: 0 16px 38px rgba(0, 217, 255, 0.16);
     }
 
-    .btn:hover,
-    .btn:focus-visible {
+    .ghost {
+      padding: 12px 18px;
+      border: 1px solid rgba(0, 217, 255, 0.26);
+      background: rgba(0, 0, 0, 0.28);
+      color: #bff5ff;
+    }
+
+    .btn:hover, .ghost:hover,
+    .btn:focus-visible, .ghost:focus-visible {
       transform: translateY(-2px);
-      filter: brightness(1.07);
-      box-shadow: 0 18px 48px rgba(0, 223, 255, 0.28);
       outline: none;
     }
 
-    .ghost-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 13px 17px;
-      border: 1px solid rgba(0, 223, 255, 0.34);
-      border-radius: 14px;
-      background: rgba(0, 16, 25, 0.56);
-      color: var(--neon-2);
+    .ghost:hover, .ghost:focus-visible {
+      border-color: var(--blue);
+      background: rgba(0, 217, 255, 0.10);
+    }
+
+    .signal-box {
+      border: 1px solid rgba(0, 217, 255, 0.22);
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.50);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025), 0 0 24px rgba(0, 217, 255, 0.09);
+      padding: 24px;
+    }
+
+    .signal-box h2 {
       font-family: Orbitron, sans-serif;
-      font-size: 0.88rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-align: center;
-      text-transform: uppercase;
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-    }
-
-    .ghost-btn:hover,
-    .ghost-btn:focus-visible {
-      transform: translateY(-2px);
-      border-color: rgba(0, 223, 255, 0.88);
-      background: rgba(0, 223, 255, 0.10);
-      outline: none;
-    }
-
-    .signal-panel {
-      border: 1px solid rgba(0, 223, 255, 0.22);
-      border-radius: var(--radius);
-      background: rgba(0, 9, 14, 0.68);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04), var(--glow);
-      padding: clamp(18px, 3vw, 26px);
-    }
-
-    .signal-panel h2 {
-      font-family: Orbitron, sans-serif;
-      color: #f2fdff;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      line-height: 1.3;
-      letter-spacing: 0.09em;
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      line-height: 1.35;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
     }
 
-    .signal-list {
+    .signals {
       display: grid;
-      gap: 12px;
-      margin-top: 18px;
+      gap: 14px;
+      margin-top: 20px;
       list-style: none;
     }
 
-    .signal-list li {
+    .signals li {
       display: grid;
-      grid-template-columns: 30px 1fr;
-      gap: 10px;
-      align-items: start;
-      color: var(--muted);
+      grid-template-columns: 32px 1fr;
+      gap: 12px;
+      color: var(--soft);
       line-height: 1.55;
     }
 
-    .signal-list span {
-      display: inline-grid;
+    .signals span {
+      display: grid;
       place-items: center;
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 10px;
-      background: rgba(0, 223, 255, 0.12);
-      color: var(--neon-2);
+      background: rgba(0, 217, 255, 0.09);
+      color: #4cecff;
       font-family: Orbitron, sans-serif;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 900;
     }
 
-    .cert-mini {
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(0, 223, 255, 0.16);
-      color: var(--muted-2);
-      font-size: 0.9rem;
-      line-height: 1.55;
-    }
-
-    .toolbar {
+    .tools {
+      margin: 24px 0 12px;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 14px;
+      gap: 12px;
       align-items: center;
-      margin: 28px 0 22px;
-      padding: 14px;
-      border: 1px solid rgba(0, 223, 255, 0.16);
+      border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(0, 9, 14, 0.54);
-      backdrop-filter: blur(14px);
-    }
-
-    .search-wrap {
-      position: relative;
+      background: rgba(0, 0, 0, 0.48);
+      padding: 12px;
     }
 
     .search-wrap label {
@@ -465,137 +333,112 @@
       clip: rect(0 0 0 0);
     }
 
+    .search-wrap { position: relative; }
+
     .search-input {
       width: 100%;
       min-height: 50px;
-      border: 1px solid rgba(0, 223, 255, 0.24);
+      border: 1px solid rgba(0, 217, 255, 0.20);
       border-radius: 16px;
-      background: rgba(0, 0, 0, 0.36);
+      background: #020609;
       color: var(--text);
       padding: 0 16px;
       outline: none;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.025);
     }
 
-    .search-input::placeholder {
-      color: rgba(209, 246, 255, 0.48);
-    }
+    .search-input::placeholder { color: rgba(169, 201, 212, 0.58); }
+    .search-input:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(0, 217, 255, 0.08); }
 
-    .search-input:focus {
-      border-color: rgba(0, 223, 255, 0.78);
-      box-shadow: 0 0 0 4px rgba(0, 223, 255, 0.09);
-    }
-
-    .toolbar-actions {
+    .tool-buttons {
       display: flex;
-      align-items: center;
-      gap: 10px;
+      gap: 9px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
 
-    .icon-btn {
+    .search-btn {
       min-height: 50px;
       padding: 0 14px;
-      border: 1px solid rgba(0, 223, 255, 0.24);
-      border-radius: 16px;
-      background: rgba(0, 20, 32, 0.66);
-      color: var(--neon-2);
-      font-weight: 800;
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+      border: 1px solid rgba(0, 217, 255, 0.22);
+      background: #050b10;
+      color: #c8f6ff;
+      font-family: Inter, sans-serif;
+      font-size: 0.93rem;
+      letter-spacing: 0;
+      text-transform: none;
     }
 
-    .icon-btn:hover,
-    .icon-btn:focus-visible {
-      transform: translateY(-1px);
-      border-color: rgba(0, 223, 255, 0.82);
-      background: rgba(0, 223, 255, 0.09);
+    .search-btn:hover, .search-btn:focus-visible {
+      border-color: var(--blue);
+      color: #001016;
+      background: var(--blue);
       outline: none;
     }
+
+    #projects { scroll-margin-top: 92px; }
 
     .section-head {
       display: flex;
       align-items: end;
       justify-content: space-between;
-      gap: 16px;
-      margin: 36px 0 18px;
+      gap: 18px;
+      margin: 34px 0 18px;
     }
 
     .section-head h2 {
       font-family: Orbitron, sans-serif;
-      font-size: clamp(1.45rem, 3vw, 2.25rem);
-      letter-spacing: 0.05em;
+      font-size: clamp(1.45rem, 3vw, 2.2rem);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     .section-head p {
-      max-width: 540px;
-      color: var(--muted);
+      max-width: 530px;
+      color: var(--soft);
       line-height: 1.6;
       text-align: right;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: clamp(16px, 2.3vw, 26px);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
     }
 
     .card {
-      position: relative;
       display: flex;
       flex-direction: column;
-      min-height: 100%;
-      overflow: hidden;
-      border: 1px solid rgba(0, 223, 255, 0.16);
+      min-width: 0;
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      background:
-        linear-gradient(180deg, rgba(5, 30, 45, 0.70), rgba(0, 6, 10, 0.86)),
-        rgba(2, 12, 19, 0.86);
-      box-shadow: 0 18px 40px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,0.035);
+      background: linear-gradient(180deg, #060d14, #020406);
+      overflow: hidden;
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .card:hover,
-    .card:focus-within {
-      transform: translateY(-5px);
-      border-color: rgba(0, 223, 255, 0.62);
-      box-shadow: 0 24px 70px rgba(0,0,0,.48), var(--glow);
+    .card:hover, .card:focus-within {
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.58), 0 0 22px rgba(0, 217, 255, 0.12);
     }
 
-    .card.featured {
-      grid-column: span 2;
-    }
-
-    .media-link,
-    .media-wrap {
+    .media-link, .media-wrap {
       position: relative;
       display: block;
       overflow: hidden;
-      border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
       background: #000;
       text-decoration: none;
     }
 
-    .card img,
-    .card video {
+    .card img, .card video {
       width: 100%;
       aspect-ratio: 4 / 5;
       object-fit: cover;
-      transform: scale(1.001);
-      transition: transform 0.32s ease, filter 0.32s ease;
+      transition: transform 0.28s ease, opacity 0.28s ease;
     }
 
-    .card:hover img,
-    .card:hover video {
-      transform: scale(1.045);
-      filter: saturate(1.12) contrast(1.06);
-    }
-
-    .card.featured img,
-    .card.featured video {
-      aspect-ratio: 16 / 10;
-    }
+    .card:hover img, .card:hover video { transform: scale(1.035); opacity: 0.94; }
 
     .badge {
       position: absolute;
@@ -603,16 +446,15 @@
       top: 12px;
       z-index: 2;
       max-width: calc(100% - 24px);
-      padding: 7px 10px;
-      border: 1px solid rgba(0, 223, 255, 0.44);
+      padding: 7px 11px;
+      border: 1px solid rgba(0, 217, 255, 0.42);
       border-radius: 999px;
-      background: rgba(0, 0, 0, 0.62);
-      color: #dffaff;
+      background: rgba(0, 0, 0, 0.76);
+      color: #e7fbff;
       font-size: 0.72rem;
       font-weight: 900;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      backdrop-filter: blur(8px);
     }
 
     .card-body {
@@ -624,166 +466,63 @@
     }
 
     .card h3 {
-      min-height: 2.6em;
       font-family: Orbitron, sans-serif;
-      color: #f2fdff;
-      font-size: clamp(0.96rem, 1.2vw, 1.08rem);
-      line-height: 1.28;
-      letter-spacing: 0.045em;
+      color: #effcff;
+      font-size: 1rem;
+      line-height: 1.35;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
     .card p {
-      color: var(--muted);
-      font-size: 0.93rem;
-      line-height: 1.55;
+      color: var(--soft);
+      font-size: 0.94rem;
+      line-height: 1.58;
     }
 
-    .card .btn {
+    .card-btn {
       width: 100%;
       margin-top: auto;
       min-height: 46px;
-      padding: 12px 12px;
+      padding: 11px 12px;
+      border: 1px solid var(--blue);
+      background: linear-gradient(135deg, var(--blue), var(--blue-2));
+      color: #001016;
       font-size: 0.78rem;
-      letter-spacing: 0.065em;
     }
+
+    .card-btn:hover, .card-btn:focus-visible { transform: translateY(-1px); outline: none; }
 
     .no-results {
       display: none;
       margin-top: 18px;
-      border: 1px dashed rgba(0, 223, 255, 0.35);
-      border-radius: 18px;
       padding: 18px;
-      color: var(--muted);
+      border: 1px dashed rgba(0, 217, 255, 0.35);
+      border-radius: 18px;
+      background: #03070b;
+      color: var(--soft);
       text-align: center;
-      background: rgba(0, 12, 20, 0.52);
     }
 
-    .cert-button-wrapper {
+    .cert-cta {
       display: flex;
       justify-content: center;
-      margin-top: 38px;
+      margin-top: 36px;
     }
 
-    .cert-btn {
+    .modal-btn {
       min-height: 52px;
       padding: 0 22px;
-      border: 1px solid rgba(0, 223, 255, 0.58);
-      border-radius: 16px;
-      background: rgba(0, 223, 255, 0.08);
-      color: var(--neon-2);
-      font-family: Orbitron, sans-serif;
-      font-weight: 900;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      box-shadow: var(--glow);
-      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+      border: 1px solid rgba(0, 217, 255, 0.46);
+      background: rgba(0, 217, 255, 0.07);
+      color: #d5f9ff;
     }
 
-    .cert-btn:hover,
-    .cert-btn:focus-visible {
+    .modal-btn:hover, .modal-btn:focus-visible {
+      background: var(--blue);
+      color: #001016;
+      outline: none;
       transform: translateY(-2px);
-      background: var(--neon);
-      color: #001017;
-      outline: none;
-    }
-
-    .cert-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 999999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-      background: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(10px);
-    }
-
-    .cert-modal.is-open {
-      display: flex;
-    }
-
-    .cert-content {
-      position: relative;
-      width: min(940px, 100%);
-      max-height: min(92vh, 980px);
-      overflow: auto;
-      border: 1px solid rgba(0, 223, 255, 0.30);
-      border-radius: 24px;
-      background:
-        radial-gradient(circle at 20% 0%, rgba(0, 223, 255, 0.16), transparent 28%),
-        linear-gradient(180deg, #03131f, #00080d);
-      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.68), var(--glow);
-      padding: clamp(18px, 3vw, 28px);
-    }
-
-    .modal-head {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 20px;
-      padding-right: 48px;
-    }
-
-    .modal-head h2 {
-      font-family: Orbitron, sans-serif;
-      font-size: clamp(1.35rem, 3vw, 2.1rem);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .modal-head p {
-      margin-top: 8px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .close-modal {
-      position: absolute;
-      right: 18px;
-      top: 18px;
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border: 1px solid rgba(0, 223, 255, 0.28);
-      border-radius: 14px;
-      background: rgba(0, 0, 0, 0.44);
-      color: var(--neon-2);
-      cursor: pointer;
-      font-size: 1.35rem;
-      line-height: 1;
-    }
-
-    .close-modal:hover,
-    .close-modal:focus-visible {
-      background: var(--neon);
-      color: #001017;
-      outline: none;
-    }
-
-    .cert-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .cert-grid img,
-    .video-grid video {
-      width: 100%;
-      border: 1px solid rgba(0, 223, 255, 0.18);
-      border-radius: 16px;
-      background: #000;
-      box-shadow: 0 10px 26px rgba(0,0,0,.35);
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 18px;
     }
 
     .cert-bar {
@@ -792,616 +531,415 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 40px;
-      padding: 18px;
-      border: 1px solid rgba(0, 223, 255, 0.12);
+      margin-top: 30px;
+      padding: 16px;
+      border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(0, 10, 16, 0.42);
+      background: rgba(0, 0, 0, 0.42);
     }
 
     .cert-bar img {
-      height: 42px;
+      height: 40px;
       width: auto;
       border-radius: 8px;
-      opacity: 0.86;
-      filter: drop-shadow(0 0 8px rgba(0, 223, 255, 0.25));
+      opacity: 0.82;
+      filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.20));
     }
 
-    .footer {
+    .cert-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(0, 0, 0, 0.90);
+      backdrop-filter: blur(10px);
+    }
+
+    .cert-modal.is-open { display: flex; }
+
+    .cert-content {
+      position: relative;
+      width: min(920px, 100%);
+      max-height: 92vh;
+      overflow: auto;
+      border: 1px solid rgba(0, 217, 255, 0.28);
+      border-radius: 24px;
+      background: linear-gradient(180deg, #060d14, #000);
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.72), 0 0 30px rgba(0, 217, 255, 0.15);
+      padding: 24px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 14px;
+      background: #000;
+      color: #d9fbff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .close-modal:hover, .close-modal:focus-visible {
+      background: var(--blue);
+      color: #001016;
+      outline: none;
+    }
+
+    .cert-content h2 {
+      padding-right: 54px;
+      font-family: Orbitron, sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .cert-content p {
+      max-width: 720px;
+      margin: 8px 0 20px;
+      color: var(--soft);
+      line-height: 1.6;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .cert-grid img, .video-grid video {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #000;
+    }
+
+    footer {
       margin-top: 42px;
-      border-top: 1px solid rgba(0, 223, 255, 0.16);
-      padding: 28px 0 10px;
-      color: var(--muted);
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+      color: var(--soft);
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 24px;
       align-items: start;
     }
 
-    .footer h2 {
+    footer h2 {
       font-family: Orbitron, sans-serif;
-      color: #effcff;
       font-size: 1rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      color: #effcff;
     }
 
-    .footer p {
-      margin-top: 10px;
-      line-height: 1.65;
-    }
+    footer p { margin-top: 10px; line-height: 1.65; }
 
     .footer-links {
       display: flex;
-      justify-content: flex-end;
       flex-wrap: wrap;
-      gap: 10px;
+      justify-content: flex-end;
+      gap: 9px;
     }
 
     .footer-links a {
       padding: 9px 11px;
-      border: 1px solid rgba(0, 223, 255, 0.16);
+      border: 1px solid rgba(0, 217, 255, 0.18);
       border-radius: 999px;
-      color: #96d8ef;
+      background: rgba(0, 217, 255, 0.035);
+      color: #bfeefa;
       text-decoration: none;
       font-size: 0.88rem;
       font-weight: 800;
-      background: rgba(0, 18, 28, 0.44);
     }
 
-    .footer-links a:hover,
-    .footer-links a:focus-visible {
-      border-color: rgba(0, 223, 255, 0.6);
+    .footer-links a:hover, .footer-links a:focus-visible {
+      border-color: var(--blue);
       color: #effcff;
       outline: none;
     }
 
     .copyright {
       margin-top: 22px;
-      color: rgba(155, 201, 220, 0.72);
-      font-size: 0.88rem;
       text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     .toast {
       position: fixed;
       left: 50%;
       bottom: 18px;
-      z-index: 9999999;
+      z-index: 100000;
       transform: translate(-50%, 120%);
       opacity: 0;
       padding: 12px 16px;
-      border: 1px solid rgba(0, 223, 255, 0.4);
+      border: 1px solid rgba(0, 217, 255, 0.35);
       border-radius: 999px;
-      background: rgba(0, 14, 22, 0.92);
-      color: #e8fbff;
+      background: #03070b;
+      color: #effcff;
       box-shadow: var(--glow);
-      transition: transform 0.22s ease, opacity 0.22s ease;
+      transition: 0.22s ease;
       pointer-events: none;
-      text-align: center;
     }
 
-    .toast.show {
-      transform: translate(-50%, 0);
-      opacity: 1;
+    .toast.show { transform: translate(-50%, 0); opacity: 1; }
+
+    @media (max-width: 1000px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .signal-box { max-width: 660px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-links { justify-content: flex-start; }
     }
 
-    @media (max-width: 1080px) {
-      .grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 860px) {
-      .hero-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .signal-panel {
-        max-width: 620px;
-      }
-
-      .section-head {
-        align-items: start;
-        flex-direction: column;
-      }
-
-      .section-head p {
-        text-align: left;
-      }
-
-      .toolbar {
-        grid-template-columns: 1fr;
-      }
-
-      .toolbar-actions,
-      .footer-links {
-        justify-content: flex-start;
-      }
-
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .card.featured {
-        grid-column: span 2;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding-inline: 12px;
-      }
-
-      .topbar {
-        margin-inline: -12px;
-        padding-inline: 12px;
-      }
-
-      .topbar-inner {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .nav-actions {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-      }
-
-      .nav-link {
-        min-height: 38px;
-        padding: 9px 10px;
-        font-size: 0.78rem;
-      }
-
-      .hero {
-        border-radius: 24px;
-      }
-
-      .hero-buttons {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card.featured {
-        grid-column: auto;
-      }
-
-      .card.featured img,
-      .card.featured video,
-      .card img,
-      .card video {
-        aspect-ratio: 4 / 5;
-      }
-
-      .card h3 {
-        min-height: auto;
-      }
-
-      .cert-grid,
-      .video-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cert-content {
-        max-height: 94vh;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-      }
+    @media (max-width: 720px) {
+      .page { padding-inline: 14px; }
+      .topbar-inner { flex-direction: column; align-items: stretch; min-height: auto; }
+      .brand { justify-content: center; }
+      .nav { display: grid; grid-template-columns: repeat(2, 1fr); }
+      .nav a, .nav button { width: 100%; font-size: 0.82rem; }
+      .hero { margin-top: 16px; border-radius: 24px; }
+      .hero-inner { padding: 24px 18px; gap: 22px; }
+      h1 { font-size: clamp(2.35rem, 13vw, 4rem); }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .tools { grid-template-columns: 1fr; }
+      .tool-buttons { justify-content: stretch; display: grid; grid-template-columns: repeat(3, 1fr); }
+      .search-btn { padding-inline: 8px; font-size: 0.86rem; }
+      .section-head { flex-direction: column; align-items: start; }
+      .section-head p { text-align: left; }
+      .grid { grid-template-columns: 1fr; gap: 18px; }
+      .cert-grid, .video-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#projects">Skip to projects</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Cornelius Aurelius home">
+        <span class="orb" aria-hidden="true"></span>
+        <span>CORNELIUS AURELIUS</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebooks</a>
+        <a href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000">Tip Cornelius</a>
+        <a href="https://corneliusaurelius.com/">Main Site</a>
+      </nav>
+    </div>
+  </header>
 
   <div class="page" id="top">
-    <header class="topbar" aria-label="Site navigation">
-      <div class="topbar-inner">
-        <a class="brand-mini" href="#top" aria-label="Cornelius Aurelius home">
-          <span class="brand-orb" aria-hidden="true"></span>
-          <span>CORNELIUS AURELIUS</span>
-        </a>
-
-        <nav class="nav-actions" aria-label="Primary links">
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebooks</a>
-          <a class="nav-link" href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000">Tip Cornelius</a>
-          <a class="nav-link" href="https://corneliusaurelius.com/">Main Site</a>
-        </nav>
-      </div>
-    </header>
-
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-grid">
+        <div class="hero-inner">
           <div>
-            <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> The Omniscientrix Hub</div>
-
-            <h1 id="hero-title">
-              <span class="hero-title-line">Cornelius</span>
-              <span class="hero-title-line">Aurelius</span>
-            </h1>
-
-            <div class="hero-subtitle">The Omniscientrix</div>
-            <div class="formula" aria-label="Delta J approximately equals zero">δJ ≈ 0</div>
-
-            <p class="hero-copy">
-              <strong>Energy · Information · Awareness</strong> — a project universe built around minimising wasted energy, turning ideas into tools, and making hidden signals easier to see.
-            </p>
-
-            <div class="hero-buttons" aria-label="Hero actions">
-              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Enter Free Ebook Library</a>
-              <a class="ghost-btn" href="#projects">Explore All Projects</a>
-              <button class="ghost-btn" type="button" onclick="shareSite()">Share This Hub</button>
+            <div class="pill"><span class="dot"></span> The Omniscientrix Hub</div>
+            <h1 id="hero-title">Cornelius<br>Aurelius</h1>
+            <div class="subtitle">The Omniscientrix</div>
+            <div class="formula">δJ ≈ 0</div>
+            <p class="hero-copy"><strong>Energy · Information · Awareness</strong> — a black-and-neon project universe built around minimising wasted energy, turning ideas into tools, and making hidden signals easier to see.</p>
+            <div class="hero-actions">
+              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebook Library</a>
+              <a class="ghost" href="#projects">Explore Projects</a>
+              <button class="ghost" type="button" onclick="shareSite()">Share Hub</button>
             </div>
           </div>
 
-          <aside class="signal-panel" aria-label="Cornelius Aurelius signal panel">
+          <aside class="signal-box">
             <h2>Built for books, tools, research, AI systems, football projects, art, inventions and digital experiments.</h2>
-            <ul class="signal-list">
+            <ul class="signals">
               <li><span>01</span><div><strong>Read.</strong> Explore free ebooks and idea systems by Cornelius Aurelius.</div></li>
               <li><span>02</span><div><strong>Use.</strong> Open AI tools, GPT projects, games, hubs and practical systems.</div></li>
               <li><span>03</span><div><strong>Share.</strong> Send the hub to readers, collaborators, sponsors and supporters.</div></li>
             </ul>
-            <p class="cert-mini">Google &amp; HubSpot Certified · Cornelius Aurelius Project Universe</p>
           </aside>
         </div>
       </section>
 
-      <section class="toolbar" aria-label="Project search and sharing tools">
+      <section class="tools" aria-label="Search and sharing tools">
         <div class="search-wrap">
           <label for="project-search">Search projects</label>
-          <input id="project-search" class="search-input" type="search" placeholder="Search ebooks, AI, football, KRONATRIX, inventions, research..." autocomplete="off" />
+          <input id="project-search" class="search-input" type="search" placeholder="Search ebooks, AI, football, KRONATRIX, research, inventions..." autocomplete="off" />
         </div>
-
-        <div class="toolbar-actions">
-          <button class="icon-btn" type="button" onclick="shareSite()">Share</button>
-          <button class="icon-btn" type="button" onclick="copySiteLink()">Copy Link</button>
-          <button class="icon-btn" type="button" onclick="openCerts()">Certificates</button>
+        <div class="tool-buttons">
+          <button class="search-btn" type="button" onclick="shareSite()">Share</button>
+          <button class="search-btn" type="button" onclick="copySiteLink()">Copy Link</button>
+          <button class="search-btn" type="button" onclick="openCerts()">Certificates</button>
         </div>
       </section>
 
       <section id="projects" aria-labelledby="projects-title">
         <div class="section-head">
           <h2 id="projects-title">Project Library</h2>
-          <p>Every card is a doorway into part of the Cornelius Aurelius universe. Search by title, topic or project type.</p>
+          <p>Every card opens part of the Cornelius Aurelius universe. Clean black layout, subtle neon blue highlights, and no overlapping sections.</p>
         </div>
 
         <div class="grid" id="project-grid">
-          <article class="card featured" data-title="About Cornelius Aurelius biography profile creator author">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top" aria-label="Open About Cornelius Aurelius">
-              <span class="badge">Creator Profile</span>
-              <img src="about-cornelius-aurelius-thumbnail-592x736.png" alt="About Cornelius Aurelius thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>About Cornelius Aurelius</h3>
-              <p>The central identity page for the Cornelius Aurelius project universe, creative philosophy and digital work.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top">Open Profile</a>
-            </div>
+          <article class="card" data-title="About Cornelius Aurelius profile biography creator author">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top"><span class="badge">Creator Profile</span><img src="about-cornelius-aurelius-thumbnail-592x736.png" alt="About Cornelius Aurelius" loading="lazy"></a>
+            <div class="card-body"><h3>About Cornelius Aurelius</h3><p>The central identity page for the Cornelius Aurelius project universe, creative philosophy and digital work.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top">Open Profile</a></div>
           </article>
 
-          <article class="card featured" data-title="Cornelius Aurelius Free Ebook Library books reading free ebooks">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top" aria-label="Open Cornelius Aurelius Free Ebook Library">
-              <span class="badge">Free Ebooks</span>
-              <img src="ChatGPT Image May 9, 2026, 05_40_53 PM.png" alt="Cornelius Aurelius Free Ebook Library thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Free Ebook Library</h3>
-              <p>A central reading hub for Cornelius Aurelius ebooks, ideas, frameworks and book projects.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Enter Library</a>
-            </div>
+          <article class="card" data-title="Free Ebook Library Cornelius Aurelius books reading free ebooks">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top"><span class="badge">Free Ebooks</span><img src="ChatGPT Image May 9, 2026, 05_40_53 PM.png" alt="Cornelius Aurelius Free Ebook Library" loading="lazy"></a>
+            <div class="card-body"><h3>Free Ebook Library</h3><p>A central reading hub for Cornelius Aurelius ebooks, ideas, frameworks and book projects.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Enter Library</a></div>
           </article>
 
-          <article class="card" data-title="Fitness Equilibrium health body training Cornelius Spencer video">
-            <div class="media-wrap">
-              <span class="badge">Fitness</span>
-              <video class="fitness-video" autoplay muted loop playsinline preload="metadata">
-                <source src="cornelius and spencer vid.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="card-body">
-              <h3>Fitness Equilibrium</h3>
-              <p>Training, discipline and physical equilibrium inside the Cornelius Aurelius system.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">Open Fitness</a>
-            </div>
+          <article class="card" data-title="Fitness Equilibrium health training body video">
+            <div class="media-wrap"><span class="badge">Fitness</span><video autoplay muted loop playsinline preload="metadata"><source src="cornelius and spencer vid.mp4" type="video/mp4"></video></div>
+            <div class="card-body"><h3>Fitness Equilibrium</h3><p>Training, discipline and physical equilibrium inside the Cornelius Aurelius system.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">Open Fitness</a></div>
           </article>
 
-          <article class="card" data-title="Certificate Insights Google HubSpot certifications insights">
-            <div class="media-wrap">
-              <span class="badge">Certificates</span>
-              <video class="fitness-video" autoplay muted loop playsinline preload="metadata">
-                <source src="Untitled%20design%20(2).mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="card-body">
-              <h3>Certificate / Insights</h3>
-              <p>Google, HubSpot and professional certification material gathered in one modal.</p>
-              <button class="btn" type="button" onclick="openCerts()">View Certificates</button>
-            </div>
+          <article class="card" data-title="Certificate Insights Google HubSpot certifications">
+            <div class="media-wrap"><span class="badge">Certificates</span><video autoplay muted loop playsinline preload="metadata"><source src="Untitled%20design%20(2).mp4" type="video/mp4"></video></div>
+            <div class="card-body"><h3>Certificate / Insights</h3><p>Google, HubSpot and professional certification material gathered in one modal.</p><button class="card-btn" type="button" onclick="openCerts()">View Certificates</button></div>
           </article>
 
-          <article class="card featured" data-title="Colour Blindness in Football Project book football players parents coaches clubs">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top" aria-label="Open Colour Blindness in Football Project">
-              <span class="badge">Football Project</span>
-              <img src="colour blindness in football cover for sites.png" alt="Colour Blindness in Football book cover" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Colour Blindness in Football Project</h3>
-              <p>A practical football awareness project for players, parents, coaches and clubs.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Open Project</a>
-            </div>
+          <article class="card" data-title="Colour Blindness in Football Project book players parents coaches clubs">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top"><span class="badge">Football Project</span><img src="colour blindness in football cover for sites.png" alt="Colour Blindness in Football book cover" loading="lazy"></a>
+            <div class="card-body"><h3>Colour Blindness in Football Project</h3><p>A practical football awareness project for players, parents, coaches and clubs.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Open Project</a></div>
           </article>
 
           <article class="card" data-title="KRONATRIX Marketing GPTs agency AI marketing tools GPT">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/" aria-label="Open KRONATRIX Marketing GPTs">
-              <span class="badge">AI Marketing</span>
-              <img src="ChatGPT Image May 7, 2026, 07_02_16 AM.png" alt="KRONATRIX Marketing GPTs thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>KRONATRIX™ Marketing GPTs</h3>
-              <p>Marketing-focused GPT systems and AI workflows for digital growth.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">Open GPTs</a>
-            </div>
+            <a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/"><span class="badge">AI Marketing</span><img src="ChatGPT Image May 7, 2026, 07_02_16 AM.png" alt="KRONATRIX Marketing GPTs" loading="lazy"></a>
+            <div class="card-body"><h3>KRONATRIX™ Marketing GPTs</h3><p>Marketing-focused GPT systems and AI workflows for digital growth.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">Open GPTs</a></div>
           </article>
 
-          <article class="card" data-title="Gifts For Omni Shop merchandise products shop">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header" aria-label="Open Gifts For Omni Shop">
-              <span class="badge">Shop</span>
-              <img src="gifts%20for%20omni%20.png" alt="Gifts For Omni logo" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Gifts For Omni Shop</h3>
-              <p>A shop space for Omni-themed gifts, products and creative merchandise.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header">Open Shop</a>
-            </div>
+          <article class="card" data-title="Gifts For Omni Shop products merchandise">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header"><span class="badge">Shop</span><img src="gifts%20for%20omni%20.png" alt="Gifts For Omni Shop" loading="lazy"></a>
+            <div class="card-body"><h3>Gifts For Omni Shop</h3><p>A shop space for Omni-themed gifts, products and creative merchandise.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header">Open Shop</a></div>
           </article>
 
-          <article class="card" data-title="Viral Lyrics Generator AI music lyrics generator">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/Viral-Lyrics-Generator/" aria-label="Open Viral Lyrics Generator">
-              <span class="badge">AI Music</span>
-              <img src="ChatGPT Image May 7, 2026, 06_52_11 AM.png" alt="Viral Lyrics Generator thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Viral Lyrics Generator</h3>
-              <p>A creative AI lyrics tool built for hooks, ideas and song concept generation.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/Viral-Lyrics-Generator/">Open Generator</a>
-            </div>
+          <article class="card" data-title="Viral Lyrics Generator AI music lyrics">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/Viral-Lyrics-Generator/"><span class="badge">AI Music</span><img src="ChatGPT Image May 7, 2026, 06_52_11 AM.png" alt="Viral Lyrics Generator" loading="lazy"></a>
+            <div class="card-body"><h3>Viral Lyrics Generator</h3><p>A creative AI lyrics tool built for hooks, ideas and song concept generation.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Viral-Lyrics-Generator/">Open Generator</a></div>
           </article>
 
-          <article class="card" data-title="AI Art Gallery images design creative gallery">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/AI-ART/" aria-label="Open AI Art Gallery">
-              <span class="badge">Gallery</span>
-              <img src="AI ART.png" alt="AI Art Gallery thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>AI.Art Gallery</h3>
-              <p>A visual gallery of AI art, concepts and Cornelius Aurelius creative imagery.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/AI-ART/">Open Gallery</a>
-            </div>
+          <article class="card" data-title="AI Art Gallery images design creative">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/AI-ART/"><span class="badge">Gallery</span><img src="AI ART.png" alt="AI Art Gallery" loading="lazy"></a>
+            <div class="card-body"><h3>AI.Art Gallery</h3><p>A visual gallery of AI art, concepts and Cornelius Aurelius creative imagery.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/AI-ART/">Open Gallery</a></div>
           </article>
 
-          <article class="card" data-title="Books Library books reading archive older library">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/BOOKS--/" aria-label="Open Books Library">
-              <span class="badge">Books</span>
-              <img src="BOOKS LIBRARY.png" alt="Books Library thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Books Library</h3>
-              <p>A book library and archive space for reading-related projects.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/BOOKS--/">Open Books</a>
-            </div>
+          <article class="card" data-title="Books Library archive books reading">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/BOOKS--/"><span class="badge">Books</span><img src="BOOKS LIBRARY.png" alt="Books Library" loading="lazy"></a>
+            <div class="card-body"><h3>Books Library</h3><p>A book library and archive space for reading-related projects.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/BOOKS--/">Open Books</a></div>
           </article>
 
-          <article class="card" data-title="Omniscientrix Laws VΩ rules principles laws">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/" aria-label="Open Omniscientrix Laws">
-              <span class="badge">Laws</span>
-              <img src="CORNELIUS AURELIUS - sites .png" alt="Omniscientrix Laws thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Omniscientrix Laws (VΩ)</h3>
-              <p>A principles hub for Omniscientrix rules, logic and internal laws.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/">Open Laws</a>
-            </div>
+          <article class="card" data-title="Omniscientrix Laws VΩ rules principles">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/"><span class="badge">Laws</span><img src="CORNELIUS AURELIUS - sites .png" alt="Omniscientrix Laws" loading="lazy"></a>
+            <div class="card-body"><h3>Omniscientrix Laws (VΩ)</h3><p>A principles hub for Omniscientrix rules, logic and internal laws.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/">Open Laws</a></div>
           </article>
 
-          <article class="card" data-title="Book to GPT Business Custom GPT Builder AI books business">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/" aria-label="Open Book to GPT Business">
-              <span class="badge">Book → GPT</span>
-              <img src="BOOK TO GPT.png" alt="Book to GPT Business thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Book → GPT Business</h3>
-              <p>A system for turning books, ideas and knowledge into custom GPT experiences.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">Open Builder</a>
-            </div>
+          <article class="card" data-title="Book to GPT Business Custom GPT Builder AI books">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/"><span class="badge">Book → GPT</span><img src="BOOK TO GPT.png" alt="Book to GPT Business" loading="lazy"></a>
+            <div class="card-body"><h3>Book → GPT Business</h3><p>A system for turning books, ideas and knowledge into custom GPT experiences.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">Open Builder</a></div>
           </article>
 
-          <article class="card" data-title="AI Book Chats books to AI chat tools">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/" aria-label="Open AI Book Chats">
-              <span class="badge">AI Books</span>
-              <img src="Books to AI · BOOK CHATS (1).png" alt="AI Book Chats thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>AI Book Chats</h3>
-              <p>Book-based AI chat concepts and knowledge interaction systems.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">Open Chats</a>
-            </div>
+          <article class="card" data-title="AI Book Chats Books to AI chat tools">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/"><span class="badge">AI Books</span><img src="Books to AI · BOOK CHATS (1).png" alt="AI Book Chats" loading="lazy"></a>
+            <div class="card-body"><h3>AI Book Chats</h3><p>Book-based AI chat concepts and knowledge interaction systems.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">Open Chats</a></div>
           </article>
 
-          <article class="card" data-title="Universe Map Omniscientrix map navigation lore project map">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/omniscientrix-map/" aria-label="Open Universe Map">
-              <span class="badge">Map</span>
-              <img src="UNIVERSE MAP.png" alt="Omniscientrix Universe Map thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Universe Map</h3>
-              <p>A navigation map for the wider Omniscientrix universe and connected projects.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-map/">Open Map</a>
-            </div>
+          <article class="card" data-title="Universe Map Omniscientrix map navigation lore">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/omniscientrix-map/"><span class="badge">Map</span><img src="UNIVERSE MAP.png" alt="Omniscientrix Universe Map" loading="lazy"></a>
+            <div class="card-body"><h3>Universe Map</h3><p>A navigation map for the wider Omniscientrix universe and connected projects.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/omniscientrix-map/">Open Map</a></div>
           </article>
 
-          <article class="card" data-title="Zenodo Research Hub research records publications archive">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/" aria-label="Open Zenodo Research Hub">
-              <span class="badge">Research</span>
-              <img src="ZENODO RESEARCH HUB.png" alt="Zenodo Research Hub thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Zenodo Research Hub</h3>
-              <p>A research and records hub for published or archived project material.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">Open Research</a>
-            </div>
+          <article class="card" data-title="Zenodo Research Hub records publications archive">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/"><span class="badge">Research</span><img src="ZENODO RESEARCH HUB.png" alt="Zenodo Research Hub" loading="lazy"></a>
+            <div class="card-body"><h3>Zenodo Research Hub</h3><p>A research and records hub for published or archived project material.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">Open Research</a></div>
           </article>
 
-          <article class="card" data-title="Inventions Cornelius Aurelius inventions ideas concepts">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/" aria-label="Open Inventions">
-              <span class="badge">Inventions</span>
-              <img src="INVENTIONS.png" alt="Cornelius Aurelius Inventions thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Inventions</h3>
-              <p>A space for invention concepts, ideas and experimental project builds.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">Open Inventions</a>
-            </div>
+          <article class="card" data-title="Inventions Cornelius Aurelius ideas concepts">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/"><span class="badge">Inventions</span><img src="INVENTIONS.png" alt="Cornelius Aurelius Inventions" loading="lazy"></a>
+            <div class="card-body"><h3>Inventions</h3><p>A space for invention concepts, ideas and experimental project builds.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">Open Inventions</a></div>
           </article>
 
-          <article class="card featured" data-title="The Flow State Footballer Ebook football flow state player performance book">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top" aria-label="Open The Flow State Footballer Ebook">
-              <span class="badge">Football Ebook</span>
-              <img src="the flow state footballer cover .png" alt="The Flow State Footballer book cover by Cornelius Aurelius" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>The Flow State Footballer Ebook</h3>
-              <p>A football performance ebook about focus, confidence, rhythm and playing inside flow.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top">Read Ebook</a>
-            </div>
+          <article class="card" data-title="The Flow State Footballer Ebook football performance flow state">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top"><span class="badge">Football Ebook</span><img src="the flow state footballer cover .png" alt="The Flow State Footballer book cover" loading="lazy"></a>
+            <div class="card-body"><h3>The Flow State Footballer Ebook</h3><p>A football performance ebook about focus, confidence, rhythm and playing inside flow.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top">Read Ebook</a></div>
           </article>
 
-          <article class="card featured" data-title="Proof Is King Ebook evidence truth proof credibility book">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/" aria-label="Open Proof Is King Ebook">
-              <span class="badge">Ebook</span>
-              <img src="proof is king cover.png" alt="Proof Is King ebook cover" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Proof Is King Ebook</h3>
-              <p>A Cornelius Aurelius ebook about proof, credibility, evidence and signal.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/">Read Ebook</a>
-            </div>
+          <article class="card" data-title="Proof Is King Ebook evidence truth proof credibility">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/"><span class="badge">Ebook</span><img src="proof is king cover.png" alt="Proof Is King ebook cover" loading="lazy"></a>
+            <div class="card-body"><h3>Proof Is King Ebook</h3><p>A Cornelius Aurelius ebook about proof, credibility, evidence and signal.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/">Read Ebook</a></div>
           </article>
 
-          <article class="card" data-title="Websites Hub Project Nexus Hub websites landing pages index html">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/" aria-label="Open Websites Hub">
-              <span class="badge">Websites</span>
-              <img src="WEBSITES  HUB (1).png" alt="Websites Hub thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Websites Hub</h3>
-              <p>A project nexus for websites, landing pages and digital hubs.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">Open Hub</a>
-            </div>
+          <article class="card" data-title="Websites Hub Project Nexus websites landing pages">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/"><span class="badge">Websites</span><img src="WEBSITES  HUB (1).png" alt="Websites Hub" loading="lazy"></a>
+            <div class="card-body"><h3>Websites Hub</h3><p>A project nexus for websites, landing pages and digital hubs.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">Open Hub</a></div>
           </article>
 
           <article class="card" data-title="KRONATRIX Agency marketing agency AI automation growth">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX/" aria-label="Open KRONATRIX Agency">
-              <span class="badge">Agency</span>
-              <img src="KRONATRIX.png" alt="KRONATRIX Agency thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>KRONATRIX Agency</h3>
-              <p>A marketing, AI and growth agency branch of the Cornelius Aurelius ecosystem.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/KRONATRIX/">Open Agency</a>
-            </div>
+            <a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX/"><span class="badge">Agency</span><img src="KRONATRIX.png" alt="KRONATRIX Agency" loading="lazy"></a>
+            <div class="card-body"><h3>KRONATRIX Agency</h3><p>A marketing, AI and growth agency branch of the Cornelius Aurelius ecosystem.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/KRONATRIX/">Open Agency</a></div>
           </article>
 
-          <article class="card" data-title="Omniscientrix Arcade games digital arcade colour blindness football games">
-            <a class="media-link" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/" aria-label="Open Omniscientrix Arcade">
-              <span class="badge">Arcade</span>
-              <img src="OMNISCIENTRIX ARCADE.png" alt="Omniscientrix Arcade thumbnail" loading="lazy" />
-            </a>
-            <div class="card-body">
-              <h3>Omniscientrix Arcade</h3>
-              <p>A digital arcade for games, learning tools and interactive experiments.</p>
-              <a class="btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">Open Arcade</a>
-            </div>
+          <article class="card" data-title="Omniscientrix Arcade games digital arcade">
+            <a class="media-link" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/"><span class="badge">Arcade</span><img src="OMNISCIENTRIX ARCADE.png" alt="Omniscientrix Arcade" loading="lazy"></a>
+            <div class="card-body"><h3>Omniscientrix Arcade</h3><p>A digital arcade for games, learning tools and interactive experiments.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">Open Arcade</a></div>
           </article>
         </div>
 
-        <p class="no-results" id="no-results">No matching projects found. Try searching for “ebook”, “AI”, “football”, “KRONATRIX”, “research” or “inventions”.</p>
+        <p class="no-results" id="no-results">No matching projects found. Try “ebook”, “AI”, “football”, “KRONATRIX”, “research” or “inventions”.</p>
       </section>
 
-      <div class="cert-button-wrapper">
-        <button class="cert-btn" type="button" onclick="openCerts()">Certificate / Insights</button>
-      </div>
+      <div class="cert-cta"><button class="modal-btn" type="button" onclick="openCerts()">Certificate / Insights</button></div>
 
       <section class="cert-bar" aria-label="Certification preview images">
-        <img src="1.png" alt="Certification preview 1" loading="lazy" />
-        <img src="2.png" alt="Certification preview 2" loading="lazy" />
-        <img src="3.png" alt="Certification preview 3" loading="lazy" />
-        <img src="4.png" alt="Certification preview 4" loading="lazy" />
+        <img src="1.png" alt="Certification preview 1" loading="lazy">
+        <img src="2.png" alt="Certification preview 2" loading="lazy">
+        <img src="3.png" alt="Certification preview 3" loading="lazy">
+        <img src="4.png" alt="Certification preview 4" loading="lazy">
       </section>
     </main>
 
     <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-title" onclick="closeCerts(event)">
       <div class="cert-content" onclick="event.stopPropagation()">
         <button class="close-modal" type="button" onclick="closeCerts()" aria-label="Close certificate modal">×</button>
+        <h2 id="cert-title">Certifications</h2>
+        <p>Google, HubSpot and professional insight material connected to the Cornelius Aurelius project universe.</p>
 
-        <div class="modal-head">
-          <div>
-            <h2 id="cert-title">Certifications</h2>
-            <p>Google, HubSpot and professional insight material connected to the Cornelius Aurelius project universe.</p>
-          </div>
+        <div class="cert-grid">
+          <img src="1.png" alt="Certificate image 1" loading="lazy"><img src="2.png" alt="Certificate image 2" loading="lazy"><img src="3.png" alt="Certificate image 3" loading="lazy">
+          <img src="4.png" alt="Certificate image 4" loading="lazy"><img src="5.png" alt="Certificate image 5" loading="lazy"><img src="6.png" alt="Certificate image 6" loading="lazy">
+          <img src="7.png" alt="Certificate image 7" loading="lazy"><img src="8.png" alt="Certificate image 8" loading="lazy"><img src="9.png" alt="Certificate image 9" loading="lazy">
         </div>
 
-        <div class="cert-grid" aria-label="Certificate images">
-          <img src="1.png" alt="Certificate image 1" loading="lazy" />
-          <img src="2.png" alt="Certificate image 2" loading="lazy" />
-          <img src="3.png" alt="Certificate image 3" loading="lazy" />
-          <img src="4.png" alt="Certificate image 4" loading="lazy" />
-          <img src="5.png" alt="Certificate image 5" loading="lazy" />
-          <img src="6.png" alt="Certificate image 6" loading="lazy" />
-          <img src="7.png" alt="Certificate image 7" loading="lazy" />
-          <img src="8.png" alt="Certificate image 8" loading="lazy" />
-          <img src="9.png" alt="Certificate image 9" loading="lazy" />
-        </div>
-
-        <div class="video-grid" aria-label="Certificate videos">
-          <video controls preload="metadata" src="Untitled%20design%20(1).mp4"></video>
-          <video controls preload="metadata" src="Untitled%20design%20(2).mp4"></video>
-          <video controls preload="metadata" src="Untitled%20design%20(3).mp4"></video>
-          <video controls preload="metadata" src="Untitled%20design.mp4"></video>
-          <video controls preload="metadata" src="10.mp4"></video>
-          <video controls preload="metadata" src="11.mp4"></video>
-          <video controls preload="metadata" src="12.mp4"></video>
-          <video controls preload="metadata" src="13.mp4"></video>
-          <video controls preload="metadata" src="14.mp4"></video>
-          <video controls preload="metadata" src="15.mp4"></video>
+        <div class="video-grid">
+          <video controls preload="metadata" src="Untitled%20design%20(1).mp4"></video><video controls preload="metadata" src="Untitled%20design%20(2).mp4"></video>
+          <video controls preload="metadata" src="Untitled%20design%20(3).mp4"></video><video controls preload="metadata" src="Untitled%20design.mp4"></video>
+          <video controls preload="metadata" src="10.mp4"></video><video controls preload="metadata" src="11.mp4"></video>
+          <video controls preload="metadata" src="12.mp4"></video><video controls preload="metadata" src="13.mp4"></video>
+          <video controls preload="metadata" src="14.mp4"></video><video controls preload="metadata" src="15.mp4"></video>
         </div>
       </div>
     </div>
 
-    <footer class="footer">
+    <footer>
       <div class="footer-grid">
         <div>
           <h2>Cornelius Aurelius</h2>
           <p>The Omniscientrix project universe — books, AI systems, football tools, creative experiments, research hubs and digital infrastructure.</p>
         </div>
-
         <nav class="footer-links" aria-label="Footer links">
           <a href="https://corneliusaurelius.com/">Main Site</a>
           <a href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOKS/">Ebooks Hub</a>
@@ -1413,7 +951,6 @@
           <a href="mailto:138licensing@gmail.com">Email</a>
         </nav>
       </div>
-
       <p class="copyright">© <span id="year"></span> Cornelius Aurelius. Energy · Information · Awareness.</p>
     </footer>
   </div>
@@ -1421,88 +958,72 @@
   <div class="toast" id="toast" role="status" aria-live="polite">Copied.</div>
 
   <script>
-    const certModal = document.getElementById("cert-modal");
-    const toast = document.getElementById("toast");
-    const searchInput = document.getElementById("project-search");
-    const cards = Array.from(document.querySelectorAll(".card"));
-    const noResults = document.getElementById("no-results");
+    const certModal = document.getElementById('cert-modal');
+    const toast = document.getElementById('toast');
+    const searchInput = document.getElementById('project-search');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const noResults = document.getElementById('no-results');
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     function openCerts() {
-      certModal.classList.add("is-open");
-      document.body.style.overflow = "hidden";
-      const closeButton = certModal.querySelector(".close-modal");
+      certModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      const closeButton = certModal.querySelector('.close-modal');
       if (closeButton) closeButton.focus();
     }
 
     function closeCerts(event) {
       if (event && event.target !== certModal) return;
-      certModal.classList.remove("is-open");
-      document.body.style.overflow = "";
-      pauseModalVideos();
-    }
-
-    function pauseModalVideos() {
-      certModal.querySelectorAll("video").forEach((video) => {
-        video.pause();
-      });
+      certModal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      certModal.querySelectorAll('video').forEach(video => video.pause());
     }
 
     function showToast(message) {
       toast.textContent = message;
-      toast.classList.add("show");
-      window.clearTimeout(showToast.timer);
-      showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 2200);
+      toast.classList.add('show');
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => toast.classList.remove('show'), 2200);
     }
 
     async function copySiteLink() {
-      const link = window.location.href.split("#")[0];
+      const link = window.location.href.split('#')[0];
       try {
         await navigator.clipboard.writeText(link);
-        showToast("Hub link copied.");
+        showToast('Hub link copied.');
       } catch (error) {
-        showToast("Copy failed. Use your browser share menu.");
+        showToast('Copy failed. Use browser share.');
       }
     }
 
     async function shareSite() {
       const shareData = {
-        title: "Cornelius Aurelius — The Omniscientrix",
-        text: "Explore the Cornelius Aurelius project universe: free ebooks, AI tools, football projects, research, inventions, art and more.",
-        url: window.location.href.split("#")[0]
+        title: 'Cornelius Aurelius — The Omniscientrix',
+        text: 'Explore the Cornelius Aurelius project universe: free ebooks, AI tools, football projects, research, inventions, art and more.',
+        url: window.location.href.split('#')[0]
       };
-
       if (navigator.share) {
-        try {
-          await navigator.share(shareData);
-          return;
-        } catch (error) {
-          if (error.name === "AbortError") return;
-        }
+        try { await navigator.share(shareData); return; }
+        catch (error) { if (error.name === 'AbortError') return; }
       }
-
       copySiteLink();
     }
 
-    searchInput.addEventListener("input", () => {
+    searchInput.addEventListener('input', () => {
       const query = searchInput.value.trim().toLowerCase();
-      let visibleCount = 0;
-
-      cards.forEach((card) => {
-        const haystack = [card.dataset.title, card.innerText].join(" ").toLowerCase();
-        const match = haystack.includes(query);
-        card.style.display = match ? "flex" : "none";
-        if (match) visibleCount += 1;
+      let visible = 0;
+      cards.forEach(card => {
+        const text = [card.dataset.title, card.innerText].join(' ').toLowerCase();
+        const match = text.includes(query);
+        card.style.display = match ? 'flex' : 'none';
+        if (match) visible++;
       });
-
-      noResults.style.display = visibleCount ? "none" : "block";
+      noResults.style.display = visible ? 'none' : 'block';
     });
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && certModal.classList.contains("is-open")) {
-        closeCerts();
-      }
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && certModal.classList.contains('is-open')) closeCerts();
     });
   </script>
 </body>
