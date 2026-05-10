@@ -68,6 +68,9 @@
       background: rgba(0, 0, 0, 0.92);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(16px);
+      transform: translateY(0);
+      transition: transform 0.26s ease, background 0.2s ease, border-color 0.2s ease;
+      will-change: transform;
     }
 
     .topbar-inner {
@@ -903,6 +906,14 @@
     }
 
     @media (max-width: 720px) {
+      .topbar.is-hidden-mobile {
+        transform: translateY(calc(-100% - 3px));
+      }
+
+      .topbar.is-visible-mobile {
+        transform: translateY(0);
+      }
+
       .page { padding-inline: 14px; }
       .brand span:last-child { font-size: 0.78rem; letter-spacing: 0.09em; }
       .topbar-inner { flex-direction: column; align-items: stretch; min-height: auto; }
@@ -1242,11 +1253,15 @@
   <script>
     const certModal = document.getElementById('cert-modal');
     const toast = document.getElementById('toast');
+    const topbar = document.querySelector('.topbar');
     const searchInput = document.getElementById('project-search');
     const cards = Array.from(document.querySelectorAll('.card'));
     const noResults = document.getElementById('no-results');
     const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
+    const mobileMenuQuery = window.matchMedia('(max-width: 720px)');
     let activeFilter = 'all';
+    let lastScrollY = window.scrollY;
+    let scrollTicking = false;
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -1311,6 +1326,47 @@
     }
 
     searchInput.addEventListener('input', updateCards);
+
+    function updateMobileHeader() {
+      if (!topbar) return;
+
+      const currentScrollY = window.scrollY;
+      const isMobile = mobileMenuQuery.matches;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      const isNearTop = currentScrollY < 80;
+      const modalOpen = certModal.classList.contains('is-open');
+
+      if (!isMobile || isNearTop || modalOpen) {
+        topbar.classList.remove('is-hidden-mobile');
+        topbar.classList.add('is-visible-mobile');
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (isScrollingDown && currentScrollY > 150) {
+        topbar.classList.add('is-hidden-mobile');
+        topbar.classList.remove('is-visible-mobile');
+      } else {
+        topbar.classList.remove('is-hidden-mobile');
+        topbar.classList.add('is-visible-mobile');
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          updateMobileHeader();
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', updateMobileHeader);
+    mobileMenuQuery.addEventListener('change', updateMobileHeader);
+    updateMobileHeader();
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
