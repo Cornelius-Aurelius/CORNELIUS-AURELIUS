@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -99,10 +99,10 @@
       flex: 0 0 auto;
     }
 
-    .brand span {
+    .brand span:last-child {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.85rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.14em;
       white-space: nowrap;
       overflow: hidden;
@@ -125,10 +125,11 @@
       background: rgba(0, 217, 255, 0.035);
       color: #bfeefa;
       text-decoration: none;
-      font-weight: 800;
-      font-size: 0.88rem;
+      font-weight: 900;
+      font-size: 0.84rem;
       cursor: pointer;
       transition: 0.2s ease;
+      white-space: nowrap;
     }
 
     .nav a:hover, .nav button:hover,
@@ -227,7 +228,7 @@
       margin-top: 26px;
     }
 
-    .btn, .ghost, .card-btn, .modal-btn, .search-btn {
+    .btn, .ghost, .card-btn, .modal-btn, .search-btn, .filter-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -315,8 +316,210 @@
       font-weight: 900;
     }
 
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 34px 0 18px;
+    }
+
+    .section-head h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.45rem, 3vw, 2.2rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-head p {
+      max-width: 530px;
+      color: var(--soft);
+      line-height: 1.6;
+      text-align: right;
+    }
+
+    .pathways {
+      margin-top: 28px;
+    }
+
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .path-card {
+      position: relative;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top, rgba(0, 217, 255, 0.10), transparent 44%),
+        linear-gradient(180deg, #07111a, #010305);
+      text-decoration: none;
+      overflow: hidden;
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .path-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -30% -35% -30%;
+      height: 110px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.14), transparent 68%);
+      pointer-events: none;
+    }
+
+    .path-card:hover,
+    .path-card:focus-visible {
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.58), 0 0 24px rgba(0, 217, 255, 0.13);
+      outline: none;
+    }
+
+    .path-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(0, 217, 255, 0.32);
+      border-radius: 18px;
+      background: rgba(0, 217, 255, 0.07);
+      color: #5eeeff;
+      font-size: 1.65rem;
+      box-shadow: inset 0 0 18px rgba(0, 217, 255, 0.07);
+    }
+
+    .path-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f1fdff;
+    }
+
+    .path-card p {
+      color: var(--soft);
+      line-height: 1.6;
+      font-size: 0.96rem;
+    }
+
+    .path-link {
+      margin-top: auto;
+      color: #45eaff;
+      font-weight: 900;
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .start-guide {
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.44);
+      padding: 22px;
+    }
+
+    .start-guide h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .start-guide > p {
+      margin-top: 8px;
+      color: var(--soft);
+      text-align: center;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .guide-card {
+      min-height: 118px;
+      padding: 16px;
+      border: 1px solid rgba(0, 217, 255, 0.18);
+      border-radius: 18px;
+      background: rgba(7, 17, 26, 0.72);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: 0.2s ease;
+    }
+
+    .guide-card:hover,
+    .guide-card:focus-visible {
+      border-color: var(--blue);
+      background: rgba(0, 217, 255, 0.08);
+      outline: none;
+    }
+
+    .guide-card strong {
+      color: #f1fdff;
+      line-height: 1.35;
+    }
+
+    .guide-card span {
+      margin-top: auto;
+      color: #4cecff;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .stats-strip {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(0, 0, 0, 0.38);
+      padding: 12px;
+    }
+
+    .stat {
+      min-height: 94px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      padding: 16px;
+      border: 1px solid rgba(0, 217, 255, 0.12);
+      border-radius: 18px;
+      background: rgba(7, 17, 26, 0.56);
+    }
+
+    .stat strong {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.02rem;
+      color: #effcff;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .stat span {
+      color: var(--soft);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
     .tools {
-      margin: 24px 0 12px;
+      margin: 32px 0 12px;
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 12px;
@@ -358,7 +561,7 @@
       justify-content: flex-end;
     }
 
-    .search-btn {
+    .search-btn, .filter-btn {
       min-height: 50px;
       padding: 0 14px;
       border: 1px solid rgba(0, 217, 255, 0.22);
@@ -370,36 +573,23 @@
       text-transform: none;
     }
 
-    .search-btn:hover, .search-btn:focus-visible {
+    .search-btn:hover, .search-btn:focus-visible,
+    .filter-btn:hover, .filter-btn:focus-visible,
+    .filter-btn.is-active {
       border-color: var(--blue);
       color: #001016;
       background: var(--blue);
       outline: none;
     }
 
-    #projects { scroll-margin-top: 92px; }
-
-    .section-head {
+    .filters {
+      margin: 12px 0 20px;
       display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      margin: 34px 0 18px;
+      flex-wrap: wrap;
+      gap: 9px;
     }
 
-    .section-head h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.45rem, 3vw, 2.2rem);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .section-head p {
-      max-width: 530px;
-      color: var(--soft);
-      line-height: 1.6;
-      text-align: right;
-    }
+    #projects { scroll-margin-top: 92px; }
 
     .grid {
       display: grid;
@@ -706,6 +896,7 @@
     @media (max-width: 1120px) {
       .hero-inner { grid-template-columns: 1fr; }
       .signal-box { max-width: 660px; }
+      .path-grid, .guide-grid, .stats-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-links { justify-content: flex-start; }
@@ -713,20 +904,24 @@
 
     @media (max-width: 720px) {
       .page { padding-inline: 14px; }
-      .brand span { font-size: 0.78rem; letter-spacing: 0.09em; }
+      .brand span:last-child { font-size: 0.78rem; letter-spacing: 0.09em; }
       .topbar-inner { flex-direction: column; align-items: stretch; min-height: auto; }
       .brand { justify-content: center; }
       .nav { display: grid; grid-template-columns: repeat(2, 1fr); }
-      .nav a, .nav button { width: 100%; font-size: 0.82rem; }
+      .nav a, .nav button { width: 100%; font-size: 0.82rem; padding-inline: 8px; }
       .hero { margin-top: 16px; border-radius: 24px; }
       .hero-inner { padding: 24px 18px; gap: 22px; }
       h1 { font-size: clamp(2.35rem, 12vw, 3.8rem); max-width: 100%; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .section-head { flex-direction: column; align-items: start; }
+      .section-head p { text-align: left; }
+      .path-grid, .guide-grid, .stats-strip { grid-template-columns: 1fr; }
+      .path-card { min-height: auto; }
       .tools { grid-template-columns: 1fr; }
       .tool-buttons { justify-content: stretch; display: grid; grid-template-columns: repeat(3, 1fr); }
       .search-btn { padding-inline: 8px; font-size: 0.86rem; }
-      .section-head { flex-direction: column; align-items: start; }
-      .section-head p { text-align: left; }
+      .filters { display: grid; grid-template-columns: repeat(2, 1fr); }
+      .filter-btn { padding-inline: 8px; font-size: 0.86rem; }
       .grid { grid-template-columns: 1fr; gap: 18px; }
       .cert-grid, .video-grid { grid-template-columns: 1fr; }
     }
@@ -741,10 +936,12 @@
         <span>CORNELIUS AURELIUS</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
+        <a href="#pathways-title">Start Here</a>
         <a href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebooks</a>
-        <a href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000">Tip Cornelius</a>
-        <a href="https://corneliusaurelius.com/">Main Site</a>
+        <a href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Football Mission</a>
+        <a href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">AI Tools</a>
+        <a href="#projects">All Projects</a>
+        <a href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000">Tip</a>
       </nav>
     </div>
   </header>
@@ -760,9 +957,9 @@
             <div class="formula">δJ ≈ 0</div>
             <p class="hero-copy"><strong>Energy · Information · Awareness</strong> — a project universe built around minimising wasted energy, turning ideas into tools, and making hidden signals easier to see.</p>
             <div class="hero-actions">
-              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebook Library</a>
-              <a class="ghost" href="#projects">Explore Projects</a>
-              <button class="ghost" type="button" onclick="shareSite()">Share Hub</button>
+              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Read 20 Free Ebooks</a>
+              <a class="ghost" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Support Football Mission</a>
+              <a class="ghost" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">Use AI Tools</a>
             </div>
           </div>
 
@@ -775,6 +972,77 @@
             </ul>
           </aside>
         </div>
+      </section>
+
+      <section class="pathways" aria-labelledby="pathways-title">
+        <div class="section-head">
+          <h2 id="pathways-title">Choose Your Path</h2>
+          <p>The Cornelius Aurelius universe is organised into four simple doors: read, support, use or explore.</p>
+        </div>
+
+        <div class="path-grid">
+          <a class="path-card" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">
+            <div class="path-icon" aria-hidden="true">📚</div>
+            <h2>Read</h2>
+            <p>Start with free ebooks, frameworks, psychology, football, money, creativity, AI and personal power.</p>
+            <div class="path-link">Read 20 Free Ebooks →</div>
+          </a>
+
+          <a class="path-card" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">
+            <div class="path-icon" aria-hidden="true">⚽</div>
+            <h2>Support</h2>
+            <p>Help the Colour Blindness in Football mission reach players, parents, coaches, clubs and children earlier.</p>
+            <div class="path-link">Support The Mission →</div>
+          </a>
+
+          <a class="path-card" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">
+            <div class="path-icon" aria-hidden="true">🤖</div>
+            <h2>Use</h2>
+            <p>Open KRONATRIX GPTs, AI tools, marketing systems, book-to-GPT builders and business experiments.</p>
+            <div class="path-link">Use AI Tools →</div>
+          </a>
+
+          <a class="path-card" href="#projects">
+            <div class="path-icon" aria-hidden="true">◉</div>
+            <h2>Explore</h2>
+            <p>Enter the wider Omniscientrix universe: art, inventions, laws, maps, research, arcade projects and experiments.</p>
+            <div class="path-link">Explore All Projects →</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="start-guide" aria-labelledby="start-title">
+        <h2 id="start-title">Not Sure Where To Start?</h2>
+        <p>Choose what fits you best.</p>
+
+        <div class="guide-grid">
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">
+            <strong>I want to read something useful</strong>
+            <span>Go to Free Ebooks →</span>
+          </a>
+
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">
+            <strong>I care about football, children or coaching</strong>
+            <span>Open The Mission →</span>
+          </a>
+
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">
+            <strong>I need clients, marketing help or AI tools</strong>
+            <span>Use KRONATRIX →</span>
+          </a>
+
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top">
+            <strong>I want to understand Cornelius Aurelius</strong>
+            <span>Read The Profile →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="Project highlights">
+        <div class="stat"><strong>20+ Free Ebooks</strong><span>Available to read through the ebook library.</span></div>
+        <div class="stat"><strong>Football Mission</strong><span>Built to help players, parents, coaches and clubs.</span></div>
+        <div class="stat"><strong>AI Tools</strong><span>GPTs, systems, business tools and digital experiments.</span></div>
+        <div class="stat"><strong>One Universe</strong><span>Books, art, research, inventions and project worlds.</span></div>
       </section>
 
       <section class="tools" aria-label="Search and sharing tools">
@@ -791,112 +1059,120 @@
 
       <section id="projects" aria-labelledby="projects-title">
         <div class="section-head">
-          <h2 id="projects-title">Project Library</h2>
-          <p>Every card opens part of the Cornelius Aurelius universe. Search, explore, read, use, share and move between projects without friction.</p>
+          <h2 id="projects-title">Explore All Projects</h2>
+          <p>The full archive of Cornelius Aurelius projects, tools, books, AI systems, creative experiments, football work and research hubs.</p>
+        </div>
+
+        <div class="filters" aria-label="Project filters">
+          <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="read">Read</button>
+          <button class="filter-btn" type="button" data-filter="support">Support</button>
+          <button class="filter-btn" type="button" data-filter="use">Use</button>
+          <button class="filter-btn" type="button" data-filter="explore">Explore</button>
         </div>
 
         <div class="grid" id="project-grid">
-          <article class="card" data-title="About Cornelius Aurelius profile biography creator author">
+          <article class="card" data-category="explore" data-title="About Cornelius Aurelius profile biography creator author">
             <a class="media-link" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top"><span class="badge">Creator Profile</span><img src="about-cornelius-aurelius-thumbnail-592x736.png" alt="About Cornelius Aurelius" loading="lazy"></a>
             <div class="card-body"><h3>About Cornelius Aurelius</h3><p>The central identity page for the Cornelius Aurelius project universe, creative philosophy and digital work.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top">Open Profile</a></div>
           </article>
 
-          <article class="card" data-title="Free Ebook Library Cornelius Aurelius books reading free ebooks">
+          <article class="card" data-category="read" data-title="Free Ebook Library Cornelius Aurelius books reading free ebooks">
             <a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top"><span class="badge">Free Ebooks</span><img src="ChatGPT Image May 9, 2026, 05_40_53 PM.png" alt="Cornelius Aurelius Free Ebook Library" loading="lazy"></a>
             <div class="card-body"><h3>Free Ebook Library</h3><p>A central reading hub for Cornelius Aurelius ebooks, ideas, frameworks and book projects.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Enter Library</a></div>
           </article>
 
-          <article class="card" data-title="Fitness Equilibrium health training body video">
-            <div class="media-wrap"><span class="badge">Fitness</span><video autoplay muted loop playsinline preload="metadata"><source src="cornelius and spencer vid.mp4" type="video/mp4"></video></div>
-            <div class="card-body"><h3>Fitness Equilibrium</h3><p>Training, discipline and physical equilibrium inside the Cornelius Aurelius system.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">Open Fitness</a></div>
-          </article>
-
-          <article class="card" data-title="Certificate Insights Google HubSpot certifications">
-            <div class="media-wrap"><span class="badge">Certificates</span><video autoplay muted loop playsinline preload="metadata"><source src="Untitled%20design%20(2).mp4" type="video/mp4"></video></div>
-            <div class="card-body"><h3>Certificate / Insights</h3><p>Google, HubSpot and professional certification material gathered in one modal.</p><button class="card-btn" type="button" onclick="openCerts()">View Certificates</button></div>
-          </article>
-
-          <article class="card" data-title="Colour Blindness in Football Project book players parents coaches clubs">
+          <article class="card" data-category="support" data-title="Colour Blindness in Football Project book players parents coaches clubs">
             <a class="media-link" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top"><span class="badge">Football Project</span><img src="colour blindness in football cover for sites.png" alt="Colour Blindness in Football book cover" loading="lazy"></a>
             <div class="card-body"><h3>Colour Blindness in Football Project</h3><p>A practical football awareness project for players, parents, coaches and clubs.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Open Project</a></div>
           </article>
 
-          <article class="card" data-title="KRONATRIX Marketing GPTs agency AI marketing tools GPT">
+          <article class="card" data-category="use" data-title="KRONATRIX Marketing GPTs agency AI marketing tools GPT">
             <a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/"><span class="badge">AI Marketing</span><img src="ChatGPT Image May 7, 2026, 07_02_16 AM.png" alt="KRONATRIX Marketing GPTs" loading="lazy"></a>
             <div class="card-body"><h3>KRONATRIX™ Marketing GPTs</h3><p>Marketing-focused GPT systems and AI workflows for digital growth.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">Open GPTs</a></div>
           </article>
 
-          <article class="card" data-title="Gifts For Omni Shop products merchandise">
+          <article class="card" data-category="explore" data-title="Fitness Equilibrium health training body video">
+            <div class="media-wrap"><span class="badge">Fitness</span><video autoplay muted loop playsinline preload="metadata"><source src="cornelius and spencer vid.mp4" type="video/mp4"></video></div>
+            <div class="card-body"><h3>Fitness Equilibrium</h3><p>Training, discipline and physical equilibrium inside the Cornelius Aurelius system.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Cornelius-Fitness-Equilibrium/">Open Fitness</a></div>
+          </article>
+
+          <article class="card" data-category="explore" data-title="Certificate Insights Google HubSpot certifications">
+            <div class="media-wrap"><span class="badge">Certificates</span><video autoplay muted loop playsinline preload="metadata"><source src="Untitled%20design%20(2).mp4" type="video/mp4"></video></div>
+            <div class="card-body"><h3>Certificate / Insights</h3><p>Google, HubSpot and professional certification material gathered in one modal.</p><button class="card-btn" type="button" onclick="openCerts()">View Certificates</button></div>
+          </article>
+
+          <article class="card" data-category="explore" data-title="Gifts For Omni Shop products merchandise">
             <a class="media-link" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header"><span class="badge">Shop</span><img src="gifts%20for%20omni%20.png" alt="Gifts For Omni Shop" loading="lazy"></a>
             <div class="card-body"><h3>Gifts For Omni Shop</h3><p>A shop space for Omni-themed gifts, products and creative merchandise.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header">Open Shop</a></div>
           </article>
 
-          <article class="card" data-title="Viral Lyrics Generator AI music lyrics">
+          <article class="card" data-category="use" data-title="Viral Lyrics Generator AI music lyrics">
             <a class="media-link" href="https://cornelius-aurelius.github.io/Viral-Lyrics-Generator/"><span class="badge">AI Music</span><img src="ChatGPT Image May 7, 2026, 06_52_11 AM.png" alt="Viral Lyrics Generator" loading="lazy"></a>
             <div class="card-body"><h3>Viral Lyrics Generator</h3><p>A creative AI lyrics tool built for hooks, ideas and song concept generation.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Viral-Lyrics-Generator/">Open Generator</a></div>
           </article>
 
-          <article class="card" data-title="AI Art Gallery images design creative">
+          <article class="card" data-category="explore" data-title="AI Art Gallery images design creative">
             <a class="media-link" href="https://cornelius-aurelius.github.io/AI-ART/"><span class="badge">Gallery</span><img src="AI ART.png" alt="AI Art Gallery" loading="lazy"></a>
             <div class="card-body"><h3>AI.Art Gallery</h3><p>A visual gallery of AI art, concepts and Cornelius Aurelius creative imagery.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/AI-ART/">Open Gallery</a></div>
           </article>
 
-          <article class="card" data-title="Books Library archive books reading">
+          <article class="card" data-category="read" data-title="Books Library archive books reading">
             <a class="media-link" href="https://cornelius-aurelius.github.io/BOOKS--/"><span class="badge">Books</span><img src="BOOKS LIBRARY.png" alt="Books Library" loading="lazy"></a>
             <div class="card-body"><h3>Books Library</h3><p>A book library and archive space for reading-related projects.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/BOOKS--/">Open Books</a></div>
           </article>
 
-          <article class="card" data-title="Omniscientrix Laws VΩ rules principles">
+          <article class="card" data-category="explore" data-title="Omniscientrix Laws VΩ rules principles">
             <a class="media-link" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/"><span class="badge">Laws</span><img src="CORNELIUS AURELIUS - sites .png" alt="Omniscientrix Laws" loading="lazy"></a>
             <div class="card-body"><h3>Omniscientrix Laws (VΩ)</h3><p>A principles hub for Omniscientrix rules, logic and internal laws.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/">Open Laws</a></div>
           </article>
 
-          <article class="card" data-title="Book to GPT Business Custom GPT Builder AI books">
+          <article class="card" data-category="use" data-title="Book to GPT Business Custom GPT Builder AI books">
             <a class="media-link" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/"><span class="badge">Book → GPT</span><img src="BOOK TO GPT.png" alt="Book to GPT Business" loading="lazy"></a>
             <div class="card-body"><h3>Book → GPT Business</h3><p>A system for turning books, ideas and knowledge into custom GPT experiences.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Book-Custom-GPT-Builder/">Open Builder</a></div>
           </article>
 
-          <article class="card" data-title="AI Book Chats Books to AI chat tools">
+          <article class="card" data-category="use" data-title="AI Book Chats Books to AI chat tools">
             <a class="media-link" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/"><span class="badge">AI Books</span><img src="Books to AI · BOOK CHATS (1).png" alt="AI Book Chats" loading="lazy"></a>
             <div class="card-body"><h3>AI Book Chats</h3><p>Book-based AI chat concepts and knowledge interaction systems.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/">Open Chats</a></div>
           </article>
 
-          <article class="card" data-title="Universe Map Omniscientrix map navigation lore">
+          <article class="card" data-category="explore" data-title="Universe Map Omniscientrix map navigation lore">
             <a class="media-link" href="https://cornelius-aurelius.github.io/omniscientrix-map/"><span class="badge">Map</span><img src="UNIVERSE MAP.png" alt="Omniscientrix Universe Map" loading="lazy"></a>
             <div class="card-body"><h3>Universe Map</h3><p>A navigation map for the wider Omniscientrix universe and connected projects.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/omniscientrix-map/">Open Map</a></div>
           </article>
 
-          <article class="card" data-title="Zenodo Research Hub records publications archive">
+          <article class="card" data-category="explore" data-title="Zenodo Research Hub records publications archive">
             <a class="media-link" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/"><span class="badge">Research</span><img src="ZENODO RESEARCH HUB.png" alt="Zenodo Research Hub" loading="lazy"></a>
             <div class="card-body"><h3>Zenodo Research Hub</h3><p>A research and records hub for published or archived project material.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/omniscientrix-universe-research/">Open Research</a></div>
           </article>
 
-          <article class="card" data-title="Inventions Cornelius Aurelius ideas concepts">
+          <article class="card" data-category="explore" data-title="Inventions Cornelius Aurelius ideas concepts">
             <a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/"><span class="badge">Inventions</span><img src="INVENTIONS.png" alt="Cornelius Aurelius Inventions" loading="lazy"></a>
             <div class="card-body"><h3>Inventions</h3><p>A space for invention concepts, ideas and experimental project builds.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-INVENTIONS/">Open Inventions</a></div>
           </article>
 
-          <article class="card" data-title="The Flow State Footballer Ebook football performance flow state">
+          <article class="card" data-category="read" data-title="The Flow State Footballer Ebook football performance flow state">
             <a class="media-link" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top"><span class="badge">Football Ebook</span><img src="the flow state footballer cover .png" alt="The Flow State Footballer book cover" loading="lazy"></a>
             <div class="card-body"><h3>The Flow State Footballer Ebook</h3><p>A football performance ebook about focus, confidence, rhythm and playing inside flow.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top">Read Ebook</a></div>
           </article>
 
-          <article class="card" data-title="Proof Is King Ebook evidence truth proof credibility">
+          <article class="card" data-category="read" data-title="Proof Is King Ebook evidence truth proof credibility">
             <a class="media-link" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/"><span class="badge">Ebook</span><img src="proof is king cover.png" alt="Proof Is King ebook cover" loading="lazy"></a>
             <div class="card-body"><h3>Proof Is King Ebook</h3><p>A Cornelius Aurelius ebook about proof, credibility, evidence and signal.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/">Read Ebook</a></div>
           </article>
 
-          <article class="card" data-title="Websites Hub Project Nexus websites landing pages">
+          <article class="card" data-category="use" data-title="Websites Hub Project Nexus websites landing pages">
             <a class="media-link" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/"><span class="badge">Websites</span><img src="WEBSITES  HUB (1).png" alt="Websites Hub" loading="lazy"></a>
             <div class="card-body"><h3>Websites Hub</h3><p>A project nexus for websites, landing pages and digital hubs.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Project-Nexus-Hub/">Open Hub</a></div>
           </article>
 
-          <article class="card" data-title="KRONATRIX Agency marketing agency AI automation growth">
+          <article class="card" data-category="use" data-title="KRONATRIX Agency marketing agency AI automation growth">
             <a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX/"><span class="badge">Agency</span><img src="KRONATRIX.png" alt="KRONATRIX Agency" loading="lazy"></a>
             <div class="card-body"><h3>KRONATRIX Agency</h3><p>A marketing, AI and growth agency branch of the Cornelius Aurelius ecosystem.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/KRONATRIX/">Open Agency</a></div>
           </article>
 
-          <article class="card" data-title="Omniscientrix Arcade games digital arcade">
+          <article class="card" data-category="explore" data-title="Omniscientrix Arcade games digital arcade">
             <a class="media-link" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/"><span class="badge">Arcade</span><img src="OMNISCIENTRIX ARCADE.png" alt="Omniscientrix Arcade" loading="lazy"></a>
             <div class="card-body"><h3>Omniscientrix Arcade</h3><p>A digital arcade for games, learning tools and interactive experiments.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/Omniscientrix-Arcade-/">Open Arcade</a></div>
           </article>
@@ -946,6 +1222,9 @@
         <nav class="footer-links" aria-label="Footer links">
           <a href="https://corneliusaurelius.com/">Main Site</a>
           <a href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOKS/">Ebooks Hub</a>
+          <a href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebook Library</a>
+          <a href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Football Mission</a>
+          <a href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">KRONATRIX GPTs</a>
           <a href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000">Tip Cornelius</a>
           <a href="https://www.instagram.com/cornelius_aurelius_/">Instagram</a>
           <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/">LinkedIn</a>
@@ -966,6 +1245,8 @@
     const searchInput = document.getElementById('project-search');
     const cards = Array.from(document.querySelectorAll('.card'));
     const noResults = document.getElementById('no-results');
+    const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
+    let activeFilter = 'all';
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -1013,16 +1294,31 @@
       copySiteLink();
     }
 
-    searchInput.addEventListener('input', () => {
+    function updateCards() {
       const query = searchInput.value.trim().toLowerCase();
       let visible = 0;
+
       cards.forEach(card => {
         const text = [card.dataset.title, card.innerText].join(' ').toLowerCase();
-        const match = text.includes(query);
-        card.style.display = match ? 'flex' : 'none';
-        if (match) visible++;
+        const matchesSearch = !query || text.includes(query);
+        const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
+        const show = matchesSearch && matchesFilter;
+        card.style.display = show ? 'flex' : 'none';
+        if (show) visible++;
       });
+
       noResults.style.display = visible ? 'none' : 'block';
+    }
+
+    searchInput.addEventListener('input', updateCards);
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        filterButtons.forEach(btn => btn.classList.remove('is-active'));
+        button.classList.add('is-active');
+        updateCards();
+      });
     });
 
     document.addEventListener('keydown', event => {
