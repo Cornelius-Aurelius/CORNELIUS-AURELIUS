@@ -594,6 +594,19 @@
 
     #projects { scroll-margin-top: 92px; }
 
+    .projects-priority {
+      padding-top: 18px;
+    }
+
+    .projects-priority .section-head {
+      margin: 18px 0 14px;
+    }
+
+    .projects-priority .tools {
+      margin: 0 0 12px;
+    }
+
+
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -936,6 +949,78 @@
       .grid { grid-template-columns: 1fr; gap: 18px; }
       .cert-grid, .video-grid { grid-template-columns: 1fr; }
     }
+
+    @media (max-width: 720px) {
+      .topbar-inner {
+        min-height: 58px;
+        padding: 8px 14px;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand {
+        justify-content: flex-start;
+        flex: 0 0 auto;
+      }
+
+      .orb {
+        width: 28px;
+        height: 28px;
+      }
+
+      .nav {
+        display: flex;
+        grid-template-columns: none;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav a,
+      .nav button {
+        width: auto;
+        flex: 0 0 auto;
+        min-height: 36px;
+        padding: 8px 10px;
+        font-size: 0.76rem;
+      }
+
+      .projects-priority {
+        padding-top: 10px;
+      }
+
+      .projects-priority .section-head {
+        margin: 12px 0 12px;
+      }
+
+      .projects-priority .section-head p {
+        line-height: 1.45;
+      }
+
+      .projects-priority .tools {
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .projects-priority .filters {
+        margin: 10px 0 14px;
+      }
+
+      .projects-priority .card img,
+      .projects-priority .card video {
+        aspect-ratio: 16 / 10;
+        object-fit: contain;
+      }
+    }
+
   </style>
 </head>
 
@@ -959,104 +1044,13 @@
 
   <div class="page" id="top">
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-inner">
-          <div>
-            <div class="pill"><span class="dot"></span> The Omniscientrix Hub</div>
-            <h1 id="hero-title">Cornelius<br>Aurelius</h1>
-            <div class="subtitle">The Omniscientrix</div>
-            <div class="formula">δJ ≈ 0</div>
-            <p class="hero-copy"><strong>Energy · Information · Awareness</strong> — a project universe built around minimising wasted energy, turning ideas into tools, and making hidden signals easier to see.</p>
-            <div class="hero-actions">
-              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Read 20 Free Ebooks</a>
-              <a class="ghost" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Support Football Mission</a>
-              <a class="ghost" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">Use AI Tools</a>
-            </div>
-          </div>
-
-          <aside class="signal-box">
-            <h2>Built for books, tools, research, AI systems, football projects, art, inventions and digital experiments.</h2>
-            <ul class="signals">
-              <li><span>01</span><div><strong>Read.</strong> Explore free ebooks and idea systems by Cornelius Aurelius.</div></li>
-              <li><span>02</span><div><strong>Use.</strong> Open AI tools, GPT projects, games, hubs and practical systems.</div></li>
-              <li><span>03</span><div><strong>Share.</strong> Send the hub to readers, collaborators, sponsors and supporters.</div></li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section class="pathways" aria-labelledby="pathways-title">
+<section id="projects" class="projects-priority" aria-labelledby="projects-title">
         <div class="section-head">
-          <h2 id="pathways-title">Choose Your Path</h2>
-          <p>The Cornelius Aurelius universe is organised into four simple doors: read, support, use or explore.</p>
+          <h2 id="projects-title">Explore All Projects</h2>
+          <p>The full archive of Cornelius Aurelius projects, tools, books, AI systems, creative experiments, football work and research hubs.</p>
         </div>
 
-        <div class="path-grid">
-          <a class="path-card" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">
-            <div class="path-icon" aria-hidden="true">📚</div>
-            <h2>Read</h2>
-            <p>Start with free ebooks, frameworks, psychology, football, money, creativity, AI and personal power.</p>
-            <div class="path-link">Read 20 Free Ebooks →</div>
-          </a>
-
-          <a class="path-card" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">
-            <div class="path-icon" aria-hidden="true">⚽</div>
-            <h2>Support</h2>
-            <p>Help the Colour Blindness in Football mission reach players, parents, coaches, clubs and children earlier.</p>
-            <div class="path-link">Support The Mission →</div>
-          </a>
-
-          <a class="path-card" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">
-            <div class="path-icon" aria-hidden="true">🤖</div>
-            <h2>Use</h2>
-            <p>Open KRONATRIX GPTs, AI tools, marketing systems, book-to-GPT builders and business experiments.</p>
-            <div class="path-link">Use AI Tools →</div>
-          </a>
-
-          <a class="path-card" href="#projects">
-            <div class="path-icon" aria-hidden="true">◉</div>
-            <h2>Explore</h2>
-            <p>Enter the wider Omniscientrix universe: art, inventions, laws, maps, research, arcade projects and experiments.</p>
-            <div class="path-link">Explore All Projects →</div>
-          </a>
-        </div>
-      </section>
-
-      <section class="start-guide" aria-labelledby="start-title">
-        <h2 id="start-title">Not Sure Where To Start?</h2>
-        <p>Choose what fits you best.</p>
-
-        <div class="guide-grid">
-          <a class="guide-card" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">
-            <strong>I want to read something useful</strong>
-            <span>Go to Free Ebooks →</span>
-          </a>
-
-          <a class="guide-card" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">
-            <strong>I care about football, children or coaching</strong>
-            <span>Open The Mission →</span>
-          </a>
-
-          <a class="guide-card" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">
-            <strong>I need clients, marketing help or AI tools</strong>
-            <span>Use KRONATRIX →</span>
-          </a>
-
-          <a class="guide-card" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top">
-            <strong>I want to understand Cornelius Aurelius</strong>
-            <span>Read The Profile →</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="stats-strip" aria-label="Project highlights">
-        <div class="stat"><strong>20+ Free Ebooks</strong><span>Available to read through the ebook library.</span></div>
-        <div class="stat"><strong>Football Mission</strong><span>Built to help players, parents, coaches and clubs.</span></div>
-        <div class="stat"><strong>AI Tools</strong><span>GPTs, systems, business tools and digital experiments.</span></div>
-        <div class="stat"><strong>One Universe</strong><span>Books, art, research, inventions and project worlds.</span></div>
-      </section>
-
-      <section class="tools" aria-label="Search and sharing tools">
+<section class="tools" aria-label="Search and sharing tools">
         <div class="search-wrap">
           <label for="project-search">Search projects</label>
           <input id="project-search" class="search-input" type="search" placeholder="Search ebooks, AI, football, KRONATRIX, research, inventions..." autocomplete="off" />
@@ -1068,12 +1062,7 @@
         </div>
       </section>
 
-      <section id="projects" aria-labelledby="projects-title">
-        <div class="section-head">
-          <h2 id="projects-title">Explore All Projects</h2>
-          <p>The full archive of Cornelius Aurelius projects, tools, books, AI systems, creative experiments, football work and research hubs.</p>
-        </div>
-
+      
         <div class="filters" aria-label="Project filters">
           <button class="filter-btn is-active" type="button" data-filter="all">All</button>
           <button class="filter-btn" type="button" data-filter="read">Read</button>
@@ -1205,6 +1194,104 @@
         </div>
 
         <p class="no-results" id="no-results">No matching projects found. Try “ebook”, “AI”, “football”, “KRONATRIX”, “research” or “inventions”.</p>
+      </section>
+
+      
+<section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div>
+            <div class="pill"><span class="dot"></span> The Omniscientrix Hub</div>
+            <h1 id="hero-title">Cornelius<br>Aurelius</h1>
+            <div class="subtitle">The Omniscientrix</div>
+            <div class="formula">δJ ≈ 0</div>
+            <p class="hero-copy"><strong>Energy · Information · Awareness</strong> — a project universe built around minimising wasted energy, turning ideas into tools, and making hidden signals easier to see.</p>
+            <div class="hero-actions">
+              <a class="btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Read 20 Free Ebooks</a>
+              <a class="ghost" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Support Football Mission</a>
+              <a class="ghost" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">Use AI Tools</a>
+            </div>
+          </div>
+
+          <aside class="signal-box">
+            <h2>Built for books, tools, research, AI systems, football projects, art, inventions and digital experiments.</h2>
+            <ul class="signals">
+              <li><span>01</span><div><strong>Read.</strong> Explore free ebooks and idea systems by Cornelius Aurelius.</div></li>
+              <li><span>02</span><div><strong>Use.</strong> Open AI tools, GPT projects, games, hubs and practical systems.</div></li>
+              <li><span>03</span><div><strong>Share.</strong> Send the hub to readers, collaborators, sponsors and supporters.</div></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="pathways" aria-labelledby="pathways-title">
+        <div class="section-head">
+          <h2 id="pathways-title">Choose Your Path</h2>
+          <p>The Cornelius Aurelius universe is organised into four simple doors: read, support, use or explore.</p>
+        </div>
+
+        <div class="path-grid">
+          <a class="path-card" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">
+            <div class="path-icon" aria-hidden="true">📚</div>
+            <h2>Read</h2>
+            <p>Start with free ebooks, frameworks, psychology, football, money, creativity, AI and personal power.</p>
+            <div class="path-link">Read 20 Free Ebooks →</div>
+          </a>
+
+          <a class="path-card" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">
+            <div class="path-icon" aria-hidden="true">⚽</div>
+            <h2>Support</h2>
+            <p>Help the Colour Blindness in Football mission reach players, parents, coaches, clubs and children earlier.</p>
+            <div class="path-link">Support The Mission →</div>
+          </a>
+
+          <a class="path-card" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">
+            <div class="path-icon" aria-hidden="true">🤖</div>
+            <h2>Use</h2>
+            <p>Open KRONATRIX GPTs, AI tools, marketing systems, book-to-GPT builders and business experiments.</p>
+            <div class="path-link">Use AI Tools →</div>
+          </a>
+
+          <a class="path-card" href="#projects">
+            <div class="path-icon" aria-hidden="true">◉</div>
+            <h2>Explore</h2>
+            <p>Enter the wider Omniscientrix universe: art, inventions, laws, maps, research, arcade projects and experiments.</p>
+            <div class="path-link">Explore All Projects →</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="start-guide" aria-labelledby="start-title">
+        <h2 id="start-title">Not Sure Where To Start?</h2>
+        <p>Choose what fits you best.</p>
+
+        <div class="guide-grid">
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">
+            <strong>I want to read something useful</strong>
+            <span>Go to Free Ebooks →</span>
+          </a>
+
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">
+            <strong>I care about football, children or coaching</strong>
+            <span>Open The Mission →</span>
+          </a>
+
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING-GPTs/">
+            <strong>I need clients, marketing help or AI tools</strong>
+            <span>Use KRONATRIX →</span>
+          </a>
+
+          <a class="guide-card" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top">
+            <strong>I want to understand Cornelius Aurelius</strong>
+            <span>Read The Profile →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="Project highlights">
+        <div class="stat"><strong>20+ Free Ebooks</strong><span>Available to read through the ebook library.</span></div>
+        <div class="stat"><strong>Football Mission</strong><span>Built to help players, parents, coaches and clubs.</span></div>
+        <div class="stat"><strong>AI Tools</strong><span>GPTs, systems, business tools and digital experiments.</span></div>
+        <div class="stat"><strong>One Universe</strong><span>Books, art, research, inventions and project worlds.</span></div>
       </section>
 
       <div class="cert-cta"><button class="modal-btn" type="button" onclick="openCerts()">Certificate / Insights</button></div>
