@@ -1021,6 +1021,148 @@
       }
     }
 
+
+    /* Mobile dropdown menu upgrade */
+    .mobile-menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 42px;
+      padding: 9px 13px;
+      border: 1px solid rgba(0, 217, 255, 0.34);
+      border-radius: 999px;
+      background: rgba(0, 217, 255, 0.055);
+      color: #d8f9ff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .mobile-menu-toggle:hover,
+    .mobile-menu-toggle:focus-visible {
+      background: var(--blue);
+      color: #001016;
+      border-color: var(--blue);
+      outline: none;
+    }
+
+    .menu-icon {
+      width: 18px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .menu-icon span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 99px;
+      background: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        z-index: 9999;
+      }
+
+      .topbar.menu-open {
+        transform: translateY(0) !important;
+        background: rgba(0, 0, 0, 0.97);
+        border-bottom-color: rgba(0, 217, 255, 0.34);
+      }
+
+      .topbar-inner {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center !important;
+        min-height: 58px !important;
+        padding: 8px 14px !important;
+        gap: 10px !important;
+      }
+
+      .brand {
+        justify-content: flex-start !important;
+        min-width: 0;
+      }
+
+      .brand span:last-child {
+        max-width: 58vw;
+        font-size: 0.76rem !important;
+        letter-spacing: 0.08em !important;
+      }
+
+      .orb {
+        width: 28px !important;
+        height: 28px !important;
+      }
+
+      .mobile-menu-toggle {
+        display: inline-flex;
+      }
+
+      .topbar .nav {
+        grid-column: 1 / -1;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        width: 100%;
+        max-height: 0;
+        margin-top: 0;
+        padding: 0 10px;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        border: 1px solid transparent;
+        border-radius: 18px;
+        background: rgba(2, 6, 9, 0.98);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.58), 0 0 22px rgba(0, 217, 255, 0.08);
+        transition: max-height 0.26s ease, opacity 0.2s ease, padding 0.2s ease, margin 0.2s ease, border-color 0.2s ease;
+        scrollbar-width: none;
+      }
+
+      .topbar .nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .topbar.menu-open .nav {
+        max-height: 460px;
+        margin-top: 6px;
+        padding: 10px;
+        opacity: 1;
+        pointer-events: auto;
+        border-color: rgba(0, 217, 255, 0.22);
+      }
+
+      .topbar .nav a,
+      .topbar .nav button {
+        width: 100% !important;
+        min-height: 44px !important;
+        justify-content: center;
+        padding: 11px 12px !important;
+        border-radius: 13px !important;
+        font-size: 0.84rem !important;
+        background: rgba(0, 217, 255, 0.045);
+      }
+
+      .topbar.menu-open .menu-icon span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .topbar.menu-open .menu-icon span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .topbar.menu-open .menu-icon span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+
   </style>
 </head>
 
@@ -1031,7 +1173,11 @@
         <span class="orb" aria-hidden="true"></span>
         <span>CORNELIUS AURELIUS</span>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <button class="mobile-menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="menu-label">Menu</span>
+      </button>
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
         <a href="#pathways-title">Start Here</a>
         <a href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Free Ebooks</a>
         <a href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Football Mission</a>
@@ -1356,6 +1502,8 @@
     const certModal = document.getElementById('cert-modal');
     const toast = document.getElementById('toast');
     const topbar = document.querySelector('.topbar');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const primaryNav = document.getElementById('primary-nav');
     const searchInput = document.getElementById('project-search');
     const cards = Array.from(document.querySelectorAll('.card'));
     const noResults = document.getElementById('no-results');
@@ -1366,6 +1514,32 @@
     let scrollTicking = false;
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function setMobileMenu(open) {
+      if (!topbar || !mobileMenuToggle || !primaryNav) return;
+      topbar.classList.toggle('menu-open', open);
+      mobileMenuToggle.setAttribute('aria-expanded', String(open));
+      mobileMenuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', () => {
+        const isOpen = topbar.classList.contains('menu-open');
+        setMobileMenu(!isOpen);
+      });
+    }
+
+    if (primaryNav) {
+      primaryNav.addEventListener('click', event => {
+        const link = event.target.closest('a');
+        if (link && mobileMenuQuery.matches) setMobileMenu(false);
+      });
+    }
+
+    document.addEventListener('click', event => {
+      if (!topbar || !mobileMenuQuery.matches || !topbar.classList.contains('menu-open')) return;
+      if (!topbar.contains(event.target)) setMobileMenu(false);
+    });
 
     function openCerts() {
       certModal.classList.add('is-open');
@@ -1437,8 +1611,9 @@
       const isScrollingDown = currentScrollY > lastScrollY;
       const isNearTop = currentScrollY < 80;
       const modalOpen = certModal.classList.contains('is-open');
+      const menuOpen = topbar.classList.contains('menu-open');
 
-      if (!isMobile || isNearTop || modalOpen) {
+      if (!isMobile || isNearTop || modalOpen || menuOpen) {
         topbar.classList.remove('is-hidden-mobile');
         topbar.classList.add('is-visible-mobile');
         lastScrollY = currentScrollY;
@@ -1467,7 +1642,10 @@
     }, { passive: true });
 
     window.addEventListener('resize', updateMobileHeader);
-    mobileMenuQuery.addEventListener('change', updateMobileHeader);
+    mobileMenuQuery.addEventListener('change', () => {
+      if (!mobileMenuQuery.matches) setMobileMenu(false);
+      updateMobileHeader();
+    });
     updateMobileHeader();
 
     filterButtons.forEach(button => {
