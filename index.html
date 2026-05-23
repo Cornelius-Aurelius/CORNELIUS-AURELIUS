@@ -1653,7 +1653,9 @@
       object-position: center center;
       flex: 0 0 auto;
       background: transparent !important;
-      filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.32));
+      image-rendering: auto;
+      transform: translateZ(0);
+      filter: drop-shadow(0 0 4px rgba(0, 217, 255, 0.28));
     }
 
     @media (max-width: 720px) {
@@ -1729,7 +1731,7 @@
 <header class="topbar">
 <div class="topbar-inner">
 <a aria-label="Cornelius Aurelius home" class="brand" href="#top">
-<img alt="Spencer Aurelius logo" class="brand-logo" decoding="async" height="47" src="spencer-aurelius-logo.png" width="35"/>
+<img alt="Spencer Aurelius logo" class="brand-logo" decoding="async" fetchpriority="high" height="47" src="spencer-aurelius-logo.png" width="35"/>
 <span>CORNELIUS AURELIUS</span>
 </a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" type="button">
