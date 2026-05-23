@@ -1645,6 +1645,24 @@
         grid-template-columns: 104px minmax(0, 1fr);
       }
     }
+
+    .brand-logo {
+      width: 35px !important;
+      height: 47px !important;
+      object-fit: contain;
+      object-position: center center;
+      flex: 0 0 auto;
+      background: transparent !important;
+      filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.32));
+    }
+
+    @media (max-width: 720px) {
+      .brand-logo {
+        width: 35px !important;
+        height: 47px !important;
+      }
+    }
+
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -1711,7 +1729,7 @@
 <header class="topbar">
 <div class="topbar-inner">
 <a aria-label="Cornelius Aurelius home" class="brand" href="#top">
-<span aria-hidden="true" class="orb"></span>
+<img alt="Spencer Aurelius logo" class="brand-logo" decoding="async" height="47" src="spencer-aurelius-logo.png" width="35"/>
 <span>CORNELIUS AURELIUS</span>
 </a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" type="button">
