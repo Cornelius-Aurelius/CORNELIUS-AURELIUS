@@ -12,15 +12,15 @@
 <meta content="Explore Cornelius Aurelius projects: inventions, free ebooks, free marketing, football, AI art, Omniscientrix laws and Gifts For Omni." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="cornelius-aurelius-inventions-thumbnail-cornelius-aurelius-alt-text.jpg" property="og:image"/>
-<title>Cornelius Aurelius — Projects, Inventions, Books &amp; Ideas</title>
-<link rel="icon" href="favicon.ico" sizes="any" />
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-<link rel="manifest" href="site.webmanifest" />
-<meta name="msapplication-TileColor" content="#000000" />
-<meta name="msapplication-TileImage" content="apple-touch-icon.png" />
+<title>Cornelius Aurelius — Projects, Inventions, Books &amp; Ideas</title><link href="https://corneliusaurelius.com/" rel="canonical"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="site.webmanifest" rel="manifest"/>
+<meta content="#000000" name="msapplication-TileColor"/>
+<meta content="apple-touch-icon.png" name="msapplication-TileImage"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -1550,7 +1550,102 @@
     }
     /* End header dropdown menu */
 
-  </style>
+  
+
+    /* Final thumbnail and header upgrade */
+    .badge {
+      display: none !important;
+    }
+
+    .media-link,
+    .media-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 4 / 5;
+      width: 100%;
+      min-height: 0;
+      padding: clamp(6px, 1vw, 10px);
+      background: #000;
+    }
+
+    .card img,
+    .card video,
+    .projects-priority .card img,
+    .projects-priority .card video {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain !important;
+      object-position: center center !important;
+      background: #000;
+    }
+
+    .card:hover img,
+    .card:hover video {
+      transform: none !important;
+      opacity: 1;
+    }
+
+    .card-body {
+      min-width: 0;
+    }
+
+    .topbar .nav a,
+    .topbar .nav button {
+      overflow-wrap: anywhere;
+    }
+
+    @media (min-width: 721px) {
+      .topbar-inner {
+        min-height: 70px;
+      }
+
+      .topbar .nav {
+        right: 18px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) and (min-width: 721px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .card {
+        grid-template-columns: minmax(112px, 36%) minmax(0, 1fr);
+      }
+
+      .media-link,
+      .media-wrap {
+        aspect-ratio: auto;
+        height: 100%;
+        min-height: 146px;
+        padding: 6px;
+      }
+
+      .card img,
+      .card video,
+      .projects-priority .card img,
+      .projects-priority .card video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain !important;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .card {
+        grid-template-columns: 104px minmax(0, 1fr);
+      }
+    }
+</style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -1611,7 +1706,7 @@
       "description": "Gifts For Omni shop and product space."
     }
   ]
-}</script></head>
+}</script><meta content="index, follow, max-image-preview:large" name="robots"/></head>
 <body>
 <header class="topbar">
 <div class="topbar-inner">
@@ -1631,7 +1726,6 @@
 <section aria-labelledby="projects-title" class="projects-priority" id="projects">
 <div class="section-head">
 <h2 id="projects-title">Projects</h2>
-
 </div>
 <section aria-label="Search and sharing tools" class="tools">
 <div class="search-wrap">
@@ -1647,41 +1741,40 @@
 <div aria-label="Project filters" class="filters"><button class="filter-btn is-active" data-filter="all" type="button">All</button><button class="filter-btn" data-filter="read" type="button">Read</button><button class="filter-btn" data-filter="support" type="button">Support</button><button class="filter-btn" data-filter="use" type="button">Use</button><button class="filter-btn" data-filter="explore" type="button">Explore</button></div>
 <div class="grid" id="project-grid">
 <article class="card" data-category="explore" data-title="About Me Cornelius Aurelius profile biography creator author">
-<a class="media-link" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top"><span class="badge">About Me</span><img alt="About Me page for Cornelius Aurelius creator profile and project universe" decoding="async" loading="eager" src="about-cornelius-aurelius-thumbnail-592x736.png"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top"><img alt="About Me page for Cornelius Aurelius creator profile and project universe" decoding="async" loading="eager" src="about-cornelius-aurelius-thumbnail-592x736.png"/></a>
 <div class="card-body"><h3>About Me</h3><p>The central Cornelius Aurelius profile page, creative identity, philosophy and project universe.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/ABOUT-CORNELIUS-AURELIUS/#top">Open About Me</a></div>
 </article>
 <article class="card" data-category="explore" data-title="Inventions Cornelius Aurelius invention hub Sonic Brace GLOVE StarBond future inventions">
-<a class="media-link" href="https://cornelius-aurelius.github.io/INVENTIONS/"><span class="badge">Inventions</span><img alt="Cornelius Aurelius Inventions thumbnail showing Sonic Brace, GLOVE, StarBond Headset and future invention concepts" decoding="async" height="1350" loading="eager" src="cornelius-aurelius-inventions-thumbnail-cornelius-aurelius-alt-text.jpg" width="1080"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/INVENTIONS/"><img alt="Cornelius Aurelius Inventions thumbnail for the invention hub showing futuristic invention concepts by Cornelius Aurelius" decoding="async" height="1350" loading="eager" src="cornelius-aurelius-inventions-thumbnail-cornelius-aurelius-alt-text.jpg" width="1080"/></a>
 <div class="card-body"><h3>Inventions</h3><p>A premium invention hub for Cornelius Aurelius ideas, concepts, accessibility systems, future products and experimental builds.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/INVENTIONS/">Open Inventions</a></div>
 </article>
 <article class="card" data-category="read" data-title="Free Ebooks Cornelius Aurelius library books reading free ebook library">
-<a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top"><span class="badge">Free Ebooks</span><img alt="Free Ebooks by Cornelius Aurelius ebook library thumbnail" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 05_40_53 PM.png"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top"><img alt="Cornelius Aurelius Ebook Library thumbnail promoting 20 plus free ebooks by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 05_40_53 PM.png"/></a>
 <div class="card-body"><h3>Free Ebooks</h3><p>A central reading hub for Cornelius Aurelius ebooks, frameworks, ideas and book projects.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOK-LIBRARY/#top">Enter Library</a></div>
 </article>
 <article class="card" data-category="use" data-title="Free Marketing KRONATRIX Marketing 13.8 Cornelius Aurelius free marketing vault business growth">
-<a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING---CORNELIUS-AURELIUS/#top"><span class="badge">Free Marketing</span><img alt="Free Marketing by Cornelius Aurelius KRONATRIX Marketing 13.8 thumbnail" decoding="async" loading="lazy" src="kronatrix-thumbnail.png"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING---CORNELIUS-AURELIUS/#top"><img alt="Free Marketing by Cornelius Aurelius KRONATRIX Marketing 13.8 thumbnail" decoding="async" loading="lazy" src="kronatrix-thumbnail.png"/></a>
 <div class="card-body"><h3>Free Marketing</h3><p>A free marketing vault for visibility, branding, content, psychology, offers, systems and business growth.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/KRONATRIX-MARKETING---CORNELIUS-AURELIUS/#top">Open Free Marketing</a></div>
 </article>
 <article class="card" data-category="support" data-title="Football Project Colour Blindness in Football players parents coaches clubs">
-<a class="media-link" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top"><span class="badge">Football Project</span><img alt="Football Project Colour Blindness in Football by Cornelius Aurelius" decoding="async" loading="lazy" src="colour blindness in football cover for sites.png"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top"><img alt="Football Project Colour Blindness in Football by Cornelius Aurelius" decoding="async" loading="lazy" src="colour blindness in football cover for sites.png"/></a>
 <div class="card-body"><h3>Football Project</h3><p>The Colour Blindness in Football awareness project for players, parents, coaches and clubs.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Open Football Project</a></div>
 </article>
 <article class="card" data-category="explore" data-title="AI Art Cornelius Aurelius AI art gallery images design creative">
-<a class="media-link" href="https://cornelius-aurelius.github.io/AI-ART/"><span class="badge">AI Art</span><img alt="AI Art gallery by Cornelius Aurelius" decoding="async" loading="lazy" src="AI ART.png"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/AI-ART/"><img alt="AI Art gallery by Cornelius Aurelius" decoding="async" loading="lazy" src="AI ART.png"/></a>
 <div class="card-body"><h3>AI Art</h3><p>A visual gallery of AI art, concepts and Cornelius Aurelius creative imagery.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/AI-ART/">Open AI Art</a></div>
 </article>
 <article class="card" data-category="explore" data-title="Omniscientrix Laws VΩ Cornelius Aurelius rules principles laws">
-<a class="media-link" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/"><span class="badge">VΩ Laws</span><img alt="Omniscientrix Laws VΩ by Cornelius Aurelius" decoding="async" loading="lazy" src="CORNELIUS AURELIUS - sites .png"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/"><img alt="Omniscientrix Laws VΩ by Cornelius Aurelius" decoding="async" loading="lazy" src="CORNELIUS AURELIUS - sites .png"/></a>
 <div class="card-body"><h3>Omniscientrix Laws (VΩ)</h3><p>A principles hub for Omniscientrix rules, VΩ logic and internal laws.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/OMNISCIENTRIX-LAWS-/">Open Laws</a></div>
 </article>
 <article class="card" data-category="explore" data-title="Gifts For Omni shop products merchandise Cornelius Aurelius">
-<a class="media-link" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header"><span class="badge">Gifts For Omni</span><img alt="Gifts For Omni shop by Cornelius Aurelius" decoding="async" loading="lazy" src="gifts%20for%20omni%20.png"/></a>
+<a class="media-link" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header"><img alt="Gifts For Omni shop by Cornelius Aurelius" decoding="async" loading="lazy" src="gifts%20for%20omni%20.png"/></a>
 <div class="card-body"><h3>Gifts For Omni</h3><p>A shop space for Omni-themed gifts, products and creative merchandise.</p><a class="card-btn" href="https://cornelius-aurelius.github.io/GIFTS-FOR-OMNI/#dashboard-header">Open Gifts For Omni</a></div>
 </article>
 </div>
 <p class="no-results" id="no-results">No matching projects found. Try “inventions”, “ebooks”, “marketing”, “football”, “AI art”, “laws” or “gifts”.</p>
 </section>
-
 </main>
 <div aria-labelledby="cert-title" aria-modal="true" class="cert-modal" id="cert-modal" onclick="closeCerts(event)" role="dialog">
 <div class="cert-content" onclick="event.stopPropagation()">
@@ -1810,7 +1903,7 @@
         const matchesSearch = !query || text.includes(query);
         const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
         const show = matchesSearch && matchesFilter;
-        card.style.display = show ? 'flex' : 'none';
+        card.style.display = show ? '' : 'none';
         if (show) visible++;
       });
 
