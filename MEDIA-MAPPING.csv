@@ -1,0 +1,16 @@
+category,source_media_used,target_page,published_filename,status
+Profile portrait,1000083719.jpg,https://corneliusaurelius.com/about/,assets/media/cornelius-aurelius-profile-photo.jpg,Mapped and included
+Physical paintings,1000083690.mp4,https://corneliusaurelius.com/creative/paintings/,assets/media/cornelius-aurelius-painting.mp4,Mapped and included
+Physical paintings thumbnail,Frame extracted from 1000083690.mp4,https://corneliusaurelius.com/creative/paintings/,assets/media/cornelius-aurelius-painting-thumbnail.jpg,Mapped and included
+Piano,1000083713.mp4,https://corneliusaurelius.com/creative/music/piano/,assets/media/cornelius-aurelius-piano.mp4,Mapped and included
+Piano thumbnail,Frame extracted from 1000083713.mp4,https://corneliusaurelius.com/creative/music/piano/,assets/media/cornelius-aurelius-piano-thumbnail.jpg,Mapped and included
+Drums,1000083692.mp4,https://corneliusaurelius.com/creative/music/drums/,assets/media/cornelius-aurelius-drums.mp4,Mapped and included
+Drums thumbnail,Frame extracted from 1000083692.mp4,https://corneliusaurelius.com/creative/music/drums/,assets/media/cornelius-aurelius-drums-thumbnail.jpg,Mapped and included
+Football,1000083703.mp4,https://corneliusaurelius.com/sport/football/,assets/media/cornelius-aurelius-football.mp4,Mapped and included
+Football thumbnail,Frame extracted from 1000083703.mp4,https://corneliusaurelius.com/sport/football/,assets/media/cornelius-aurelius-football-thumbnail.jpg,Mapped and included
+Fitness,1000083717.mp4,https://corneliusaurelius.com/sport/fitness/,assets/media/cornelius-aurelius-fitness.mp4,Mapped and included
+Fitness thumbnail,Frame extracted from 1000083717.mp4,https://corneliusaurelius.com/sport/fitness/,assets/media/cornelius-aurelius-fitness-thumbnail.jpg,Mapped and included
+AI Art,cornelius-aurelius-ai-art-thumbnail.png,https://corneliusaurelius.com/creative/ai-art/,cornelius-aurelius-ai-art-thumbnail.png,Existing labelled asset retained
+KRONATRIX,assets/kronatrix-logo.png,https://corneliusaurelius.com/business/kronatrix/,assets/kronatrix-logo.png,Existing labelled asset retained
+Omniscientrix,Omniscientrix-Laws.png,https://corneliusaurelius.com/research/omniscientrix/,Omniscientrix-Laws.png,Existing labelled asset retained with exploratory context
+Spencer Aurelius,spencer-aurelius-logo.png,https://corneliusaurelius.com/business/kronatrix/spencer-aurelius/,spencer-aurelius-logo.png,Retained only for Spencer mascot content; not used as Cornelius logo

@@ -1,0 +1,526 @@
+
+:root{
+  --bg:#020508;--panel:#071018;--panel2:#0a151f;--text:#eefbff;--soft:#a9c4cf;
+  --muted:#708a95;--cyan:#42e8ff;--cyan2:#009fe8;--line:rgba(66,232,255,.20);
+  --line2:rgba(66,232,255,.42);--max:1180px;--radius:24px;--shadow:0 22px 60px rgba(0,0,0,.42)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:radial-gradient(circle at 50% -10%,rgba(66,232,255,.12),transparent 32%),linear-gradient(180deg,#000 0%,#03080c 45%,#000 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit}img,video{max-width:100%;height:auto;display:block}button,input{font:inherit}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:999;background:#fff;color:#000;padding:10px 14px;border-radius:8px}
+.wrap{width:min(calc(100% - 32px),var(--max));margin-inline:auto}.site-header{position:sticky;top:0;z-index:100;background:rgba(0,0,0,.90);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:900;letter-spacing:.08em}.brand-mark{width:30px;height:30px;border-radius:50%;border:1px solid var(--cyan);background:radial-gradient(circle at 35% 25%,#fff 0 5%,var(--cyan) 7%,#063342 42%,#000 72%);box-shadow:0 0 18px rgba(66,232,255,.35)}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}.nav a{padding:8px 10px;border-radius:999px;text-decoration:none;color:#c7edf4;font-weight:750;font-size:.86rem}.nav a:hover,.nav a[aria-current="page"]{background:rgba(66,232,255,.10);color:#fff}.nav-toggle{display:none;border:1px solid var(--line2);background:transparent;color:#fff;border-radius:10px;padding:8px 12px}
+main{padding:28px 0 56px}.hero{border:1px solid var(--line);border-radius:30px;overflow:hidden;background:linear-gradient(135deg,rgba(66,232,255,.08),transparent 35%),linear-gradient(180deg,rgba(8,18,27,.97),rgba(0,0,0,.96));box-shadow:var(--shadow)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(280px,.60fr);gap:42px;align-items:center;padding:clamp(28px,5vw,58px)}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--cyan);text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:850}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px rgba(66,232,255,.7)}
+h1,h2,h3{line-height:1.12;margin:0 0 14px;font-family:"Space Grotesk",Inter,system-ui,sans-serif}h1{font-size:clamp(2.65rem,7vw,5.4rem);letter-spacing:-.045em;text-transform:uppercase}h2{font-size:clamp(1.65rem,3.7vw,2.65rem);letter-spacing:-.02em}h3{font-size:1.14rem}.identity-line{color:var(--cyan);font-weight:850;letter-spacing:.06em;font-size:clamp(1rem,2vw,1.35rem);margin:12px 0 0}.lead{font-size:clamp(1.04rem,1.8vw,1.18rem);color:var(--soft);max-width:760px}.small{font-size:.92rem;color:var(--muted)}
+.hero-visual{min-height:360px;border-radius:24px;border:1px solid var(--line);display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,rgba(66,232,255,.18),transparent 42%),#02080d;position:relative;overflow:hidden}.monogram{font-family:"Space Grotesk",sans-serif;font-size:clamp(5rem,12vw,9rem);font-weight:900;letter-spacing:-.10em;color:rgba(238,251,255,.92);text-shadow:0 0 42px rgba(66,232,255,.22)}.hero-visual:after{content:"OFFICIAL IDENTITY HUB";position:absolute;bottom:18px;letter-spacing:.18em;font-size:.72rem;color:var(--muted);font-weight:800}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 16px;border-radius:13px;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;font-weight:900;border:1px solid var(--cyan);background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#001017}.btn.secondary{background:transparent;color:#c9f7ff;border-color:var(--line2)}.btn:hover{transform:translateY(-1px)}
+.section{margin-top:54px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}.section-head p{max-width:620px;margin:0;color:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(10,21,31,.92),rgba(3,8,12,.96));border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 34px rgba(0,0,0,.22)}.card-body{padding:20px}.card p{color:var(--soft);margin:0 0 16px}.card a.stretched{text-decoration:none}.card-media{aspect-ratio:16/10;background:#061018;display:grid;place-items:center;border-bottom:1px solid var(--line);overflow:hidden}.card-media img{width:100%;height:100%;object-fit:cover}.card-symbol{font-family:"Space Grotesk",sans-serif;font-weight:900;letter-spacing:.10em;font-size:1.05rem;color:var(--cyan);padding:10px;border:1px solid var(--line2);border-radius:12px;background:rgba(66,232,255,.05)}
+.badges{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 13px}.badge{font-size:.69rem;text-transform:uppercase;letter-spacing:.10em;font-weight:900;padding:5px 8px;border-radius:999px;border:1px solid var(--line2);color:#bbf5ff;background:rgba(66,232,255,.04)}.badge.warn{border-color:rgba(255,198,88,.45);color:#ffdda0;background:rgba(255,198,88,.06)}
+.answer{padding:26px;border-radius:24px;border:1px solid var(--line);background:rgba(66,232,255,.035)}.answer p:last-child{margin-bottom:0}.notice{padding:17px 18px;border-left:3px solid #ffc658;background:rgba(255,198,88,.06);border-radius:0 14px 14px 0;color:#f2dfb7}.notice strong{color:#fff}
+.breadcrumbs{font-size:.82rem;color:var(--muted);margin:0 0 18px}.breadcrumbs a{color:#bdeffa;text-decoration:none}.page-hero{padding:34px;border-radius:26px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(66,232,255,.07),transparent 45%),var(--panel)}.page-hero h1{font-size:clamp(2.25rem,6vw,4.2rem)}
+.link-list{display:grid;gap:10px}.link-row{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:15px 16px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.015);text-decoration:none}.link-row span:last-child{color:var(--cyan);font-weight:850}.link-row:hover{border-color:var(--line2)}
+.status-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:18px;overflow:hidden}.status-table th,.status-table td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}.status-table th{background:rgba(66,232,255,.06);color:#dffbff}.status-table td{color:var(--soft)}
+.media-slot{min-height:220px;display:grid;place-items:center;text-align:center;padding:25px;border:1px dashed var(--line2);border-radius:20px;color:var(--muted);background:rgba(66,232,255,.025)}
+footer{border-top:1px solid var(--line);padding:34px 0 48px;color:var(--muted)}.footer-grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.footer-links{display:flex;gap:12px;flex-wrap:wrap}.footer-links a{color:#b8e7ef;text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr}.hero-visual{min-height:250px}.grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-toggle{display:inline-flex}.nav{display:none;position:absolute;left:16px;right:16px;top:70px;background:#02070b;border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--shadow)}.nav.open{display:grid}.nav a{padding:10px 12px}.site-header .wrap{position:relative}}
+@media(max-width:620px){.wrap{width:min(calc(100% - 22px),var(--max))}.grid,.grid.two,.grid.four{grid-template-columns:1fr}.hero-grid,.page-hero{padding:24px}.section{margin-top:40px}.section-head{display:block}.section-head p{margin-top:8px}.footer-grid{display:grid}.identity-line{letter-spacing:.025em}.link-row{align-items:flex-start;flex-direction:column;gap:4px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Cornelius Aurelius identity + media fixes — 18 Aug 2026 */
+.brand-logo{width:38px;height:38px;object-fit:contain;flex:0 0 auto;border-radius:50%;filter:drop-shadow(0 0 10px rgba(66,232,255,.25))}
+.tip-link{border:1px solid rgba(255,198,88,.45)!important;color:#ffe2a7!important;background:rgba(255,198,88,.07)!important}
+.tip-link:hover,.tip-link:focus-visible{background:#ffc658!important;color:#1a1100!important}
+.tip-btn{border-color:#ffc658;background:linear-gradient(135deg,#ffd77f,#ffb52d);color:#1a1100}
+.tip-row{border-color:rgba(255,198,88,.38)}
+.hero-photo-wrap{padding:0!important;overflow:hidden;background:#000!important}
+.hero-photo{width:100%;height:100%;min-height:380px;object-fit:cover;object-position:center 28%;display:block}
+.card-media.project-art img{object-fit:contain!important;background:#000;padding:8px}
+.card-media.real-media img{object-fit:cover!important;background:#020508;padding:0}
+.about-photo-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr);align-items:center;gap:28px}
+.about-photo{width:100%;max-height:480px;object-fit:cover;object-position:center 28%;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.feature-media{margin:0;border:1px solid var(--line);background:#020508;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.feature-media video{width:100%;max-height:72vh;background:#000;display:block}
+.feature-media figcaption{padding:14px 18px;color:var(--soft);border-top:1px solid var(--line)}
+@media(max-width:760px){.about-photo-grid{grid-template-columns:1fr}.about-photo{max-height:520px}.hero-photo{min-height:300px}.brand-logo{width:34px;height:34px}}
+
+
+/* FINAL VISUAL IMAGE STANDARDISATION — 18 AUG 2026 */
+.card-media,
+.card-media.real-media,
+.card-media.project-art{
+  aspect-ratio:auto !important;
+  height:200px;
+  min-height:200px;
+  padding:10px;
+  background:#020508 !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.card-media img,
+.card-media.real-media img,
+.card-media.project-art img{
+  width:100% !important;
+  height:100% !important;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:transparent !important;
+  padding:0 !important;
+  transform:none !important;
+}
+
+.grid.four .card-media{
+  height:180px;
+  min-height:180px;
+}
+
+.grid.two .card-media{
+  height:220px;
+  min-height:220px;
+}
+
+/* KRONATRIX is a logo, not a banner. Keep it centred and comfortably sized. */
+.card-media.kronatrix-logo-media{
+  background:
+    radial-gradient(circle at 50% 50%,rgba(0,148,255,.14),transparent 56%),
+    #020508 !important;
+  padding:18px;
+}
+.card-media.kronatrix-logo-media img{
+  width:auto !important;
+  height:auto !important;
+  max-width:155px !important;
+  max-height:155px !important;
+  object-fit:contain !important;
+  filter:drop-shadow(0 0 15px rgba(0,174,255,.24));
+}
+
+/* The homepage portrait should remain a portrait, but should not dominate the screen. */
+.hero-photo-wrap{
+  min-height:0 !important;
+  height:420px;
+  padding:10px !important;
+  background:#020508 !important;
+}
+.hero-photo{
+  width:100%;
+  height:100%;
+  min-height:0 !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#020508;
+  border-radius:18px;
+}
+
+@media(max-width:940px){
+  .card-media,
+  .card-media.real-media,
+  .card-media.project-art,
+  .grid.four .card-media,
+  .grid.two .card-media{
+    height:185px;
+    min-height:185px;
+  }
+  .hero-photo-wrap{height:380px}
+}
+
+@media(max-width:620px){
+  .card-media,
+  .card-media.real-media,
+  .card-media.project-art,
+  .grid.four .card-media,
+  .grid.two .card-media{
+    height:170px;
+    min-height:170px;
+  }
+  .card-media.kronatrix-logo-media img{
+    max-width:135px !important;
+    max-height:135px !important;
+  }
+  .hero-photo-wrap{height:330px}
+}
+
+
+/* ABSOLUTE FINAL IMAGE DISPLAY FIX — 18 AUG 2026
+   Every card gets the same visual stage. The actual image is never stretched or cropped. */
+.card-media,
+.card-media.real-media,
+.card-media.project-art,
+.grid.four .card-media,
+.grid.two .card-media {
+  box-sizing:border-box !important;
+  width:100% !important;
+  height:240px !important;
+  min-height:240px !important;
+  aspect-ratio:auto !important;
+  padding:12px !important;
+  margin:0 !important;
+  background:#020508 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+}
+
+.card-media img,
+.card-media.real-media img,
+.card-media.project-art img,
+.grid.four .card-media img,
+.grid.two .card-media img {
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  margin:auto !important;
+  padding:0 !important;
+  background:transparent !important;
+  transform:none !important;
+  filter:none !important;
+}
+
+/* First-hand media thumbnails are already composed into a widescreen card image. */
+.card-media.real-media img {
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+}
+
+/* Logos stay logos: centred, not stretched to fill the card. */
+.card-media.kronatrix-logo-media {
+  background:radial-gradient(circle at center,rgba(0,150,255,.14),transparent 58%),#020508 !important;
+}
+.card-media.kronatrix-logo-media img {
+  width:180px !important;
+  height:180px !important;
+  max-width:78% !important;
+  max-height:78% !important;
+  object-fit:contain !important;
+  filter:drop-shadow(0 0 14px rgba(0,174,255,.22)) !important;
+}
+
+/* Omniscientrix artwork is portrait artwork: show the WHOLE supplied image. */
+.card-media img[src*="omniscientrix-laws"] {
+  width:auto !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+}
+
+.hero-photo-wrap {
+  height:440px !important;
+  min-height:0 !important;
+  padding:12px !important;
+  background:#020508 !important;
+}
+.hero-photo {
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#020508 !important;
+}
+
+@media(max-width:900px){
+  .card-media,
+  .card-media.real-media,
+  .card-media.project-art,
+  .grid.four .card-media,
+  .grid.two .card-media {height:220px !important;min-height:220px !important;}
+  .hero-photo-wrap{height:390px !important;}
+}
+
+@media(max-width:620px){
+  .card-media,
+  .card-media.real-media,
+  .card-media.project-art,
+  .grid.four .card-media,
+  .grid.two .card-media {height:190px !important;min-height:190px !important;padding:8px !important;}
+  .card-media.kronatrix-logo-media img{width:145px !important;height:145px !important;}
+  .hero-photo-wrap{height:340px !important;}
+}
+
+
+/* ================================================================
+   CORNELIUS AURELIUS — FINAL IMAGE SCALE + UPLOADED LOGO FIX
+   18 AUGUST 2026
+   ================================================================ */
+
+/* Header uses the exact user-uploaded personal symbol, not the CA monogram. */
+.brand-logo{
+  width:50px !important;
+  height:50px !important;
+  min-width:50px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  border-radius:8px !important;
+  background:#000 !important;
+  filter:none !important;
+  box-shadow:none !important;
+}
+@media(max-width:760px){
+  .brand-logo{
+    width:44px !important;
+    height:44px !important;
+    min-width:44px !important;
+  }
+}
+
+/* All cards use a large, consistent media stage. */
+.card-media,
+.card-media.real-media,
+.card-media.project-art,
+.grid.four .card-media,
+.grid.two .card-media{
+  box-sizing:border-box !important;
+  width:100% !important;
+  height:280px !important;
+  min-height:280px !important;
+  aspect-ratio:auto !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  display:block !important;
+  background:#020508 !important;
+}
+
+/* Fill the media stage. No tiny centred thumbnails. */
+.card-media img,
+.card-media.real-media img,
+.card-media.project-art img,
+.grid.four .card-media img,
+.grid.two .card-media img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  transform:none !important;
+  filter:none !important;
+  background:#020508 !important;
+}
+
+/* Four-card creative rows can be slightly shorter while still full-bleed. */
+.grid.four .card-media{
+  height:230px !important;
+  min-height:230px !important;
+}
+
+/* Two-card rows can be more cinematic. */
+.grid.two .card-media{
+  height:320px !important;
+  min-height:320px !important;
+}
+
+/* Graphic/poster focal points. */
+.card-media img[src*="cornelius-aurelius-inventions-thumbnail"]{
+  object-position:center 24% !important;
+}
+.card-media img[src*="cornelius-aurelius-ebook-library-thumbnail"]{
+  object-position:center 26% !important;
+}
+.card-media img[src*="omniscientrix-laws"]{
+  object-position:center 22% !important;
+}
+.card-media img[src*="colour%20blindness"],
+.card-media img[src*="colour blindness"]{
+  object-position:center 25% !important;
+}
+.card-media img[src*="spencer-aurelius"]{
+  object-position:center 18% !important;
+}
+
+/* KRONATRIX is a logo: large, centred, and never stretched/cropped. */
+.card-media.kronatrix-logo-media{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:22px !important;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(0,149,255,.18),transparent 58%),
+    #020508 !important;
+}
+.card-media.kronatrix-logo-media img{
+  width:auto !important;
+  height:auto !important;
+  max-width:88% !important;
+  max-height:88% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  filter:drop-shadow(0 0 18px rgba(0,160,255,.24)) !important;
+}
+
+/* Hero portrait remains a portrait and fills its own dedicated frame. */
+.hero-photo-wrap{
+  height:500px !important;
+  min-height:500px !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  background:#020508 !important;
+}
+.hero-photo{
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  object-fit:cover !important;
+  object-position:center 24% !important;
+}
+
+/* Responsive sizing. */
+@media(max-width:980px){
+  .card-media,
+  .card-media.real-media,
+  .card-media.project-art,
+  .grid.four .card-media,
+  .grid.two .card-media{
+    height:250px !important;
+    min-height:250px !important;
+  }
+  .hero-photo-wrap{
+    height:430px !important;
+    min-height:430px !important;
+  }
+}
+@media(max-width:620px){
+  .card-media,
+  .card-media.real-media,
+  .card-media.project-art,
+  .grid.four .card-media,
+  .grid.two .card-media{
+    height:220px !important;
+    min-height:220px !important;
+  }
+  .card-media.kronatrix-logo-media{
+    padding:18px !important;
+  }
+  .hero-photo-wrap{
+    height:370px !important;
+    min-height:370px !important;
+  }
+}
+
+
+/* =====================================================================
+   FINAL NATURAL-RATIO IMAGE SYSTEM — 18 AUGUST 2026
+   Images determine their own height from their intrinsic aspect ratio.
+   No crop. No forced fixed-height stage. No stretching.
+   ===================================================================== */
+.card-media,
+.card-media.real-media,
+.card-media.project-art,
+.grid.four .card-media,
+.grid.two .card-media,
+.natural-media{
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  padding:0 !important;
+  margin:0 !important;
+  display:block !important;
+  overflow:hidden !important;
+  background:#020508 !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.card-media img,
+.card-media.real-media img,
+.card-media.project-art img,
+.grid.four .card-media img,
+.grid.two .card-media img,
+.natural-media img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  max-width:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  transform:none !important;
+  filter:none !important;
+  background:#020508 !important;
+}
+
+/* The KRONATRIX file is a square logo. Preserve the entire square logo. */
+.card-media.kronatrix-logo-media{
+  padding:18px !important;
+  background:radial-gradient(circle at center,rgba(0,149,255,.14),transparent 62%),#020508 !important;
+}
+.card-media.kronatrix-logo-media img{
+  width:min(100%,320px) !important;
+  height:auto !important;
+  margin:0 auto !important;
+  object-fit:contain !important;
+}
+
+/* The creative row uses two columns so first-hand images are large enough to read. */
+.grid.four{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+}
+
+/* Two-item media rows remain centred and readable instead of stretching across the entire page. */
+.grid.two{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  align-items:start !important;
+}
+
+.grid{
+  align-items:start !important;
+}
+
+/* Natural portrait treatment for the homepage identity photo: full image, never cropped. */
+.hero-photo-wrap{
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  background:#020508 !important;
+}
+.hero-photo{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:760px !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#020508 !important;
+}
+
+.about-photo{
+  width:100% !important;
+  height:auto !important;
+  max-height:760px !important;
+  object-fit:contain !important;
+}
+
+@media(max-width:940px){
+  .grid.four,.grid.two,.grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:620px){
+  .grid.four,.grid.two,.grid{grid-template-columns:1fr !important;}
+  .card-media.kronatrix-logo-media{padding:14px !important;}
+}

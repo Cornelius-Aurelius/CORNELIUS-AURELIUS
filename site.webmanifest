@@ -1,0 +1,19 @@
+{
+  "name": "Cornelius Aurelius",
+  "short_name": "Cornelius Aurelius",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#020508",
+  "background_color": "#020508",
+  "display": "standalone"
+}
