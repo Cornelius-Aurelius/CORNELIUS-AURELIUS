@@ -524,3 +524,11 @@ footer{border-top:1px solid var(--line);padding:34px 0 48px;color:var(--muted)}.
   .grid.four,.grid.two,.grid{grid-template-columns:1fr !important;}
   .card-media.kronatrix-logo-media{padding:14px !important;}
 }
+
+
+/* LIVE V2 ORIGINAL MEDIA GALLERIES — natural ratio, no crop */
+.media-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.media-gallery .feature-media,.media-item{margin:0;border:1px solid rgba(0,217,255,.18);border-radius:18px;overflow:hidden;background:#020508}
+.media-gallery video,.media-item video{display:block;width:100%;height:auto;max-height:none;object-fit:contain;background:#000}
+.media-gallery figcaption,.media-item figcaption{padding:12px 14px;color:#a9c9d4;line-height:1.5}
+@media(max-width:720px){.media-gallery{grid-template-columns:1fr}}

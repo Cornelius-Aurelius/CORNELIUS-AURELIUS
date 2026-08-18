@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://corneliusaurelius.com/sitemap.xml
+
+Sitemap: https://corneliusaurelius.com/video-sitemap.xml
