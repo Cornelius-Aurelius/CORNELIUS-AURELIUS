@@ -1,0 +1,1 @@
+Private recruiter-only SEO page assets and index. This directory is intentionally unlinked from the main website and should not be added to navigation or sitemaps.
