@@ -1,0 +1,13 @@
+<style>
+/* Evidence clarity: preserve source detail and never upscale proof media. */
+.proof-media{display:flex;align-items:center;justify-content:center}
+.media-open{display:block;width:auto!important;max-width:min(100%,640px);margin:0 auto}
+.media-open img{display:block;width:auto!important;max-width:100%;height:auto!important;object-fit:contain!important;image-rendering:auto;margin:0 auto}
+.hero-proof .media-open{max-width:min(100%,680px)}
+.history-row .media-open{max-width:min(100%,620px)}
+@media(max-width:980px){.media-open,.hero-proof .media-open,.history-row .media-open{max-width:100%}}
+</style>
+<script>
+/* Both Cornelius diagnostic cards intentionally use the same supplied 60/100/100/100 evidence. */
+document.querySelectorAll('img[data-b64="proof/assets/cornelius-run-3.b64"]').forEach(img=>{img.dataset.b64='proof/assets/cornelius-run-2.b64'});
+</script>
