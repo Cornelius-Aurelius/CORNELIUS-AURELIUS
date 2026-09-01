@@ -1,1 +1,1 @@
-Private recruiter-only SEO page assets and index. This directory is intentionally unlinked from the main website and should not be added to navigation or sitemaps.
+Evidence-led SEO hiring brief and proof assets for Cornelius Aurelius. The canonical page is indexable and included in the site sitemap while remaining separate from the primary navigation.
