@@ -1,0 +1,1 @@
+High-clarity AVIF evidence assets for the SEO hiring brief. Images preserve full aspect ratios and are intentionally kept compact for page performance.
