@@ -1,0 +1,1 @@
+SEO proof assets for the hiring brief.
