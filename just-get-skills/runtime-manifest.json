@@ -5,6 +5,8 @@
     "skills": 12840,
     "explicit_connections": 19059
   },
+  "base64_sha256": "4ab8dfe415e27d86b795769eff6a34a9e1df22b2da1f36a5bc79de5499dfbd73",
+  "raw_sha256": "49e65208c987297eb16454d512433d16d72372e8362ffb1687f629688393136d",
   "parts": [
     "runtime.part00.txt",
     "runtime.part01.txt",
@@ -26,6 +28,7 @@
     "runtime.rem17.03.txt",
     "runtime.rem17.04.txt",
     "runtime.rem17.05.txt",
-    "runtime.rem17.06.txt"
+    "runtime.rem17.06.txt",
+    "runtime.rem17.07.txt"
   ]
 }
