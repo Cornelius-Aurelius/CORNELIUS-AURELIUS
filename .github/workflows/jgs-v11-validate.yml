@@ -23,66 +23,41 @@ jobs:
         run: |
           node --check just-get-skills/app.js
           node --check just-get-skills/runtime-adapter.js
-      - name: Validate runtime payload
+          node --check just-get-skills/runtime-binary-loader.js
+      - name: Validate production runtime
         run: |
           python - <<'PY'
-          import base64, gzip, json, pathlib, hashlib
+          import gzip, json, pathlib, subprocess, hashlib
           root = pathlib.Path('just-get-skills')
-          manifest = json.loads((root/'runtime-manifest.json').read_text())
-          expected_hashes = {
-            'runtime.part00.txt':'0ebeda049e5cf93cc22886ab4f324a149f0f6132482f80ba1974326329b4c000',
-            'runtime.part01.txt':'b25591b4fb0314e35e77f0ce46473271d17fd595fe968b78e1c193f72ece0323',
-            'runtime.part02.txt':'f606056f9711981e17efb4b36e2945266f10fde2f2d955e7b72611f66f14d72c',
-            'runtime.part03.txt':'c2aa02fecdb865d4bee244503f860168d890d38443f1153d77286ab927b66087',
-            'runtime.part04-05.txt':'deb1fdb74cd2e1d37cf0eb82e166a6bd9c6fa9a6898c7eb2e0ac8097eb7a95cf',
-            'runtime.part06-07.txt':'5fdc4826f9c6001e0fb6c483f00a45703617ca110d84a6858b07213b78c89c12',
-            'runtime.clean08.txt':'4205f2ee15314da7ab0378b3ceb530f06395d9edf481eb252cd4f1fd2e232d6a',
-            'runtime.clean09.txt':'07cea6a06609f8a2c56f9d5d62a69cad13427a6a244a0c8bc9cf18a239540dd4',
-            'runtime.part10-11.txt':'fad847e5aef061041433cca008c32af578f33c07cbe4b21f41cf26a5adc16c76',
-            'runtime.clean12.txt':'e6c0c05a60cb14c8c9b56d6fd499b78d03d55f471bc3d78223b29f933125cd51',
-            'runtime.clean13.txt':'1cedbda67ac03db3ad0357049d3eec9682647df113844a297323e799ce074565',
-            'runtime.clean14.txt':'40002ed5a087a185583ceccbc9256317bec6c3ffd87d009751d9693603e26e2f',
-            'runtime.clean15.txt':'f590d08a194cf123b2aff9613efd168210bf68c8b1129b172fe3f97a135f2d3d',
-            'runtime.clean16.txt':'189d6d917b0e12604d27dafc29793e094ae323085be10ca27b36c994149d860c',
-            'runtime.rem17.00.txt':'bb03f6801119cf37bdff54ec977c1117630eb1300a26ceb8c2665d8f501f4b8f',
-            'runtime.rem17.01.txt':'2175cd620c60059fee39818ff1a0e4e9883ce275a693e7ee52a9c58a826f4d6a',
-            'runtime.rem17.02.txt':'0036977a7c18357c61d6aae11ea9d9bf2b5c24b3aa5fc5d44ac1a46b32967bcd',
-            'runtime.rem17.03.txt':'c51c9d0dc9db6d851ce70dd81444bf777316928720ca0de64e4673ced7e48835',
-            'runtime.rem17.04.txt':'c488539f294a5a0fc2e0774a6cd7bb84e8db5cad4e3a431a9944cb971a21a11f',
-            'runtime.rem17.05.txt':'74de26120973c1de5abd9d75d2287a1d8d131bdb242d67171255a3bcf442b84c',
-            'runtime.rem17.06.txt':'31606c22c060345e99cb6bcbf890fcac62ae670a0f83420161c051cc8d04ce2c'
-          }
-          chunks=[]
-          for p in manifest['parts']:
-              f=root/p
-              if not f.is_file(): raise SystemExit(f'Missing runtime part: {p}')
-              s=''.join(f.read_text().split())
-              h=hashlib.sha256(s.encode()).hexdigest()
-              status='MATCH' if h==expected_hashes.get(p) else 'MISMATCH'
-              print(status,p,'chars',len(s),'sha256',h)
-              if status!='MATCH': raise SystemExit(f'Runtime fragment mismatch: {p}')
-              chunks.append(s)
-          joined=''.join(chunks)
-          print('parts',len(chunks),'base64 chars',len(joined),'sha256',hashlib.sha256(joined.encode()).hexdigest())
-          assert len(joined)==276440, len(joined)
-          assert hashlib.sha256(joined.encode()).hexdigest()=='4ab8dfe415e27d86b795769eff6a34a9e1df22b2da1f36a5bc79de5499dfbd73'
-          raw=gzip.decompress(base64.b64decode(joined,validate=True))
-          assert hashlib.sha256(raw).hexdigest()=='49e65208c987297eb16454d512433d16d72372e8362ffb1687f629688393136d'
-          data=json.loads(raw)
-          skills=data.get('skills',data.get('s',[])); conns=data.get('connections',data.get('c',[])); expected=manifest['expected']
-          print('decoded bytes',len(raw),'skills',len(skills),'connections',len(conns))
-          assert len(skills)==expected['skills']; assert len(conns)==expected['explicit_connections']
+          runtime = root / 'runtime.gz'
+          manifest = json.loads((root / 'runtime-manifest.json').read_text())
+          if not runtime.is_file():
+              raise SystemExit('Missing production runtime.gz')
+          blob = subprocess.check_output(['git','hash-object',str(runtime)], text=True).strip()
+          print('runtime git blob', blob, 'bytes', runtime.stat().st_size, 'sha256', hashlib.sha256(runtime.read_bytes()).hexdigest())
+          assert blob == '234c2fb915cf7e2a353204e5532da7785b4c4b94', blob
+          raw = gzip.decompress(runtime.read_bytes())
+          data = json.loads(raw)
+          skills = data.get('skills', data.get('s', []))
+          conns = data.get('connections', data.get('c', []))
+          expected = manifest['expected']
+          print('decoded bytes', len(raw), 'skills', len(skills), 'connections', len(conns))
+          assert len(skills) == expected['skills'] == 12840
+          assert len(conns) == expected['explicit_connections'] == 19059
           print('RUNTIME_VALID')
           PY
       - name: Validate production references
         run: |
           python - <<'PY'
           from pathlib import Path
-          html=Path('just-get-skills/index.html').read_text()
-          for item in ['styles.css','runtime-adapter.js','app.js','just-get-skills-logo.png']:
-              assert item in html,item
-          assert Path('just-get-skills/runtime-manifest.json').exists()
+          root = Path('just-get-skills')
+          html = (root / 'index.html').read_text()
+          for item in ['styles.css','runtime-adapter.js','app.js','runtime-binary-loader.js','just-get-skills-logo.png','just-get-skills-share.png']:
+              assert item in html, item
+          for file in ['styles.css','runtime-adapter.js','app.js','runtime-binary-loader.js','runtime.gz','runtime-manifest.json','site.webmanifest','just-get-skills-logo.png','just-get-skills-share.png']:
+              assert (root / file).is_file(), file
           assert '12,840' in html
           assert 'My Evidence' not in html
+          assert '#48e5ff' in (root / 'styles.css').read_text().lower()
           print('REFERENCES_VALID')
           PY
