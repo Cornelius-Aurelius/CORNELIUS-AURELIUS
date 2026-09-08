@@ -1,0 +1,63 @@
+name: JGS V1.1 Validate
+
+on:
+  push:
+    branches: [jgs-v1-1-fixes]
+  pull_request:
+    paths:
+      - 'just-get-skills/**'
+      - '.github/workflows/jgs-v11-validate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript syntax
+        run: |
+          node --check just-get-skills/app.js
+          node --check just-get-skills/runtime-adapter.js
+      - name: Validate runtime payload
+        run: |
+          python - <<'PY'
+          import base64, gzip, json, pathlib, hashlib
+          root = pathlib.Path('just-get-skills')
+          manifest = json.loads((root/'runtime-manifest.json').read_text())
+          missing = [p for p in manifest['parts'] if not (root/p).is_file()]
+          if missing:
+              raise SystemExit(f'Missing runtime parts: {missing}')
+          joined = ''.join((root/p).read_text() for p in manifest['parts'])
+          compact = ''.join(joined.split())
+          print('parts', len(manifest['parts']), 'base64 chars', len(compact), 'sha256', hashlib.sha256(compact.encode()).hexdigest())
+          raw = gzip.decompress(base64.b64decode(compact, validate=True))
+          data = json.loads(raw)
+          skills = data.get('skills', data.get('s', []))
+          conns = data.get('connections', data.get('c', []))
+          expected = manifest['expected']
+          print('decoded bytes', len(raw), 'skills', len(skills), 'connections', len(conns))
+          assert len(skills) == expected['skills'], (len(skills), expected['skills'])
+          assert len(conns) == expected['explicit_connections'], (len(conns), expected['explicit_connections'])
+          assert data.get('s') is not None or data.get('skills') is not None
+          print('RUNTIME_VALID')
+          PY
+      - name: Validate production references
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html = Path('just-get-skills/index.html').read_text()
+          required = ['styles.css','runtime-adapter.js','app.js','runtime-manifest.json','just-get-skills-logo.png']
+          for item in required:
+              if item == 'runtime-manifest.json':
+                  assert Path('just-get-skills', item).exists(), item
+              else:
+                  assert item in html, item
+          assert '12,840' in html
+          assert 'My Evidence' not in html
+          print('REFERENCES_VALID')
+          PY
