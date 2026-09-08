@@ -1,0 +1,34 @@
+{
+  "version": "1.1",
+  "encoding": "base64+gzip+json",
+  "expected": {
+    "skills": 12840,
+    "explicit_connections": 19059
+  },
+  "base64_sha256": "4ab8dfe415e27d86b795769eff6a34a9e1df22b2da1f36a5bc79de5499dfbd73",
+  "raw_sha256": "49e65208c987297eb16454d512433d16d72372e8362ffb1687f629688393136d",
+  "parts": [
+    "runtime.part00.txt",
+    "runtime.part01.txt",
+    "runtime.part02.txt",
+    "runtime.part03.txt",
+    "runtime.part04-05.txt",
+    "runtime.part06-07.txt",
+    "runtime.clean08.txt",
+    "runtime.clean09.txt",
+    "runtime.part10-11.txt",
+    "runtime.clean12.txt",
+    "runtime.clean13.txt",
+    "runtime.clean14.txt",
+    "runtime.clean15.txt",
+    "runtime.clean16.txt",
+    "runtime.rem17.00.txt",
+    "runtime.rem17.01.txt",
+    "runtime.rem17.02.txt",
+    "runtime.rem17.03.txt",
+    "runtime.rem17.04.txt",
+    "runtime.rem17.05.txt",
+    "runtime.rem17.06.txt",
+    "runtime.rem17.07.txt"
+  ]
+}
