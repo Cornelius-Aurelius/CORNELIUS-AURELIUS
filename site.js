@@ -1,10 +1,1 @@
-
-(() => {
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  if (!btn || !nav) return;
-  btn.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(open));
-  });
-})();
+(()=>{const button=document.querySelector('.nav-toggle'),nav=document.querySelector('.nav');if(button&&nav){const close=()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false')};button.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(open))});nav.addEventListener('click',event=>{if(event.target.closest('a'))close()});document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){close();button.focus()}})}document.querySelectorAll('video').forEach(video=>video.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause()})))})();
