@@ -32,3 +32,26 @@
   .word-box strong{font-size:19px;overflow-wrap:anywhere}
   .orb-one{right:-205px;top:-110px}
 }
+
+/* Approved project thumbnails — original artwork, no cropping. */
+.project-media-photo{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  padding:12px!important;background:#06111f!important;
+}
+.project-media-photo img{
+  display:block;width:100%;height:100%;
+  object-fit:contain;object-position:center;max-width:100%;max-height:100%;
+  border-radius:4px;
+}
+.project-media-photo.football-art{background:linear-gradient(135deg,#150d09,#100908)!important}
+.project-media-photo.kronatrix-art,.project-media-photo.music-art{background:#020712!important}
+@media(max-width:740px){
+ .project-media-photo,.project-highlight .project-media-photo{padding:8px!important}
+ .project-media-photo img{object-fit:contain}
+}
+@media(max-width:420px){
+ .project-media-photo,.project-highlight .project-media-photo{
+   min-height:173px;height:100%!important;
+ }
+ .project-media-photo img{height:100%;width:100%}
+}
