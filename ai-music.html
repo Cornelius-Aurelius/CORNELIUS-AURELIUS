@@ -102,7 +102,7 @@ function refresh(){let visible=0,ready=0;const q=(search?.value||'').trim().toLo
 search?.addEventListener('input',refresh);
 for(const card of cards){
  const img=card.querySelector('.song-art img');
- if(img){const ready=()=>{if(card.classList.contains('pending-artwork')){card.classList.remove('pending-artwork');refresh()}};const fallback=()=>{img.hidden=true;card.querySelector('.song-art')?.classList.remove('has-cover')};img.addEventListener('load',ready);img.addEventListener('error',fallback);if(img.complete){if(img.naturalWidth)ready();else fallback();}}
+ if(img){const ready=()=>{if(card.classList.contains('pending-artwork')){card.classList.remove('pending-artwork');refresh()}};const fallback=()=>{img.hidden=true;card.querySelector('.song-art')?.classList.remove('has-cover')};img.addEventListener('load',ready);img.addEventListener('error',fallback);if(card.classList.contains('pending-artwork')){const probe=new Image();probe.onload=ready;probe.onerror=fallback;probe.src=img.getAttribute('src');}else if(img.complete){if(img.naturalWidth)ready();else fallback();}}
 }
 for(const slot of document.querySelectorAll('.audio-slot')){
  const url=slot.dataset.audio;if(!url)continue;
