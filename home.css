@@ -55,3 +55,7 @@
  }
  .project-media-photo img{height:100%;width:100%}
 }
+
+/* The AI.IQ and AI Music approved posters use a full, uncropped image stage. */
+.project-media-photo.tool-art{background:#020712!important;}
+.project-media-photo.tool-art img,.project-media-photo.music-art img{object-fit:contain!important;width:100%;height:100%;}
