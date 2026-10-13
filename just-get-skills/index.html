@@ -5,30 +5,33 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#070503">
 <title>Just Get Skills — Find Your Exact Skill-Link</title>
-<meta name="description" content="Find the exact Skill-Link between what you already know and what you want to learn. Discover the smallest useful transferable skill, why it helps, and how to reuse it deliberately.">
+<meta name="description" content="Find the exact Skill-Link between what you already know and what you want to learn. Explore 12,840 skills and identify the smallest useful transferable process between them.">
 <meta name="author" content="Cornelius Aurelius">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://corneliusaurelius.com/just-get-skills/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cornelius Aurelius">
 <meta property="og:title" content="Just Get Skills — Find Your Exact Skill-Link">
-<meta property="og:description" content="Use what you already know to learn what comes next. Find a specific reusable Skill-Link and learn how to transfer it deliberately.">
+<meta property="og:description" content="Use what you already know to learn what comes next. Explore 12,840 skills and find a specific reusable Skill-Link.">
 <meta property="og:url" content="https://corneliusaurelius.com/just-get-skills/">
-<meta property="og:image" content="https://corneliusaurelius.com/cornelius-aurelius-logo.png">
+<meta property="og:image" content="https://corneliusaurelius.com/just-get-skills/just-get-skills-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Just Get Skills — find the Skill-Link between what you know and what you want to learn">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Just Get Skills — Find Your Exact Skill-Link">
 <meta name="twitter:description" content="Use what you already know to learn what comes next.">
-<meta name="twitter:image" content="https://corneliusaurelius.com/cornelius-aurelius-logo.png">
-<link rel="icon" type="image/png" href="../cornelius-aurelius-logo.png">
-<link rel="apple-touch-icon" href="../cornelius-aurelius-logo.png">
+<meta name="twitter:image" content="https://corneliusaurelius.com/just-get-skills/just-get-skills-share.png">
+<link rel="icon" type="image/png" href="just-get-skills-logo.png">
+<link rel="apple-touch-icon" href="just-get-skills-logo.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Just Get Skills","url":"https://corneliusaurelius.com/just-get-skills/","applicationCategory":"EducationalApplication","operatingSystem":"Web","creator":{"@type":"Person","name":"Cornelius Aurelius","url":"https://corneliusaurelius.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Just Get Skills","url":"https://corneliusaurelius.com/just-get-skills/","applicationCategory":"EducationalApplication","operatingSystem":"Web","description":"A Skill-Link engine that explores 12,840 canonical skills and identifies specific reusable processes between existing experience and a new target skill.","creator":{"@type":"Person","name":"Cornelius Aurelius","url":"https://corneliusaurelius.com/"}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="top"><div class="wrap topin">
-<a class="brand" href="./"><img src="../cornelius-aurelius-logo.png" alt="Just Get Skills official logo" width="54" height="54"><span><b>JUST GET SKILLS</b><small>Polymath Skill-Link Engine</small></span></a>
+<a class="brand" href="./"><img src="just-get-skills-logo.png" alt="Just Get Skills official logo" width="54" height="54"><span><b>JUST GET SKILLS</b><small>Polymath Skill-Link Engine</small></span></a>
 <button id="menuToggle" class="menu" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
 <nav id="mainNav" aria-label="Main navigation"><button data-view="home" class="active">Find a Skill-Link</button><button data-view="explore">Explore Skills</button><button data-view="dna">Skill DNA</button><button data-view="saved">Saved Skill-Links</button><button data-view="method">How Skill-Links Work</button></nav>
 <div class="links"><a href="https://chatgpt.com/" target="_blank" rel="noopener">Use with ChatGPT ↗</a><a href="https://just-get-skills.corneliusaurelius.com/" target="_blank" rel="noopener">Free eBook ↗</a><button data-open-suggest>Suggest a Skill-Link</button><a href="https://corneliusaurelius.com/">Cornelius Aurelius ↩</a></div>
@@ -37,18 +40,20 @@
 <section id="home" class="view active"><div class="wrap">
 <div class="hero"><div class="eyebrow">Different experiences · same reusable skills</div><h1>Find the <em>Skill-Link</em> between what you know and what you want to learn.</h1><p>JGS searches downward for the smallest useful reusable subskill, then explains exactly why it matters and how to transfer it deliberately.</p></div>
 <div class="finder"><label>I already know / do<input id="source" list="skillList" autocomplete="off" placeholder="e.g. Skiing"></label><div class="arrow">→</div><label>I want to learn<input id="target" list="skillList" autocomplete="off" placeholder="e.g. Football"></label><button id="find">Find My Skill-Link</button></div>
-<div class="examples"><button data-pair="Skiing|Football">Skiing → Football</button><button data-pair="Magic|Football">Magic → Football</button><button data-pair="Knitting|Programming">Knitting → Programming</button><button data-pair="Drumming|Language learning">Drumming → Language</button><button data-pair="Chess|Football">Chess → Football</button></div>
+<div class="examples"><button data-pair="Skiing|Football">Skiing → Football</button><button data-pair="Magic|Football">Magic → Football</button><button data-pair="Knitting|Programming">Knitting → Programming</button><button data-pair="Drum kit|Language learning">Drumming → Language</button><button data-pair="Chess|Football">Chess → Football</button></div>
 <div id="result" aria-live="polite"></div>
 <section class="ai"><div><span>GO DEEPER WITH AI</span><h2>Turn this Skill-Link into your personal learning strategy.</h2><p>Copy a purpose-built prompt, open ChatGPT, and optionally upload your CV, certificates, notes, course history or portfolio there. The AI should search your wider background for additional specific Skill-Links and build a learning route around you.</p></div><div class="ai-actions"><button id="copyPrompt">Copy personalised AI prompt</button><a href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT ↗</a></div></section>
 </div></section>
-<section id="explore" class="view"><div class="wrap"><div class="panel"><div class="panelhead"><div><div class="eyebrow">Polymath Skill Universe</div><h2>Explore skills visually.</h2><p>Search or browse broad worlds. Click any skill to use it as your starting point or target.</p></div><input id="skillSearch" placeholder="Search skills…"></div><div id="skillBrowser"></div></div></div></section>
-<section id="dna" class="view"><div class="wrap"><div class="panel"><div class="eyebrow">Skill DNA</div><h2>Break a skill into reusable parts.</h2><p class="muted">Choose a skill from Explore Skills or type one below.</p><div class="dnaform"><input id="dnaInput" list="skillList" placeholder="e.g. Football"><button id="dnaBtn">Open Skill DNA</button></div><div id="dnaResult"></div></div></div></section>
+<section id="explore" class="view"><div class="wrap"><div class="panel"><div class="panelhead"><div><div class="eyebrow">Polymath Skill Universe</div><h2>Explore 12,840 skills.</h2><p>Search the complete canonical skill library or browse broad worlds. Click any skill to make it your starting point, target or open its Skill DNA.</p></div><input id="skillSearch" placeholder="Search all skills…"></div><div id="skillBrowser"><div class="message-card">Open Explore Skills to load the full Skill Universe.</div></div></div></div></section>
+<section id="dna" class="view"><div class="wrap"><div class="panel"><div class="eyebrow">Skill DNA</div><h2>Break a skill into reusable parts.</h2><p class="muted">Choose a skill from Explore Skills or type one below. JGS will show available process candidates, mechanisms and abilities from the runtime.</p><div class="dnaform"><input id="dnaInput" list="skillList" placeholder="e.g. Football"><button id="dnaBtn">Open Skill DNA</button></div><div id="dnaResult"></div></div></div></section>
 <section id="saved" class="view"><div class="wrap"><div class="panel"><div class="panelhead"><div><div class="eyebrow">Your library</div><h2>Saved Skill-Links</h2><p>Stored locally in this browser.</p></div><button id="clearSaved">Delete all</button></div><div id="savedList"></div></div></div></section>
-<section id="method" class="view"><div class="wrap"><div class="panel"><div class="eyebrow">How Skill-Links Work</div><h2>Specific before generic.</h2><div class="methodgrid"><article><b>1. Resolve the source and target</b><p>Understand what the two activities actually require.</p></article><article><b>2. Decompose both</b><p>Break them into observable subskills and processes.</p></article><article><b>3. Search downward</b><p>Prefer single-leg dynamic balance over generic “balance” where justified.</p></article><article><b>4. Reject weak analogies</b><p>Focus, discipline or teamwork alone are not enough.</p></article><article><b>5. Explain the causal link</b><p>Source behaviour → shared subskill → target behaviour → useful head start.</p></article><article><b>6. Keep limits visible</b><p>A Skill-Link does not replace target-specific technique, rules or knowledge.</p></article></div></div></div></section>
+<section id="method" class="view"><div class="wrap"><div class="panel"><div class="eyebrow">How Skill-Links Work</div><h2>Specific before generic.</h2><div class="methodgrid"><article><b>1. Resolve the source and target</b><p>Match everyday wording, aliases, roles and tools to the canonical skill universe.</p></article><article><b>2. Decompose both</b><p>Break them into observable subskills, abilities and mechanisms.</p></article><article><b>3. Search downward</b><p>Prefer a specific unit such as single-leg dynamic balance over broad “balance” where justified.</p></article><article><b>4. Reject weak analogies</b><p>Focus, discipline or teamwork alone are not enough.</p></article><article><b>5. Explain the causal link</b><p>Source behaviour → shared subskill → target behaviour → useful head start.</p></article><article><b>6. Keep limits visible</b><p>A Skill-Link does not replace target-specific technique, rules or knowledge.</p></article></div></div></div></section>
 </main>
 <datalist id="skillList"></datalist>
 <dialog id="skillDialog"><button class="close" aria-label="Close">×</button><div id="skillDialogBody"></div></dialog>
 <dialog id="suggestDialog"><button class="close" aria-label="Close">×</button><h2>Suggest a Skill-Link</h2><p>Send Cornelius a source → target connection you think JGS should investigate.</p><label>From<input id="suggestFrom"></label><label>To<input id="suggestTo"></label><label>Why do they connect?<textarea id="suggestWhy"></textarea></label><button id="sendSuggest" class="primary">Create email</button></dialog>
-<footer><div class="wrap foot"><div class="footbrand"><img src="../cornelius-aurelius-logo.png" alt="" aria-hidden="true"><span><b>JUST GET SKILLS</b><small>Created by Cornelius Aurelius</small></span></div><div><a href="https://just-get-skills.corneliusaurelius.com/">Free eBook</a><a href="https://corneliusaurelius.com/">CorneliusAurelius.com</a></div></div></footer>
+<footer><div class="wrap foot"><div class="footbrand"><img src="just-get-skills-logo.png" alt="" aria-hidden="true"><span><b>JUST GET SKILLS</b><small>Created by Cornelius Aurelius</small></span></div><div><a href="https://just-get-skills.corneliusaurelius.com/">Free eBook</a><a href="https://corneliusaurelius.com/">CorneliusAurelius.com</a></div></div></footer>
+<script src="runtime-adapter.js"></script>
 <script src="app.js" defer></script>
+<script src="runtime-binary-loader.js" defer></script>
 </body></html>
