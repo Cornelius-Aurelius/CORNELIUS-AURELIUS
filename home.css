@@ -118,3 +118,7 @@
   #work .project-card > .project-media{padding:10px!important}
   #work .project-body{padding:16px 18px 19px}
 }
+
+/* Quiet, accessible support link in the header. */
+.desktop-nav > a.tip-nav-link{color:#526a60;font-size:12px;font-weight:600;white-space:nowrap}
+.desktop-nav > a.tip-nav-link:hover{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
