@@ -1,0 +1,37 @@
+# Cornelius Aurelius
+
+> Official portfolio of Cornelius Aurelius, a multidisciplinary creator exploring physical art, music, software, literature, sport, invention concepts and independent research.
+
+## Official identity
+- [Main portfolio](https://corneliusaurelius.com/)
+- [About Cornelius Aurelius](https://about.corneliusaurelius.com/)
+- [GitHub profile](https://github.com/Cornelius-Aurelius)
+- [Complete project directory](https://corneliusaurelius.com/directory.html)
+
+## Creative practice
+- [Physical paintings](https://corneliusaurelius.com/paintings.html)
+- [Piano and keyboard](https://corneliusaurelius.com/piano.html)
+- [Drumming](https://corneliusaurelius.com/drums.html)
+- [Football](https://corneliusaurelius.com/football.html)
+- [AI-assisted artwork](https://aiart.corneliusaurelius.com/)
+- [AI-assisted music](https://corneliusaurelius.com/ai-music.html)
+
+## Selected projects
+- [Just Get Skills](https://skills.corneliusaurelius.com/): transferable skill connections and learning strategies.
+- [BluXabi](https://bluxabi.corneliusaurelius.com/): Spanish learning through word patterns.
+- [Colour Blindness in Football](https://colourblindfootball.corneliusaurelius.com/): awareness and educational resources.
+- [KRONATRIX](https://kronatrix.co.uk/): digital marketing and AI visibility.
+- [AI.IQ](https://ai.iq.corneliusaurelius.com/): social media intelligence.
+- [Ebook library](https://ebooks.corneliusaurelius.com/): reading resources.
+- [Invention hub](https://inventions.corneliusaurelius.com/): proposed product and technology concepts.
+- [Exploratory research](https://corneliusaurelius.com/research.html): proposed frameworks, not established scientific findings.
+- [Santa game](https://cornelius-aurelius.github.io/Santa-The-Road-to-the-North-Pole/)
+- [Snowfight](https://cornelius-aurelius.github.io/snowfight/)
+
+## Interpretation
+Physical creative practice is distinct from AI-assisted work. Concept illustrations do not establish manufactured products, clinical validation or commercial readiness. The project directory includes historical records and entries without available destinations. Consult individual project pages for current information.
+
+## Discovery
+- [Sitemap](https://corneliusaurelius.com/sitemap.xml)
+- [Video sitemap](https://corneliusaurelius.com/video-sitemap.xml)
+- [Music sitemap](https://corneliusaurelius.com/music-sitemap.xml)
