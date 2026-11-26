@@ -15,9 +15,20 @@ document.querySelectorAll('.mobile-nav nav a').forEach(link=>link.addEventListen
 const cameraTitle = [...document.querySelectorAll('#android-apps .app-showcase-card h3')]
     .find(heading => heading.textContent.trim() === 'C.CAM ULTRA');
 if (cameraTitle) {
+    const cameraCard = cameraTitle.closest('.app-showcase-card');
     const productLink = document.createElement('a');
     productLink.href = '/aurelius-cam/';
-    productLink.textContent = 'AURELIUS CAM Ultra';
-    cameraTitle.replaceChildren(productLink);
+    productLink.setAttribute('aria-label', 'AURELIUS CAM Ultra for Android');
+    productLink.style.cssText = 'display:flex;flex:1;flex-direction:column;color:inherit;text-decoration:none';
+    cameraTitle.textContent = 'AURELIUS CAM Ultra';
+    const downloadLabel = document.createElement('span');
+    downloadLabel.textContent = 'Download for Android';
+    downloadLabel.style.cssText = 'display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:8px;background:#65ccff;color:#08121b;font-weight:700';
+    cameraCard.querySelector('.development-status').replaceWith(downloadLabel);
+    productLink.append(...cameraCard.childNodes);
+    cameraCard.append(productLink);
+
+    const appsDescription = cameraCard.closest('#android-apps').querySelector('.section-head > p');
+    if (appsDescription) appsDescription.textContent = 'Explore the camera preview and other Android tools in development.';
 }
 })();
