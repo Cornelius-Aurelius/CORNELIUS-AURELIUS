@@ -1,0 +1,40 @@
+name: Publish camera installer
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Preview version in major.minor format
+        required: true
+        type: string
+      sha256:
+        description: Expected SHA-256 of the APK
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUILD_ARTIFACT_URL: ${{ secrets.CAMERA_BUILD_ARTIFACT_URL }}
+      EXPECTED_SHA: ${{ inputs.sha256 }}
+      VERSION: ${{ inputs.version }}
+      GH_REPO: ${{ github.repository }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Verify and publish APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+$ ]]
+          [[ "$EXPECTED_SHA" =~ ^[a-f0-9]{64}$ ]]
+          [[ "$BUILD_ARTIFACT_URL" == https://*.oaiusercontent.com/* ]]
+          curl --fail --silent --show-error --max-time 60 --proto '=https' "$BUILD_ARTIFACT_URL" -o build.zip
+          name="AURELIUS-CAM-Ultra-$VERSION.apk"
+          unzip -p build.zip C.CAM.apk > "$name"
+          printf '%s  %s\n' "$EXPECTED_SHA" "$name" | sha256sum -c -
+          gh release create "aurelius-cam-$VERSION-preview" "$name" \
+            --target "$GITHUB_SHA" --prerelease \
+            --title "AURELIUS CAM Ultra $VERSION Preview" \
+            --notes "Free Android camera preview by Cornelius Aurelius. Debug-signed. Device testing is pending. An existing build signed with another certificate cannot be upgraded in place. Official page: https://corneliusaurelius.com/aurelius-cam/"
