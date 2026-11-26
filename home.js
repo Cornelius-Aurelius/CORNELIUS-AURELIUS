@@ -11,4 +11,13 @@ for(const chip of chips){if(chip.dataset.area===area)chip.setAttribute('aria-cur
 if(areaNote){areaNote.hidden=!area;areaNote.textContent=area?'Topic: '+(chips.find(x=>x.dataset.area===area)?.textContent||area):''}}
 if(search&&category){search.addEventListener('input',filter);category.addEventListener('change',()=>{area='';history.replaceState(null,'',location.pathname+'#directory');filter()});status?.addEventListener('change',filter);document.querySelector('#reset')?.addEventListener('click',()=>{area='';search.value='';category.value='';if(status)status.value='';filter();history.replaceState(null,'',location.pathname+'#directory');search.focus()});filter()}
 document.querySelectorAll('video').forEach(video=>video.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause()})));
-document.querySelectorAll('.mobile-nav nav a').forEach(link=>link.addEventListener('click',()=>{const menu=document.querySelector('.mobile-nav');if(menu)menu.open=false}));})();
+document.querySelectorAll('.mobile-nav nav a').forEach(link=>link.addEventListener('click',()=>{const menu=document.querySelector('.mobile-nav');if(menu)menu.open=false}));
+const cameraTitle = [...document.querySelectorAll('#android-apps .app-showcase-card h3')]
+    .find(heading => heading.textContent.trim() === 'C.CAM ULTRA');
+if (cameraTitle) {
+    const productLink = document.createElement('a');
+    productLink.href = '/aurelius-cam/';
+    productLink.textContent = 'AURELIUS CAM Ultra';
+    cameraTitle.replaceChildren(productLink);
+}
+})();
