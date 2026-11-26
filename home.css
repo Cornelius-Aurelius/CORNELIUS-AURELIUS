@@ -243,3 +243,24 @@ body.portfolio-home,body.portfolio-directory {--paper:#f8f6f0;--ink:#20362f;--mu
  .portfolio-home .hero-copy{padding-inline:18px}.portfolio-home .action-row .btn{padding-inline:12px}
  .portfolio-home .portfolio-stats span{font-size:11px}
 }
+
+
+/* Equal-size featured cards, full original artwork, separate title strip. */
+body.portfolio-home #work .project-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;max-width:none!important}
+body.portfolio-home #work .project-card{grid-column:auto!important;min-width:0;display:flex!important;flex-direction:column}
+body.portfolio-home #work .project-card>.project-media.editorial-art{display:grid!important;position:relative!important;grid-template-rows:minmax(0,1fr) auto!important;aspect-ratio:16/12!important;height:auto!important;min-height:0!important;max-height:none!important;padding:12px!important;overflow:hidden}
+body.portfolio-home #work .editorial-art>.art-frame{position:relative!important;display:flex!important;align-items:center;justify-content:center;min-height:0;min-width:0;overflow:hidden;width:100%;height:100%}
+body.portfolio-home #work .editorial-art>.art-frame>img{position:static!important;display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:none!important;inset:auto!important}
+body.portfolio-home #work .editorial-art>.art-caption{position:static!important;inset:auto!important;display:grid!important;background:#10141c!important;padding:10px!important;min-height:48px}
+body.portfolio-home #work .project-body{flex:1;display:flex;flex-direction:column}
+body.portfolio-home #work .project-body>.inline-link{margin-top:auto}
+@media(max-width:900px){body.portfolio-home #work .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){body.portfolio-home #work .project-grid{grid-template-columns:minmax(0,1fr)!important}}
+/* App showcase: richer presentation with dedicated product interface previews. */
+body.portfolio-home #android-apps .app-visual{background-color:#0a111a!important;background-position:center!important;background-repeat:no-repeat!important;background-size:contain!important;aspect-ratio:16/10!important}
+body.portfolio-home #android-apps .app-showcase-card:nth-child(1) .app-visual{background-image:url('app-camera-preview.svg')!important}
+body.portfolio-home #android-apps .app-showcase-card:nth-child(2) .app-visual{background-image:url('app-volume-preview.svg')!important}
+body.portfolio-home #android-apps .app-showcase-card:nth-child(3) .app-visual{background-image:url('app-tuner-preview.svg')!important}
+body.portfolio-home #android-apps .app-visual>svg{display:none!important}
+body.portfolio-home #android-apps .app-visual>span{background:#090b10e8;padding:4px 7px;border-radius:4px;font-size:0!important}
+body.portfolio-home #android-apps .app-visual>span::after{content:"INTERFACE CONCEPT";font-size:9px;letter-spacing:.1em}
