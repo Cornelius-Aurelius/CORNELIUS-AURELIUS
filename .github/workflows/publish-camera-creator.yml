@@ -1,0 +1,27 @@
+name: Publish camera creator preview
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/publish-camera-creator.yml]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUILD_ARTIFACT_URL: ${{ secrets.CAMERA_CREATOR_ARTIFACT_URL }}
+      GH_REPO: ${{ github.repository }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Verify and publish APK
+        run: |
+          set -euo pipefail
+          [[ "$BUILD_ARTIFACT_URL" == https://*.oaiusercontent.com/* ]]
+          curl --fail --silent --show-error --max-time 60 --proto '=https' "$BUILD_ARTIFACT_URL" -o build.zip
+          name=Aurelius-Cam-Creator-Preview.apk
+          unzip -p build.zip C.CAM.apk > "$name"
+          printf '%s  %s\n' 88861a66fce3413b0eb2f9b96cf333fedcbeb3d9d42e6a727724366b736b5f93 "$name" | sha256sum -c -
+          gh release create aurelius-cam-creator-preview "$name" --target "$GITHUB_SHA" --prerelease \
+            --title 'Aurelius Cam Creator Preview' \
+            --notes 'Android selfie camera preview. Open Aurelius Cam Creator after installation. Official page: https://corneliusaurelius.com/aurelius-cam/'
