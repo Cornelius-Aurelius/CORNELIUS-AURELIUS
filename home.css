@@ -256,11 +256,18 @@ body.portfolio-home #work .project-body{flex:1;display:flex;flex-direction:colum
 body.portfolio-home #work .project-body>.inline-link{margin-top:auto}
 @media(max-width:900px){body.portfolio-home #work .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:600px){body.portfolio-home #work .project-grid{grid-template-columns:minmax(0,1fr)!important}}
-/* App showcase: richer presentation with dedicated product interface previews. */
-body.portfolio-home #android-apps .app-visual{background-color:#0a111a!important;background-position:center!important;background-repeat:no-repeat!important;background-size:contain!important;aspect-ratio:16/10!important}
-body.portfolio-home #android-apps .app-showcase-card:nth-child(1) .app-visual{background-image:url('app-camera-preview.svg')!important}
-body.portfolio-home #android-apps .app-showcase-card:nth-child(2) .app-visual{background-image:url('app-volume-preview.svg')!important}
-body.portfolio-home #android-apps .app-showcase-card:nth-child(3) .app-visual{background-image:url('app-tuner-preview.svg')!important}
-body.portfolio-home #android-apps .app-visual>svg{display:none!important}
-body.portfolio-home #android-apps .app-visual>span{background:#090b10e8;padding:4px 7px;border-radius:4px;font-size:0!important}
-body.portfolio-home #android-apps .app-visual>span::after{content:"INTERFACE CONCEPT";font-size:9px;letter-spacing:.1em}
+/* Homepage app cards use the icons shipped by each app. */
+body.portfolio-home #android-apps .app-visual {
+  aspect-ratio: 16 / 9;
+  padding: 20px;
+  background: radial-gradient(ellipse at 50% 45%, #1a3043, #0b121b 74%);
+}
+body.portfolio-home #android-apps .app-visual img {
+  display: block;
+  width: clamp(76px, 36%, 108px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 20%;
+  box-shadow: 0 8px 28px #0008;
+}
