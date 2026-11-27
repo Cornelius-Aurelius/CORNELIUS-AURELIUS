@@ -38,7 +38,6 @@ main,.site-nav,footer{width:min(1120px,100%);margin:auto;padding-inline:clamp(18
 .hero p{max-width:49ch}.promise{color:#75ddff;font-weight:800;font-size:.84rem;letter-spacing:.06em}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-block:24px}
 .actions a,.picker{background:#00bfff;color:#07141c;border-radius:10px;padding:13px 16px;font-weight:750;text-decoration:none}
-.actions .download{background:#121a24;color:#f4f7fa;border:1px solid #354758}
 .player{padding:clamp(16px,3vw,28px);border:1px solid #284054;border-radius:24px;background:#0c131d;box-shadow:0 20px 60px #0007}
 .player h2{margin:0}.player > p{margin-block:8px}.picker{display:block;margin-top:16px}
 .picker input{max-width:100%;color:#07141c}.picker input::file-selector-button{border:0;border-radius:6px;background:#07141c;color:white;padding:8px;margin-right:9px}
@@ -59,7 +58,21 @@ a:focus-visible,summary:focus-visible{outline:3px solid #00bfff;outline-offset:4
 <h1 id="title">AURELIUS<br><span>Audio Boost</span></h1>
 <p>Boost media playing in supported Android apps, or use the browser player to turn up audio and video files on your device.</p>
 <p class="promise">100% FREE · NO ADS · NO SIGN-UP · NO PAYMENTS</p>
-<div class="actions"><a href="AURELIUS-Audio-Boost-Android-Test.apk" download>Download for Android (.apk)</a><a class="download" href="#file">Use browser player</a><a class="download" href="AURELIUS-Audio-Boost.html" download>Download browser edition</a></div>
+<div class="actions"><a id="download-app" href="/aurelius-audio-boost/AURELIUS-Audio-Boost.html" download="AURELIUS-Audio-Boost.html">Download App</a></div>
+<p id="download-format">Downloads the standalone browser app (.html).</p>
+<script>
+{
+  const isAndroid = navigator.userAgentData?.platform === 'Android' ||
+    /Android/i.test(navigator.userAgent);
+  if (isAndroid) {
+    const downloadLink = document.getElementById('download-app');
+    downloadLink.href = '/aurelius-audio-boost/AURELIUS-Audio-Boost-Android-Test.apk';
+    downloadLink.download = 'AURELIUS-Audio-Boost.apk';
+    document.getElementById('download-format').textContent =
+      'Downloads the Android app (.apk). Open the file after it downloads to install.';
+  }
+}
+</script>
 <p>Android 8.0 or later. The external-audio mode worked on an OUKITEL C3 running Android 14 in a user test. Results can vary by device, app and audio output.</p>
 <p>Your media stays on your device. Created by Cornelius Aurelius.</p>
 </section>
