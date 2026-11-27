@@ -15,16 +15,46 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "AURELIUS Audio Boost",
-  "url": "https://corneliusaurelius.com/aurelius-audio-boost/",
-  "description": "A free browser tool for adjusting playback loudness and tone of local audio and video files.",
-  "applicationCategory": "MultimediaApplication",
-  "operatingSystem": "Any with a compatible web browser",
-  "browserRequirements": "JavaScript and Web Audio API support",
-  "isAccessibleForFree": true,
-  "offers": {"@type": "Offer", "price": 0, "priceCurrency": "GBP"},
-  "creator": {"@type": "Person", "name": "Cornelius Aurelius", "url": "https://corneliusaurelius.com/"}
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "AURELIUS Audio Boost",
+      "url": "https://corneliusaurelius.com/aurelius-audio-boost/",
+      "description": "A free browser tool for adjusting playback loudness and tone of local audio and video files.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any with a compatible web browser",
+      "browserRequirements": "JavaScript and Web Audio API support",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "GBP"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Cornelius Aurelius",
+        "url": "https://corneliusaurelius.com/"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "AURELIUS Audio Boost for Android",
+      "softwareVersion": "1.2",
+      "operatingSystem": "Android 8.0 or later",
+      "applicationCategory": "MultimediaApplication",
+      "downloadUrl": "https://corneliusaurelius.com/aurelius-audio-boost/AURELIUS-Audio-Boost-1.2.apk",
+      "creator": {
+        "@type": "Person",
+        "name": "Cornelius Aurelius",
+        "url": "https://corneliusaurelius.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "GBP"
+      }
+    }
+  ]
 }
 </script>
 <style>
@@ -47,17 +77,18 @@ details{padding:15px 0;border-bottom:1px solid #26394a}summary{cursor:pointer;fo
 a:focus-visible,summary:focus-visible{outline:3px solid #00bfff;outline-offset:4px}
 @media(max-width:780px){.layout{grid-template-columns:1fr}.hero img{width:76px;height:76px}}
 </style>
+<link rel="icon" type="image/svg+xml" href="sonic-lightning.svg">
 </head>
 <body>
 <nav class="site-nav" aria-label="Main website"><a href="https://corneliusaurelius.com/">Cornelius<span>Aurelius</span>.com</a></nav>
 <main>
 <div class="layout">
 <section class="hero" aria-labelledby="title">
-<img src="https://corneliusaurelius.com/app-volume-preview.svg" width="104" height="104" alt="">
+<img src="sonic-lightning.svg" width="104" height="104" alt="Sonic Lightning app icon">
 <p class="edition">Android &amp; browser editions</p>
 <h1 id="title">AURELIUS<br><span>Audio Boost</span></h1>
 <p>Boost media playing in supported Android apps, or use the browser player to turn up audio and video files on your device.</p>
-<p class="promise">100% FREE · NO ADS · NO SIGN-UP · NO PAYMENTS</p>
+<p class="promise">100% FREE · NO ADS · NO SIGN-UP · NO PAYMENTS · NO SUBSCRIPTIONS</p>
 <div class="actions"><a id="download-app" href="/aurelius-audio-boost/AURELIUS-Audio-Boost.html" download="AURELIUS-Audio-Boost.html">Download App</a></div>
 <p id="download-format">Downloads the standalone browser app (.html).</p>
 <script>
@@ -66,14 +97,14 @@ a:focus-visible,summary:focus-visible{outline:3px solid #00bfff;outline-offset:4
     /Android/i.test(navigator.userAgent);
   if (isAndroid) {
     const downloadLink = document.getElementById('download-app');
-    downloadLink.href = '/aurelius-audio-boost/AURELIUS-Audio-Boost-Android-Test.apk';
-    downloadLink.download = 'AURELIUS-Audio-Boost.apk';
+    downloadLink.href = '/aurelius-audio-boost/AURELIUS-Audio-Boost-1.2.apk';
+    downloadLink.download = 'AURELIUS-Audio-Boost-1.2.apk';
     document.getElementById('download-format').textContent =
       'Downloads the Android app (.apk). Open the file after it downloads to install.';
   }
 }
 </script>
-<p>Android 8.0 or later. The external-audio mode worked on an OUKITEL C3 running Android 14 in a user test. Results can vary by device, app and audio output.</p>
+<p>Android 8.0 or later. Version 1.2 is a signed preview. External audio support varies by device, app and output. The earlier prototype worked on an OUKITEL C3 in a user test.</p>
 <p>Your media stays on your device. Created by Cornelius Aurelius.</p>
 </section>
 <section class="player" aria-labelledby="player-title">
@@ -85,10 +116,10 @@ a:focus-visible,summary:focus-visible{outline:3px solid #00bfff;outline-offset:4
 </div>
 <section aria-labelledby="faq">
 <h2 id="faq">Compatibility and playback</h2>
-<details><summary>Can it boost YouTube or audio from other apps?</summary><p>On Android, tap <strong>Try external music audio effects</strong> to enable boosting for compatible media apps. Start at low volume. The browser player only adjusts local files played inside it.</p></details>
+<details><summary>Can it boost YouTube or audio from other apps?</summary><p>On Android, tap <strong>Boost audio from other apps</strong> to enable boosting for compatible media apps. Start at low volume. The browser player only adjusts local files played inside it.</p></details>
 <details><summary>Which files and devices can I use?</summary><p>Use a browser with Web Audio support on your phone, tablet or computer. MP3 and WAV are good starting points. The formats you can play depend on your browser. With a supported video file, the player plays its audio track.</p></details>
 <details><summary>How does the browser download work?</summary><p>It saves a standalone HTML file. On a device that lets you open local HTML in a browser, you can use the player offline. Mobile devices that preview downloaded HTML can use the online player above.</p></details>
-<details><summary>Which edition should I use?</summary><p>On Android, download the APK and open it to install the app. Android may ask you to allow installation from your browser. On iPhone, iPad, Chromebook, Windows and Mac, use the browser player for local files.</p></details>
+<details><summary>Which edition should I use?</summary><p>On Android, download the APK, open it to install, then launch AURELIUS Audio Boost. Version 1.2 installs alongside earlier test builds. Android may ask you to allow installation from your browser. On iPhone, iPad, Chromebook, Windows, Mac and Linux, use the browser player for local files.</p></details>
 </section>
 </main>
 <footer>Created by <a href="https://corneliusaurelius.com/">Cornelius <span>Aurelius</span></a></footer>
