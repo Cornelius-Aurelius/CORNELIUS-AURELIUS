@@ -1,0 +1,27 @@
+name: Publish camera fullscreen preview
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/publish-camera-fullscreen.yml]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUILD_ARTIFACT_URL: ${{ secrets.CAMERA_FULLSCREEN_ARTIFACT_URL }}
+      GH_REPO: ${{ github.repository }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Verify and publish APK
+        run: |
+          set -euo pipefail
+          [[ "$BUILD_ARTIFACT_URL" == https://*.oaiusercontent.com/* ]]
+          curl --fail --silent --show-error --max-time 60 --proto '=https' "$BUILD_ARTIFACT_URL" -o build.zip
+          name=Aurelius-Cam-Fullscreen-Preview.apk
+          unzip -p build.zip C.CAM.apk > "$name"
+          printf '%s  %s\n' d64228995d3615cdf60e3393c3c5b6aac78823ecff1435b79968a1a4735f017b "$name" | sha256sum -c -
+          gh release create aurelius-cam-fullscreen-preview "$name" --target "$GITHUB_SHA" --prerelease \
+            --title 'Aurelius Cam Fullscreen Preview' \
+            --notes 'Android preview with full-screen photo and video viewing and bulk selection. Open Aurelius Cam Fullscreen after installation. Official page: https://corneliusaurelius.com/aurelius-cam/'
