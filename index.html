@@ -76,6 +76,24 @@ body.portfolio-home .discipline-links{display:grid;grid-template-columns:repeat(
 .portfolio-home .professional-credentials .btn{white-space:normal;text-align:center;min-height:44px}
 .portfolio-home .professional-credentials a:focus-visible{outline:3px solid #9cdeff;outline-offset:4px}
 @media (min-width:1201px){.portfolio-home .desktop-nav{gap:clamp(6px,1vw,14px)}}
+
+.google-credentials{margin-top:24px}
+.google-credentials h3{margin:0 0 4px;font-size:1rem;color:#f5f7fa}
+.google-credentials__pause{accent-color:#009cff;margin:0 5px 0 0;vertical-align:middle}
+.google-credentials__pause:focus-visible{outline:2px solid #9cdeff;outline-offset:3px}
+.google-credentials__pause+label{display:inline-flex;align-items:center;min-height:28px;color:#bec9d5;font-size:.8rem;cursor:pointer}
+.google-credentials__window{overflow:hidden;margin-top:6px}
+.google-credentials__track{display:flex;width:max(100%,744px);animation:google-credentials-scroll 32s linear infinite}
+.google-credentials__group{display:flex;flex:0 0 100%;justify-content:space-around;gap:8px;min-width:0;list-style:none;margin:0;padding:4px}
+.google-credentials__group li{flex:0 0 96px}
+.google-credentials__group img{display:block;width:100%;height:auto;border:1px solid #374659;border-radius:5px;background:#fff}
+.google-credentials__pause:checked~.google-credentials__window .google-credentials__track{animation-play-state:paused}
+@keyframes google-credentials-scroll{from{transform:translateX(-100%)}to{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){
+  .google-credentials__track{width:100%;animation:none;transform:none}
+  .google-credentials__group{justify-content:flex-start;flex-wrap:wrap}
+  .google-credentials__group[aria-hidden],.google-credentials__pause,.google-credentials__pause+label{display:none}
+}
 </style></head>
 <body class="portfolio-home">
 <a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="Cornelius Aurelius home"><span class="brand-symbol" aria-hidden="true">CA</span><span>Cornelius <b class="brand-accent">Aurelius</b></span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="index.html#creative">Disciplines</a><a href="index.html#work">Work</a><a href="ai-music.html">Music</a><a href="#christmas">Christmas</a><a href="https://inventions.corneliusaurelius.com/">Inventions</a><a href="research.html">Research</a><a href="https://cornelius-aurelius.github.io/Certified/">Credentials</a><a href="https://about.corneliusaurelius.com/" class="about-nav-link">About me ↗</a><a class="tip-nav-link" href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000" target="_blank" rel="noopener noreferrer">♡ Tip</a><a class="nav-action" href="directory.html">All creations ↗</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a href="index.html#creative">Disciplines</a><a href="index.html#work">Work</a><a href="ai-music.html">Music</a><a href="#christmas">Christmas</a><a href="https://inventions.corneliusaurelius.com/">Inventions</a><a href="research.html">Research</a><a href="https://cornelius-aurelius.github.io/Certified/">Credentials</a><a href="https://about.corneliusaurelius.com/" class="about-nav-link">About me ↗</a><a class="tip-nav-link" href="https://buy.stripe.com/28E00jbRIfz8aLI7TGco000" target="_blank" rel="noopener noreferrer">♡ Tip</a><a class="nav-action" href="directory.html">All creations ↗</a></nav></details></div></header><main id="main" class="container"><section class="portfolio-hero" id="identity" aria-labelledby="identity-title">
@@ -83,8 +101,35 @@ body.portfolio-home .discipline-links{display:grid;grid-template-columns:repeat(
 <figure class="hero-portrait"><img src="cornelius-aurelius-profile-photo-640w.jpg" srcset="cornelius-aurelius-profile-photo-360w.jpg 360w, cornelius-aurelius-profile-photo-640w.jpg 640w, assets-images-cornelius-aurelius-profile-photo.jpg 864w" sizes="(max-width: 600px) 258px, (max-width: 760px) 280px, 300px" width="864" height="1536" alt="Portrait of Cornelius Aurelius" fetchpriority="high"><figcaption><span>THE PERSON BEHIND THE WORK</span><strong>Cornelius Aurelius</strong><small>A multidisciplinary creator</small><a class="inline-link" href="https://about.corneliusaurelius.com/">Get to know me ↗</a></figcaption></figure></section>
 <section class="professional-credentials" aria-labelledby="professional-credentials-title">
   <h2 id="professional-credentials-title">Curiosity backed by knowledge.</h2>
-  <p>My professional training spans analytics, digital advertising, email and social media marketing, e-commerce, publishing and negotiation. This portfolio brings together 15 historical credentials and training records from Google, HubSpot Academy, Amazon Advertising, Udemy and Jaguar Land Rover.</p>
+  <p>My professional training spans analytics, digital advertising, email and social media marketing, e-commerce, publishing and negotiation. This portfolio brings together historical credentials and training records from Google, HubSpot Academy, Amazon Advertising, Udemy and Jaguar Land Rover.</p>
   <a class="btn btn-primary" href="https://cornelius-aurelius.github.io/Certified/">Explore My Professional Credentials <span aria-hidden="true">↗</span></a>
+  <div class="google-credentials" role="group" aria-labelledby="google-credentials-title">
+    <h3 id="google-credentials-title">Google credentials</h3>
+    <input class="google-credentials__pause" type="checkbox" id="pause-google-credentials">
+    <label for="pause-google-credentials">Pause animation</label>
+    <div class="google-credentials__window">
+      <div class="google-credentials__track">
+      <ul class="google-credentials__group">
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-analytics.webp" width="960" height="681" loading="lazy" decoding="async" alt="Google Analytics Individual Qualification"></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-ads-search.webp" width="960" height="681" loading="lazy" decoding="async" alt="Google Ads Search Certification"></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-ads-display.webp" width="960" height="681" loading="lazy" decoding="async" alt="Google Ads Display Certification"></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-ads-video.webp" width="960" height="681" loading="lazy" decoding="async" alt="Google Ads Video Certification"></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/shopping-ads.webp" width="960" height="681" loading="lazy" decoding="async" alt="Shopping ads Certification"></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/campaign-manager.webp" width="960" height="681" loading="lazy" decoding="async" alt="Campaign Manager Certification Exam"></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/creative-certification.webp" width="960" height="681" loading="lazy" decoding="async" alt="Creative Certification Exam"></li>
+      </ul>
+      <ul class="google-credentials__group" aria-hidden="true">
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-analytics.webp" width="960" height="681" loading="lazy" decoding="async" alt=""></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-ads-search.webp" width="960" height="681" loading="lazy" decoding="async" alt=""></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-ads-display.webp" width="960" height="681" loading="lazy" decoding="async" alt=""></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/google-ads-video.webp" width="960" height="681" loading="lazy" decoding="async" alt=""></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/shopping-ads.webp" width="960" height="681" loading="lazy" decoding="async" alt=""></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/campaign-manager.webp" width="960" height="681" loading="lazy" decoding="async" alt=""></li>
+        <li><img src="https://cornelius-aurelius.github.io/Certified/previews/creative-certification.webp" width="960" height="681" loading="lazy" decoding="async" alt=""></li>
+      </ul>
+      </div>
+    </div>
+  </div>
 </section>
   
 
